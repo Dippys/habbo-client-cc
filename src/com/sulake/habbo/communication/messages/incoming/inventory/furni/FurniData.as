@@ -108,7 +108,7 @@
             return this._tradable;
         }
 
-        public function get isSellable():Boolean
+        public function get sellable():Boolean
         {
             return this._isSellable;
         }
