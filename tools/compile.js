@@ -15,11 +15,19 @@ const args = [
   '+flexlib=C:\\flex\\frameworks',
   sourceFile,
   '-static-link-runtime-shared-libraries=true',
-  '-swf-version=14',
-  '-default-background-color=#000000',
+  '-swf-version=25',
+  '-default-background-color=#FFFFFF',
   '-use-network=true',
-  '-default-frame-rate', '40',
-  '-default-size', '1280', '800'
+  '-use-resource-bundle-metadata=true',
+  '-default-frame-rate', '30',
+  '-default-size', '800', '600',
+  '-accessible=false',
+  '-benchmark=false',
+  '-optimize=true',
+  '-show-unused-type-selector-warnings=true',
+  '-strict=true',
+  '-warnings=true',
+  '-verbose-stacktraces=false'
 ];
 
 const compiler = spawn(javaPath, ['-jar', mxmlcJar, ...args], { cwd: path.join(__dirname, '..') });
