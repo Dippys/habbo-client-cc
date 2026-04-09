@@ -3004,11 +3004,11 @@
         private function onBuildersClubSubscriptionStatus(k:BuildersClubSubscriptionStatusMessageEvent):void
         {
             var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
-            this._builderFurniLimit = _local_2._Str_15864;
-            this._builderMaxFurniLimit = _local_2._Str_24094;
+            this._builderFurniLimit = _local_2.furniLimit;
+            this._builderMaxFurniLimit = _local_2.maxFurniLimit;
             this._builderMembershipSecondsLeft = _local_2.secondsRemaining;
             this._builderMembershipUpdateTime = getTimer();
-            this._builderMembershipSecondsLeftWithGrace = _local_2._Str_24379;
+            this._builderMembershipSecondsLeftWithGrace = _local_2.secondsRemainingWithGrace;
             if (ExternalInterface.available)
             {
                 ExternalInterface.call("FlashExternalInterface.updateBuildersClub", (this._builderMembershipSecondsLeft > 0));

@@ -5,10 +5,10 @@
 
     public class BuildersClubSubscriptionStatusMessageParser implements IMessageParser
     {
-        private var _Str_16456:int;
-        private var _Str_12494:int;
-        private var _Str_19123:int;
-        private var _Str_17298:int;
+        private var _secondsRemaining:int;
+        private var _furniLimit:int;
+        private var _maxFurniLimit:int;
+        private var _secondsRemainingWithGrace:int;
 
 
         public function flush():Boolean
@@ -18,38 +18,38 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_16456 = k.readInteger();
-            this._Str_12494 = k.readInteger();
-            this._Str_19123 = k.readInteger();
+            this._secondsRemaining = k.readInteger();
+            this._furniLimit = k.readInteger();
+            this._maxFurniLimit = k.readInteger();
             if (k.bytesAvailable)
             {
-                this._Str_17298 = k.readInteger();
+                this._secondsRemainingWithGrace = k.readInteger();
             }
             else
             {
-                this._Str_17298 = this._Str_16456;
+                this._secondsRemainingWithGrace = this._secondsRemaining;
             }
             return true;
         }
 
         public function get secondsRemaining():int
         {
-            return this._Str_16456;
+            return this._secondsRemaining;
         }
 
-        public function get _Str_15864():int
+        public function get furniLimit():int
         {
-            return this._Str_12494;
+            return this._furniLimit;
         }
 
-        public function get _Str_24094():int
+        public function get maxFurniLimit():int
         {
-            return this._Str_19123;
+            return this._maxFurniLimit;
         }
 
-        public function get _Str_24379():int
+        public function get secondsRemainingWithGrace():int
         {
-            return this._Str_17298;
+            return this._secondsRemainingWithGrace;
         }
     }
 }
