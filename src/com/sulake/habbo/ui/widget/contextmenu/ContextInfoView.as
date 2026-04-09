@@ -289,7 +289,7 @@ package com.sulake.habbo.ui.widget.contextmenu
             this.updateWindow();
         }
 
-        protected function _Str_3113():IWindowContainer
+        protected function createMinimizedView():IWindowContainer
         {
             var k:XML;
             if (!this._Str_5032)

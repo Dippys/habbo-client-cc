@@ -94,7 +94,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
             }
             if (_Str_3452)
             {
-                activeView = _Str_3113();
+                activeView = createMinimizedView();
             }
             else
             {
