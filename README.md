@@ -315,9 +315,9 @@ This repository contains extensive documentation in the `docs/` folder:
 
 ## Compatibility
 
-This client is compatible with:
+This client is designed to work with:
 
-- **Arcturus Morningstar** (recommended)
+- [habbo-server-cc](https://github.com/habbo-cc/habbo-server-cc) — Compatible server emulator
 - Other compatible Habbo server emulators using the same protocol version
 
 ### Requirements
