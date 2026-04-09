@@ -98,7 +98,7 @@
             {
                 _local_3 = new LegacyStuffData();
                 _local_3.setString(String(_local_2));
-                k = new RoomObjectDataUpdateMessage(_local_2, _local_3, k._Str_2794);
+                k = new RoomObjectDataUpdateMessage(_local_2, _local_3, k.extra);
             }
             super.processUpdateMessage(k);
         }

@@ -880,7 +880,7 @@
         private function getTraxSongFurniName(k:GroupItem, _arg_2:String, _arg_3:Boolean, _arg_4:int=-1, _arg_5:Boolean=false):String
         {
             var _local_6:IFurnitureItem = k._Str_3205();
-            var _local_7:ISongInfo = this._soundManager.musicController.getSongInfo(_local_6._Str_2794);
+            var _local_7:ISongInfo = this._soundManager.musicController.getSongInfo(_local_6.extra);
             if (_local_7 != null)
             {
                 this._localization.registerParameter("songdisc.info", "name", _local_7.name);
@@ -900,7 +900,7 @@
                     this._waitingSongInfo.push(_arg_4);
                     this._waitingSongInfo.push(k);
                     this._waitingSongInfo.push(_arg_5);
-                    this._soundManager.musicController.requestSongInfoWithoutSamples(_local_6._Str_2794);
+                    this._soundManager.musicController.requestSongInfoWithoutSamples(_local_6.extra);
                 }
             }
             return _arg_2;
@@ -931,7 +931,7 @@
                 _local_3 = this._waitingSongInfo.pop();
                 _local_4 = this._waitingSongInfo.pop();
                 _local_5 = _local_3._Str_3205();
-                if (_local_5._Str_2794 == k.id)
+                if (_local_5.extra == k.id)
                 {
                     if ((((_local_2) && (this._tradingModel._Str_5319.getWithIndex(_local_4) == _local_3)) || ((!(_local_2)) && (this._tradingModel._Str_5629.getWithIndex(_local_4) == _local_3))))
                     {

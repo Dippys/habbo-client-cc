@@ -1143,7 +1143,7 @@
                 }
             }
             _local_5 = this._Str_3613(k);
-            _local_3 = this.createGroupItem(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
+            _local_3 = this.createGroupItem(k.type, k.category, k.stuffData, k.extra, _arg_2);
             _local_3.push(k, _local_5);
             if (_local_5)
             {
@@ -1210,7 +1210,7 @@
                 }
                 return _local_4;
             }
-            _local_5 = this.createGroupItem(k.type, k.category, k.stuffData, k._Str_2794, _arg_2);
+            _local_5 = this.createGroupItem(k.type, k.category, k.stuffData, k.extra, _arg_2);
             _local_5.push(k, _local_3);
             if (_local_3)
             {
@@ -1246,7 +1246,7 @@
             }
             else
             {
-                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k._Str_2794.toString(), k.stuffData);
+                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.extra.toString(), k.stuffData);
             }
             if (_local_3)
             {

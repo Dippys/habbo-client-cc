@@ -40,7 +40,7 @@
             this._recyclable = k.isRecycleable;
             this._sellable = k.sellable;
             this._stuffData = k.stuffData;
-            this._extra = k._Str_2794;
+            this._extra = k.extra;
             this._secondsToExpiration = k.secondsToExpiration;
             this._expirationTimeStamp = k.expirationTimeStamp;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;
@@ -89,7 +89,7 @@
             this._stuffData = k;
         }
 
-        public function get _Str_2794():Number
+        public function get extra():Number
         {
             return this._extra;
         }
@@ -201,7 +201,7 @@
             this._recyclable = k.isRecycleable;
             this._sellable = k.sellable;
             this._stuffData = k.stuffData;
-            this._extra = k._Str_2794;
+            this._extra = k.extra;
             this._secondsToExpiration = k.secondsToExpiration;
             this._expirationTimeStamp = k.expirationTimeStamp;
             this._hasRentPeriodStarted = k.hasRentPeriodStarted;

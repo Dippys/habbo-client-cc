@@ -8,7 +8,7 @@
         function get ref():int;
         function get type():int;
         function get stuffData():IStuffData;
-        function get _Str_2794():Number;
+        function get extra():Number;
         function get category():int;
         function get recyclable():Boolean;
         function get tradeable():Boolean;

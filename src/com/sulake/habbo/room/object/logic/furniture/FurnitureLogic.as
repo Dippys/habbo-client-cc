@@ -314,9 +314,9 @@
                 {
                     k.data.writeRoomObjectModel(_local_2);
                 }
-                if (!isNaN(k._Str_2794))
+                if (!isNaN(k.extra))
                 {
-                    _local_2.setString(RoomObjectVariableEnum.FURNITURE_EXTRAS, String(k._Str_2794));
+                    _local_2.setString(RoomObjectVariableEnum.FURNITURE_EXTRAS, String(k.extra));
                 }
                 _local_2.setNumber(RoomObjectVariableEnum.FURNITURE_STATE_UPDATE_TIME, lastUpdateTime);
             }

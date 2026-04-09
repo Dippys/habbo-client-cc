@@ -270,7 +270,7 @@
                     else
                     {
                         this._roomPreviewer.updateRoomWallsAndFloorVisibility(false, true);
-                        this._roomPreviewer.addFurnitureIntoRoom(_local_6.type, new Vector3d(90, 0, 0), _local_6.stuffData, _local_6._Str_2794.toString());
+                        this._roomPreviewer.addFurnitureIntoRoom(_local_6.type, new Vector3d(90, 0, 0), _local_6.stuffData, _local_6.extra.toString());
                     }
                 }
                 _local_3 = (this._view.findChildByName("tradeable_icon") as IStaticBitmapWrapperWindow);

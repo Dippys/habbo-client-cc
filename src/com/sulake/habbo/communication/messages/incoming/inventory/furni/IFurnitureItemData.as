@@ -18,7 +18,7 @@
         function get flatId():int;
         function get slotId():String;
         function get songId():int;
-        function get _Str_2794():int;
+        function get extra():int;
         function get rentable():Boolean;
         function get isWallItem():Boolean;
         function get hasRentPeriodStarted():Boolean;

@@ -36,13 +36,13 @@
                 this._nextStateTimeStamp = 0;
                 _local_4 = new LegacyStuffData();
                 _local_4.setString(String(_local_2));
-                k = new RoomObjectDataUpdateMessage(_local_2, _local_4, k._Str_2794);
+                k = new RoomObjectDataUpdateMessage(_local_2, _local_4, k.extra);
                 super.processUpdateMessage(k);
             }
             else
             {
                 this._nextState = _local_2;
-                this._nextStateExtra = k._Str_2794;
+                this._nextStateExtra = k.extra;
                 this._nextStateTimeStamp = (lastUpdateTime + _local_3);
             }
         }

@@ -540,7 +540,7 @@
             var _local_2:ImageResult;
             if (!k.isWallItem)
             {
-                _local_2 = this._roomEngine.getFurnitureImage(k.type, new Vector3d(180, 0, 0), 64, this, 0, String(k._Str_2794), -1, -1, k.stuffData);
+                _local_2 = this._roomEngine.getFurnitureImage(k.type, new Vector3d(180, 0, 0), 64, this, 0, String(k.extra), -1, -1, k.stuffData);
             }
             else
             {

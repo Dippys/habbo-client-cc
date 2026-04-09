@@ -27,7 +27,7 @@
             return this._data;
         }
 
-        public function get _Str_2794():Number
+        public function get extra():Number
         {
             return this._extra;
         }

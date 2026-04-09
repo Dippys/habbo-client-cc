@@ -186,7 +186,7 @@
             return this._stuffData;
         }
 
-        public function get _Str_2794():Number
+        public function get extra():Number
         {
             return this._extra;
         }
@@ -914,9 +914,9 @@
             {
                 this._window.name = (this._window.name + (".s" + this.stuffData));
             }
-            if (!isNaN(this._Str_2794))
+            if (!isNaN(this.extra))
             {
-                this._window.name = (this._window.name + (".e" + this._Str_2794));
+                this._window.name = (this._window.name + (".e" + this.extra));
             }
             this._Str_13259();
             this._Str_7686();
@@ -947,7 +947,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k._Str_2794);
+                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k.extra);
                     if (_local_3 != null)
                     {
                         return _local_3.name;
@@ -983,7 +983,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k._Str_2794);
+                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k.extra);
                     if (_local_3 != null)
                     {
                         return _local_3.creator;
@@ -1016,7 +1016,7 @@
             {
                 if (k.category == FurniCategory.TRAX_SONG)
                 {
-                    _local_2 = k._Str_2794;
+                    _local_2 = k.extra;
                     _local_3 = this._model._Str_2476.musicController.getSongInfo(_local_2);
                     if (_local_3 == null)
                     {

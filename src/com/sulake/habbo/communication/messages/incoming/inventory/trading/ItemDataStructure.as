@@ -78,7 +78,7 @@
             return this._stuffData;
         }
 
-        public function get _Str_2794():int
+        public function get extra():int
         {
             return this._extra;
         }

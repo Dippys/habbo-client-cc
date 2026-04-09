@@ -20,7 +20,7 @@
             this._creditValue = _arg_4;
             this._assets = _arg_2;
             _local_5 = this._Str_21010();
-            super(k, type, category, _arg_3, false, new StuffDataBase(), _Str_2794, _local_5, false, "center");
+            super(k, type, category, _arg_3, false, new StuffDataBase(), extra, _local_5, false, "center");
         }
 
         override public function dispose():void
