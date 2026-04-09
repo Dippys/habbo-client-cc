@@ -56,7 +56,7 @@
             {
                 _Str_3007.visible = false;
             }
-            _Str_3196 = false;
+            isMouseOver = false;
         }
 
         override protected function set activeView(k:IWindowContainer):void
@@ -105,14 +105,14 @@
                 if (k.type == WindowMouseEvent.OVER)
                 {
                     super.buttonEventProc(k, _arg_2);
-                    _Str_3196 = true;
+                    isMouseOver = true;
                 }
                 else
                 {
                     if (k.type == WindowMouseEvent.OUT)
                     {
                         super.buttonEventProc(k, _arg_2);
-                        _Str_3196 = false;
+                        isMouseOver = false;
                     }
                     else
                     {

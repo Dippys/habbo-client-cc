@@ -51,7 +51,7 @@
                 _window.findChildByName("buttons").procedure = this.buttonEventProc;
                 _window.visible = false;
                 activeView = window;
-                _Str_3196 = false;
+                isMouseOver = false;
             }
         }
 

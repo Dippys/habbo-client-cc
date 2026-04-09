@@ -79,7 +79,7 @@
                 _window.visible = false;
                 activeView = _window;
                 this._Str_2771();
-                _Str_3196 = false;
+                isMouseOver = false;
             }
         }
 

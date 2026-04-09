@@ -37,7 +37,7 @@
         protected var _Str_3007:IWindowContainer;
         private var _Str_16285:Boolean;
         protected var _widget:IContextMenuParentWidget;
-        protected var _Str_3196:Boolean;
+        protected var isMouseOver:Boolean;
         protected var _Str_17886:FixedSizeStack;
         protected var _Str_18538:int = -1000000;
         protected var _disposed:Boolean = false;
@@ -244,7 +244,7 @@
                 this._widget.removeView(this, false);
                 return;
             }
-            if (((!(this._Str_3196)) || (this._Str_16285)))
+            if (((!(this.isMouseOver)) || (this._Str_16285)))
             {
                 _local_4 = this.getOffset(k);
                 _local_5 = (_arg_2.y - k.top);
@@ -268,7 +268,7 @@
         {
             if (k.type == WindowMouseEvent.OVER)
             {
-                this._Str_3196 = true;
+                this.isMouseOver = true;
             }
             else
             {
@@ -276,7 +276,7 @@
                 {
                     if (!k.window.hitTestGlobalPoint(new Point(k.stageX, k.stageY)))
                     {
-                        this._Str_3196 = false;
+                        this.isMouseOver = false;
                     }
                 }
             }
