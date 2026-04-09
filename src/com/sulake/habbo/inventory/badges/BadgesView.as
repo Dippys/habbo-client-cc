@@ -107,7 +107,7 @@
             }
             else
             {
-                if (_local_2._Str_3222)
+                if (_local_2.isInUse)
                 {
                     k.caption = "${inventory.badges.clearbadge}";
                 }
@@ -120,7 +120,7 @@
                 IBadgeImageWidget(IWidgetWindow(this._view.findChildByName("badge_image")).widget).badgeId = _local_2.badgeId;
                 this._view.findChildByName("badge_image").visible = true;
                 _local_3 = this._model._Str_5453(BadgesModel._Str_6557);
-                if ((((!(_local_3 == null)) && (_local_3.length >= this._model._Str_23348())) && (!(_local_2._Str_3222))))
+                if ((((!(_local_3 == null)) && (_local_3.length >= this._model._Str_23348())) && (!(_local_2.isInUse))))
                 {
                     k.disable();
                 }
@@ -175,7 +175,7 @@
             while (_local_5 < _local_3.length)
             {
                 _local_4 = (_local_3[_local_5] as Badge);
-                if (!_local_4._Str_3222)
+                if (!_local_4.isInUse)
                 {
                     _local_7 = false;
                     if (((k == null) || (k.length == 0)))

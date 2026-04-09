@@ -11,7 +11,7 @@
         function get duration():int;
         function get _Str_4010():Boolean;
         function get isActive():Boolean;
-        function get _Str_3222():Boolean;
+        function get isInUse():Boolean;
         function get icon():BitmapData;
         function set _Str_3093(_arg_1:BitmapData):void;
         function get _Str_3093():BitmapData;

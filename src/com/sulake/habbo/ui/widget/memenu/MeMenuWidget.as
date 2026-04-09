@@ -314,7 +314,7 @@
             this._hasEffectOn = false;
             for each (_local_2 in k.effects)
             {
-                if (_local_2._Str_3222)
+                if (_local_2.isInUse)
                 {
                     this._hasEffectOn = true;
                 }

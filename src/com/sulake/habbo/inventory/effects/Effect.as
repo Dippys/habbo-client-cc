@@ -51,7 +51,7 @@
             return this._isActive;
         }
 
-        public function get _Str_3222():Boolean
+        public function get isInUse():Boolean
         {
             return this._isInUse;
         }
@@ -117,7 +117,7 @@
             this._isSelected = k;
         }
 
-        public function set _Str_3222(k:Boolean):void
+        public function set isInUse(k:Boolean):void
         {
             this._isInUse = k;
         }

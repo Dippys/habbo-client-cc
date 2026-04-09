@@ -157,7 +157,7 @@
             {
                 this.stopUsingAllEffects(false, false);
                 _local_2.isActive = true;
-                _local_2._Str_3222 = true;
+                _local_2.isInUse = true;
                 this._Str_4879();
             }
         }
@@ -174,9 +174,9 @@
             {
                 this.requestEffectActivated(_local_2.type);
             }
-            if (_local_2._Str_3222 == false)
+            if (_local_2.isInUse == false)
             {
-                _local_2._Str_3222 = true;
+                _local_2.isInUse = true;
                 this._controller.communication.connection.send(new AvatarEffectSelectedComposer(k));
                 this._lastActivatedEffect = k;
                 this._Str_4879();
@@ -188,9 +188,9 @@
             var _local_3:Effect = this._Str_5810(k);
             if (_local_3 != null)
             {
-                if (_local_3._Str_3222 == true)
+                if (_local_3.isInUse == true)
                 {
-                    _local_3._Str_3222 = false;
+                    _local_3.isInUse = false;
                     if (_arg_2)
                     {
                         this._controller.communication.connection.send(new AvatarEffectSelectedComposer(-1));
@@ -208,7 +208,7 @@
             while (_local_4 < this._effects.length)
             {
                 _local_5 = this._effects[_local_4];
-                _local_5._Str_3222 = false;
+                _local_5.isInUse = false;
                 _local_4++;
             }
             if (k)

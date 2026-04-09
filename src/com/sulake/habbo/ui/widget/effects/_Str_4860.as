@@ -163,7 +163,7 @@
             this._hilite = null;
             this._timeLeftField = null;
             var _local_2:String = "";
-            if (this._effect._Str_3222)
+            if (this._effect.isInUse)
             {
                 _local_2 = "memenu_effect_selected";
             }
@@ -215,7 +215,7 @@
                     _local_3.addEventListener(WindowMouseEvent.OVER, this.onMouseEvent);
                     _local_3.addEventListener(WindowMouseEvent.OUT, this.onMouseEvent);
                 }
-                if (this._effect._Str_3222)
+                if (this._effect.isInUse)
                 {
                     this.setElementImage("effect_hilite", "memenu_fx_pause");
                 }
@@ -276,7 +276,7 @@
                     }
                     return;
                 case WindowMouseEvent.CLICK:
-                    this._widget._Str_25077(this._effect.type, this._effect._Str_3222);
+                    this._widget._Str_25077(this._effect.type, this._effect.isInUse);
                     return;
             }
         }

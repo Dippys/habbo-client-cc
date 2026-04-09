@@ -1351,7 +1351,7 @@
             var k:Array = this.handler.container.inventory.getActivatedAvatarEffects();
             for each (_local_2 in k)
             {
-                if (_local_2._Str_3222)
+                if (_local_2.isInUse)
                 {
                     return true;
                 }

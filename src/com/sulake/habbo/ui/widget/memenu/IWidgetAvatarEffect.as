@@ -9,7 +9,7 @@
         function get secondsRemaining():int;
         function get duration():int;
         function get isActive():Boolean;
-        function get _Str_3222():Boolean;
+        function get isInUse():Boolean;
         function get icon():BitmapData;
     }
 }

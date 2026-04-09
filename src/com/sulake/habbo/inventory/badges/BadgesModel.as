@@ -105,7 +105,7 @@
         private function _Str_17363(k:Badge):void
         {
             this._badgesInUse.push(k);
-            k._Str_3222 = true;
+            k.isInUse = true;
         }
 
         private function _Str_16521(k:Badge):void
@@ -116,7 +116,7 @@
                 if (this._badgesInUse[_local_2] == k)
                 {
                     this._badgesInUse.splice(_local_2, 1);
-                    k._Str_3222 = false;
+                    k.isInUse = false;
                     return;
                 }
                 _local_2++;
@@ -137,7 +137,7 @@
             var _local_4:Badge = this._Str_19103(k);
             if (_local_4 != null)
             {
-                if (_local_4._Str_3222 != _arg_2)
+                if (_local_4.isInUse != _arg_2)
                 {
                     if (_arg_2)
                     {
@@ -210,7 +210,7 @@
             var _local_2:Badge = this._Str_19103(k);
             if (_local_2 != null)
             {
-                if (_local_2._Str_3222)
+                if (_local_2.isInUse)
                 {
                     this._Str_16521(_local_2);
                 }
@@ -306,7 +306,7 @@
                     _local_2 = new Array();
                     for each (_local_3 in this._badges)
                     {
-                        if (!_local_3._Str_3222)
+                        if (!_local_3.isInUse)
                         {
                             _local_2.push(_local_3);
                         }
