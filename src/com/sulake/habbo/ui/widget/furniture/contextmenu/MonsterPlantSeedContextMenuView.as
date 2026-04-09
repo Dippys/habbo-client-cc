@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.furniture.contextmenu
+package com.sulake.habbo.ui.widget.furniture.contextmenu
 {
     import com.sulake.habbo.ui.widget.contextmenu.IContextMenuParentWidget;
     import com.sulake.core.window.IWindow;
@@ -38,8 +38,8 @@
                     {
                         return;
                     }
-                    _window.addEventListener(WindowMouseEvent.OVER, _Str_2743);
-                    _window.addEventListener(WindowMouseEvent.OUT, _Str_2743);
+                    _window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
+                    _window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                     _local_2 = _window.findChildByName("minimize");
                     if (_local_2 != null)
                     {

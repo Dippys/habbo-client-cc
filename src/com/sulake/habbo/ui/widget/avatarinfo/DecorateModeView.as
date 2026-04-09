@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.avatarinfo
+package com.sulake.habbo.ui.widget.avatarinfo
 {
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.core.assets.XmlAsset;
@@ -32,8 +32,8 @@
                 {
                     return;
                 }
-                _window.addEventListener(WindowMouseEvent.OVER, _Str_2743);
-                _window.addEventListener(WindowMouseEvent.OUT, _Str_2743);
+                _window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
+                _window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                 _buttons = (_window.findChildByName("buttons") as IItemListWindow);
                 _buttons.procedure = this._Str_5162;
                 this._Str_2771();

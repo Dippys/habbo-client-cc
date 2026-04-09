@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.contextmenu
+package com.sulake.habbo.ui.widget.contextmenu
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
@@ -264,7 +264,7 @@
             this.show();
         }
 
-        protected function _Str_2743(k:WindowMouseEvent):void
+        protected function onMouseOverOut(k:WindowMouseEvent):void
         {
             if (k.type == WindowMouseEvent.OVER)
             {
@@ -299,8 +299,8 @@
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, this._Str_23220);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, this._Str_3052);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, this._Str_3052);
-                this._Str_5032.addEventListener(WindowMouseEvent.OVER, this._Str_2743);
-                this._Str_5032.addEventListener(WindowMouseEvent.OUT, this._Str_2743);
+                this._Str_5032.addEventListener(WindowMouseEvent.OVER, this.onMouseOverOut);
+                this._Str_5032.addEventListener(WindowMouseEvent.OUT, this.onMouseOverOut);
             }
             return this._Str_5032;
         }

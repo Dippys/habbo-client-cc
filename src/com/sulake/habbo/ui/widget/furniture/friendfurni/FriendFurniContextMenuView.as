@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.furniture.friendfurni
+package com.sulake.habbo.ui.widget.furniture.friendfurni
 {
     import com.sulake.habbo.ui.widget.furniture.contextmenu.FurnitureContextInfoView;
     import com.sulake.habbo.ui.widget.contextmenu.IContextMenuParentWidget;
@@ -38,8 +38,8 @@
                     {
                         return;
                     }
-                    window.addEventListener(WindowMouseEvent.OVER, _Str_2743);
-                    window.addEventListener(WindowMouseEvent.OUT, _Str_2743);
+                    window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
+                    window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                     _local_2 = window.findChildByName("minimize");
                     if (_local_2 != null)
                     {

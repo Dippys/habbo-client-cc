@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.avatarinfo
+package com.sulake.habbo.ui.widget.avatarinfo
 {
     import com.sulake.habbo.ui.widget.events._Str_3858;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -54,8 +54,8 @@
         {
             if (window)
             {
-                window.removeEventListener(WindowMouseEvent.OVER, _Str_2743);
-                window.removeEventListener(WindowMouseEvent.OUT, _Str_2743);
+                window.removeEventListener(WindowMouseEvent.OVER, onMouseOverOut);
+                window.removeEventListener(WindowMouseEvent.OUT, onMouseOverOut);
             }
             if (this._useProductItem)
             {
@@ -133,8 +133,8 @@
                     {
                         return;
                     }
-                    _window.addEventListener(WindowMouseEvent.OVER, _Str_2743);
-                    _window.addEventListener(WindowMouseEvent.OUT, _Str_2743);
+                    _window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
+                    _window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, _Str_4457);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
