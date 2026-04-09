@@ -155,13 +155,13 @@
                     {
                         case "dance_icon":
                         case "wave_icon":
-                            if (this._widget._Str_4878)
+                            if (this._widget.hasEffectOn)
                             {
                                 _local_10 = 0.5;
                             }
                             break;
                         case "effects_icon":
-                            if (this._widget._Str_4107)
+                            if (this._widget.isDancing)
                             {
                                 _local_10 = 0.5;
                             }
@@ -297,7 +297,7 @@
             switch (_local_3)
             {
                 case "dance":
-                    if (this._widget._Str_4878)
+                    if (this._widget.hasEffectOn)
                     {
                         return;
                     }
@@ -305,14 +305,14 @@
                     break;
                 case "wave":
                 case "blow":
-                    if (this._widget._Str_4878)
+                    if (this._widget.hasEffectOn)
                     {
                         return;
                     }
-                    if (this._widget._Str_4107)
+                    if (this._widget.isDancing)
                     {
                         this._widget.messageListener.processWidgetMessage(new RoomWidgetDanceMessage(RoomWidgetDanceMessage._Str_13814));
-                        this._widget._Str_4107 = false;
+                        this._widget.isDancing = false;
                     }
                     _local_4 = AvatarExpressionEnum.WAVE;
                     if (_local_3 == "blow")
@@ -323,7 +323,7 @@
                     this._widget.hide();
                     break;
                 case "effects":
-                    if (this._widget._Str_4107)
+                    if (this._widget.isDancing)
                     {
                         return;
                     }
@@ -400,7 +400,7 @@
             switch (_local_3)
             {
                 case "dance":
-                    if (this._widget._Str_4878)
+                    if (this._widget.hasEffectOn)
                     {
                         return;
                     }
@@ -412,13 +412,13 @@
                     }
                     break;
                 case "wave":
-                    if (this._widget._Str_4878)
+                    if (this._widget.hasEffectOn)
                     {
                         return;
                     }
                     break;
                 case "effects":
-                    if (this._widget._Str_4107)
+                    if (this._widget.isDancing)
                     {
                         return;
                     }

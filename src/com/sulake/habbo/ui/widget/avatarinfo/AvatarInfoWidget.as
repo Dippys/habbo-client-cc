@@ -1345,7 +1345,7 @@
             return this.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum.VIP;
         }
 
-        public function get _Str_4878():Boolean
+        public function get hasEffectOn():Boolean
         {
             var _local_2:IWidgetAvatarEffect;
             var k:Array = this.handler.container.inventory.getActivatedAvatarEffects();
@@ -1359,14 +1359,14 @@
             return false;
         }
 
-        public function set _Str_4107(k:Boolean):void
-        {
-            this._isDancing = k;
-        }
-
-        public function get _Str_4107():Boolean
+        public function get isDancing():Boolean
         {
             return this._isDancing;
+        }
+
+        public function set isDancing(k:Boolean):void
+        {
+            this._isDancing = k;
         }
 
         public function get _Str_3859():Boolean

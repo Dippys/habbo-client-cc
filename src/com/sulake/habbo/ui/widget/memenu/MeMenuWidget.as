@@ -436,17 +436,17 @@
             return this._config;
         }
 
-        public function get _Str_4878():Boolean
+        public function get hasEffectOn():Boolean
         {
             return this._hasEffectOn;
         }
 
-        public function get _Str_4107():Boolean
+        public function get isDancing():Boolean
         {
             return this._isDancing;
         }
 
-        public function set _Str_4107(k:Boolean):void
+        public function set isDancing(k:Boolean):void
         {
             this._isDancing = k;
         }

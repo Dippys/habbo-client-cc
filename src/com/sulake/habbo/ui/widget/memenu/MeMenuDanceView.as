@@ -88,7 +88,7 @@
                         _local_9.caption = (("${widget.memenu.dance" + _local_7) + "}");
                         _local_9.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                         _local_4.addListItemAt(_local_9, (_local_4.numListItems - 1));
-                        if (this._widget._Str_4878)
+                        if (this._widget.hasEffectOn)
                         {
                             _local_9.disable();
                         }
@@ -123,13 +123,13 @@
                     _local_4 = _local_3.split("_");
                     _local_5 = parseInt(_local_4[1]);
                     this._widget.messageListener.processWidgetMessage(new RoomWidgetDanceMessage(_local_5));
-                    this._widget._Str_4107 = true;
+                    this._widget.isDancing = true;
                     this._widget.hide();
                     HabboTracking.getInstance().trackEventLog("MeMenu", "click", "dance_start");
                     return;
                 case "stop_dancing_button":
                     this._widget.messageListener.processWidgetMessage(new RoomWidgetDanceMessage(RoomWidgetDanceMessage._Str_13814));
-                    this._widget._Str_4107 = false;
+                    this._widget.isDancing = false;
                     this._widget.hide();
                     HabboTracking.getInstance().trackEventLog("MeMenu", "click", "dance_stop");
                     return;

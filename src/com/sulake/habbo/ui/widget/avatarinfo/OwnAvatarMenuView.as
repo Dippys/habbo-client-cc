@@ -52,7 +52,7 @@
             }
             else
             {
-                if ((((k.widget._Str_4107) && (k.widget._Str_6454)) && (!(k.widget._Str_4878))))
+                if ((((k.widget.isDancing) && (k.widget._Str_6454)) && (!(k.widget.hasEffectOn))))
                 {
                     k._mode = MODE_CLUB_DANCES;
                 }
@@ -162,9 +162,9 @@
                     showButton("change_name", this._data.allowNameChange);
                     showButton("decorate", ((this._Str_22241()) && ((this._data.myRoomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
                     showButton("change_looks");
-                    showButton("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
-                    showButton("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
-                    showButton("dance_stop", (((!(this.widget._Str_6454)) && (this.widget._Str_4107)) && (!(_local_3))));
+                    showButton("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget.hasEffectOn)));
+                    showButton("dance", (((!(this.widget._Str_6454)) && (!(this.widget.isDancing))) && (!(_local_3))), (!(this.widget.hasEffectOn)));
+                    showButton("dance_stop", (((!(this.widget._Str_6454)) && (this.widget.isDancing)) && (!(_local_3))));
                     if (!(_widget.windowManager as Component).getBoolean("memenu.effects.widget.disabled"))
                     {
                         showButton("effects", (!(_local_3)));
@@ -176,7 +176,7 @@
                     showButton("signs", _local_5);
                     break;
                 case MODE_CLUB_DANCES:
-                    showButton("dance_stop", true, this.widget._Str_4107);
+                    showButton("dance_stop", true, this.widget.isDancing);
                     showButton("dance_1");
                     showButton("dance_2");
                     showButton("dance_3");
@@ -193,8 +193,8 @@
                     break;
                 case MODE_EXPRESSIONS:
                     showButton("wave", true, (!(this.widget.isSwimming)));
-                    showButton("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
-                    showButton("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
+                    showButton("laugh", true, (((!(this.widget.hasEffectOn)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
+                    showButton("blow", true, (((!(this.widget.hasEffectOn)) && (!(this.widget.isSwimming))) && (this.widget.hasVip)), (!(this.widget.hasVip)));
                     showButton("idle", true);
                     if ((((this.widget.configuration.getBoolean("avatar.sitting.enabled")) && (!(this.widget.isSwimming))) && (!(_local_3))))
                     {

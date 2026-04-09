@@ -353,7 +353,7 @@
                         _local_4 = this.container.roomSession.userDataManager.getUserData(this.container.sessionDataManager.userId);
                         if (((_local_4) && (_local_2.userId == _local_4.roomObjectId)))
                         {
-                            this._widget._Str_4107 = (!(_local_2._Str_8263 == 0));
+                            this._widget.isDancing = (!(_local_2._Str_8263 == 0));
                         }
                     }
                     return;
