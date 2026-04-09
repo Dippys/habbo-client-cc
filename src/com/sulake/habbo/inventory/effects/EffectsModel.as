@@ -93,7 +93,7 @@
                 _local_4 = BitmapDataAsset(this._assets.getAssetByName((("fx_icon_" + k.type) + "_png")));
                 if (_local_4 != null)
                 {
-                    k._Str_3093 = BitmapData(_local_4.content);
+                    k.icon = BitmapData(_local_4.content);
                 }
                 this._effects.push(k);
             }

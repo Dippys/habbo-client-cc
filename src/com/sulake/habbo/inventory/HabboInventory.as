@@ -611,7 +611,7 @@
             this._view._Str_23647();
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
             var k:int;
             var _local_2:IInventoryModel;
@@ -621,7 +621,7 @@
                 while (k < this._inventories.length)
                 {
                     _local_2 = (this._inventories.getWithIndex(k) as IInventoryModel);
-                    _local_2._Str_5100();
+                    _local_2.onInventoryClose();
                     k++;
                 }
             }
@@ -745,7 +745,7 @@
             var _local_2:IInventoryModel = (this._inventories.getValue(k) as IInventoryModel);
             if (_local_2 != null)
             {
-                _local_2._Str_4889();
+                _local_2.onInventoryOpen();
             }
         }
 
@@ -964,7 +964,7 @@
             var _local_3:Array = [];
             if (((_local_2._Str_5453().length == 0) && (!(this._externalBadgesInitializationRequested))))
             {
-                this._Str_7962._Str_4889();
+                this._Str_7962.onInventoryOpen();
                 this._externalBadgesInitializationRequested = true;
             }
             for each (_local_4 in _local_2._Str_5453())

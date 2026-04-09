@@ -494,7 +494,7 @@
             return this._tradingView.getWindowContainer();
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
         }
 
@@ -509,7 +509,7 @@
             }
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
             if (this._running)
             {

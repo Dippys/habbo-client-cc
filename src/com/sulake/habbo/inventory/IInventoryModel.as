@@ -6,10 +6,10 @@
     public interface IInventoryModel extends IDisposable 
     {
         function getWindowContainer():IWindowContainer;
-        function _Str_4889():void;
+        function onInventoryOpen():void;
         function _Str_5913(_arg_1:String):void;
         function _Str_5813(_arg_1:String):void;
-        function _Str_5100():void;
+        function onInventoryClose():void;
         function updateView():void;
         function _Str_5725(_arg_1:String):void;
     }

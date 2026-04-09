@@ -958,7 +958,7 @@
                 {
                     return;
                 }
-                _local_2._Str_4889();
+                _local_2.onInventoryOpen();
             }
         }
 

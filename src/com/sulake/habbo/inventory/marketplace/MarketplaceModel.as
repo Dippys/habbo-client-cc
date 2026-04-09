@@ -264,7 +264,7 @@
             }
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
             this.send(new GetMarketplaceConfigurationMessageComposer());
         }
@@ -287,7 +287,7 @@
         {
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
         }
 

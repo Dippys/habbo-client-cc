@@ -350,7 +350,7 @@
             return new CreditTradingItem(this, this._windowManager.assets, this._roomEngine, k);
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
             var k:IConnection = this._communication.connection;
             if (k != null)
@@ -391,7 +391,7 @@
             return this._view.getWindowContainer();
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
             if (this._view.isVisible)
             {

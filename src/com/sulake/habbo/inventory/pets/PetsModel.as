@@ -160,7 +160,7 @@
             this._view._Str_3820();
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
             this._Str_22384();
         }
@@ -178,7 +178,7 @@
             return this._view.getWindowContainer();
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
             if (this._view.isVisible)
             {

@@ -155,11 +155,11 @@
             return k;
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
         }
 

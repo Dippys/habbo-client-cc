@@ -195,7 +195,7 @@
 
         public function _Str_15430():void
         {
-            this._controller._Str_5100();
+            this._controller.onInventoryClose();
             var k:IWindow = this._Str_5493();
             if (k == null)
             {
