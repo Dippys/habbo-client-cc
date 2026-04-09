@@ -662,7 +662,7 @@
         {
             var _local_2:CallForHelpResultMessageParser = CallForHelpResultMessageEvent(k).getParser();
             var _local_3:int = _local_2.resultType;
-            var _local_4:String = _local_2._Str_3460;
+            var _local_4:String = _local_2.messageText;
             switch (_local_3)
             {
                 case CallForHelpResultEnum.TOO_MANY_PENDING_CALLS_CODE:
@@ -683,7 +683,7 @@
         private function onIssueClose(k:IssueCloseNotificationMessageEvent):void
         {
             var _local_2:IssueCloseNotificationMessageParser = k.getParser();
-            var _local_3:String = _local_2._Str_3460;
+            var _local_3:String = _local_2.messageText;
             if (_local_3 == "")
             {
                 _local_3 = (("${help.cfh.closed." + getCloseReasonKey(_local_2._Str_25784)) + "}");

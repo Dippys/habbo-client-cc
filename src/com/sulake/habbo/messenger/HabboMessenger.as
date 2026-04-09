@@ -226,10 +226,10 @@
         private function onNewConsoleMessage(k:NewConsoleMessageEvent):void
         {
             var _local_2:NewConsoleMessageMessageParser = k.getParser();
-            Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));
+            Logger.log(((("Received console msg: " + _local_2.messageText) + ", ") + _local_2.senderId));
             if (this._mainView != null)
             {
-                this._mainView.addConsoleMessage(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
+                this._mainView.addConsoleMessage(_local_2.senderId, _local_2.messageText, _local_2._Str_17201, _local_2.extraData);
                 if (!this._mainView.isOpen)
                 {
                     this.playMessageReceivedSound();
@@ -242,7 +242,7 @@
             var _local_2:RoomInviteMessageParser = k.getParser();
             if (this._mainView != null)
             {
-                this._mainView.addRoomInvite(_local_2.senderId, _local_2._Str_3460);
+                this._mainView.addRoomInvite(_local_2.senderId, _local_2.messageText);
                 if (!this._mainView.isOpen)
                 {
                     this.playMessageReceivedSound();

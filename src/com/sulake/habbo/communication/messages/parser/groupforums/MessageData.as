@@ -29,7 +29,7 @@
             _local_2._Str_6415 = k.readString();
             _local_2._Str_18957 = k.readString();
             _local_2._Str_6238 = k.readInteger();
-            _local_2._Str_3460 = k.readString();
+            _local_2.messageText = k.readString();
             _local_2.state = k.readByte();
             _local_2._Str_9776 = k.readInteger();
             _local_2._Str_6110 = k.readString();
@@ -179,12 +179,12 @@
             this._creationTime = k;
         }
 
-        public function get _Str_3460():String
+        public function get messageText():String
         {
             return this._messageText;
         }
 
-        public function set _Str_3460(k:String):void
+        public function set messageText(k:String):void
         {
             this._messageText = k;
         }

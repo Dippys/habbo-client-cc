@@ -11,9 +11,9 @@
             super(k, HabboBroadcastMessageParser);
         }
 
-        public function get _Str_3460():String
+        public function get messageText():String
         {
-            return (_parser as HabboBroadcastMessageParser)._Str_3460;
+            return (_parser as HabboBroadcastMessageParser).messageText;
         }
 
         public function getParser():HabboBroadcastMessageParser

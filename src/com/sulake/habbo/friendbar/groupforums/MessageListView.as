@@ -253,7 +253,7 @@
                 }
                 else
                 {
-                    _Str_19323(_local_8, k._Str_3460);
+                    _Str_19323(_local_8, k.messageText);
                 }
             }
             var _local_9:IWindowContainer = (_local_3.findChildByName("msg_container") as IWindowContainer);

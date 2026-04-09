@@ -127,7 +127,7 @@
             }
             _local_2.add(this._controller.localizationManager.getLocalizationWithParams("groupforum.compose.reply_template", "", "author_name", k._Str_6415, "creation_time", this._mainView._Str_11823(k._Str_6238)));
             _local_2.add("\r");
-            var _local_3:Array = k._Str_3460.split("\r");
+            var _local_3:Array = k.messageText.split("\r");
             var _local_4:Boolean;
             for each (_local_5 in _local_3)
             {

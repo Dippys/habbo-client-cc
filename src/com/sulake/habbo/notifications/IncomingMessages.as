@@ -390,7 +390,7 @@
         private function onBroadcastMessageEvent(k:IMessageEvent):void
         {
             var _local_2:HabboBroadcastMessageParser = (k as HabboBroadcastMessageEvent).getParser();
-            var _local_3:String = _local_2._Str_3460;
+            var _local_3:String = _local_2.messageText;
             var _local_4:RegExp = /\\r/g;
             _local_3 = _local_3.replace(_local_4, "\r");
             this._notifications.windowManager.simpleAlert("${notifications.broadcast.title}", "", _local_3, "", "", null, FrankIllustration.NEUTRAL);

@@ -26,7 +26,7 @@
             return this._senderId;
         }
 
-        public function get _Str_3460():String
+        public function get messageText():String
         {
             return this._messageText;
         }
