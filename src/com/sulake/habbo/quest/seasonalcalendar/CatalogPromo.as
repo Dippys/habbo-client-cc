@@ -110,7 +110,7 @@
             var k:ITextWindow = ITextWindow(this._window.findChildByName("your_balance_txt"));
             var _local_2:IWindowContainer = IWindowContainer(this._window.findChildByName("currency_icon_cont"));
             _local_2.x = (k.x + k.width);
-            Util._Str_2930(_local_2);
+            Util.hideChildren(_local_2);
             var _local_3:IWindow = _local_2.findChildByName(("currency_icon_" + this._Str_13323()));
             if (_local_3 != null)
             {

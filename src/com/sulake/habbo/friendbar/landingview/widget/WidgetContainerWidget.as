@@ -31,7 +31,7 @@
             this._landingView = k;
         }
 
-        public static function _Str_2930(k:IWindowContainer):void
+        public static function hideChildren(k:IWindowContainer):void
         {
             var _local_2:int;
             while (_local_2 < k.numChildren)
@@ -78,7 +78,7 @@
 
         private function refreshContent():void
         {
-            _Str_2930(this._container);
+            hideChildren(this._container);
             if (this._currentWidget != null)
             {
                 this._currentWidget.refresh(this._container);

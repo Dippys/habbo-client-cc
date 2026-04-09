@@ -599,7 +599,7 @@
             this.prepareWindow();
             if (!this._Str_16440)
             {
-                Util._Str_2930(IWindowContainer(this._window.findChildByName("content_container")));
+                Util.hideChildren(IWindowContainer(this._window.findChildByName("content_container")));
                 this._Str_23097(this._Str_5809).visible = true;
             }
             this._Str_22806();

@@ -82,7 +82,7 @@
                 return;
             }
             var _local_2:IWindowContainer = k.view;
-            Util._Str_2930(_local_2);
+            Util.hideChildren(_local_2);
             var _local_3:IWindow = _local_2.findChildByName("bg_region");
             _local_3.visible = true;
             _local_3.procedure = this._Str_6514;

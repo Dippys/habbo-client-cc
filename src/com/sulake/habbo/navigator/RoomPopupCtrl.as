@@ -42,7 +42,7 @@
             }
             this._details.visible = true;
             this._tagRenderer._Str_8651 = true;
-            Util._Str_2930(this._details);
+            Util.hideChildren(this._details);
             this._guildInfoCtrl.refresh(this._details, this._room);
             this.refreshRoomName(this._details, this._room);
             this.refreshOwnerName();
@@ -89,7 +89,7 @@
         private function refreshExtraCont():void
         {
             var k:IWindowContainer = IWindowContainer(this._details.findChildByName("extra_cont"));
-            Util._Str_2930(k);
+            Util.hideChildren(k);
             this._tagRenderer._Str_19120(k, this._room.tags);
             if (this._room.score > 0)
             {
@@ -111,7 +111,7 @@
                 return;
             }
             var _local_2:IWindowContainer = IWindowContainer(this._details.findChildByName("eventinfo_cont"));
-            Util._Str_2930(_local_2);
+            Util.hideChildren(_local_2);
             var _local_3:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_name"));
             var _local_4:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_desc"));
             var _local_5:ITextWindow = ITextWindow(_local_2.findChildByName("eventinfo_expirationtime"));

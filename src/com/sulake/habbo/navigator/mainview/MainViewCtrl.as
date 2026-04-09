@@ -372,7 +372,7 @@
 
         private function refreshCustomContent():void
         {
-            Util._Str_2930(this._customContent);
+            Util.hideChildren(this._customContent);
             var k:Tab = this._navigator.tabs.getSelected();
             k._Str_5252.refreshCustomContent(this._customContent);
             if (Util._Str_13639(this._customContent))
@@ -388,7 +388,7 @@
 
         private function refreshFooter():void
         {
-            Util._Str_2930(this._footer);
+            Util.hideChildren(this._footer);
             var k:Tab = this._navigator.tabs.getSelected();
             k._Str_5252.refreshFooter(this._footer);
             this._footer.visible = Util._Str_13639(this._footer);
@@ -396,7 +396,7 @@
 
         private function _Str_24816(k:Boolean):void
         {
-            Util._Str_2930(this._listContent);
+            Util.hideChildren(this._listContent);
             var _local_2:Tab = this._navigator.tabs.getSelected();
             var _local_3:Boolean = ((this._navigator.data.guestRoomSearchArrived) && (_local_2.defaultSearchType == Tabs.SEARCHTYPE_ROOM_ADS));
             this._Str_25672(k, _local_3);

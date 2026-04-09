@@ -59,7 +59,7 @@
                 _local_2 = IWindowContainer(this._navigator.getXmlWindow("grs_popular_tag_row"));
                 this._list.addListItem(_local_2);
             }
-            Util._Str_2930(_local_2);
+            Util.hideChildren(_local_2);
             var _local_3:int;
             while (_local_3 < this._navigator.data._Str_6697.tags.length)
             {

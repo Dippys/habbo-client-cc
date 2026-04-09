@@ -156,7 +156,7 @@
                 _local_6.findChildByName("user_info_region").procedure = this.onUserInfo;
                 this._list.addListItem(_local_6);
             }
-            Util._Str_2930(_local_6);
+            Util.hideChildren(_local_6);
             if (!k)
             {
                 _local_6.height = 0;
@@ -580,7 +580,7 @@
                 return;
             }
             _local_3.visible = true;
-            Util._Str_2930(_local_3);
+            Util.hideChildren(_local_3);
             var _local_4:int;
             while (_local_4 < k._Str_11426())
             {

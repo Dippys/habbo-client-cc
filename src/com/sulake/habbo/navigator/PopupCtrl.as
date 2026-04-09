@@ -64,7 +64,7 @@
                 this._popup.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);
                 this._popup.procedure = this._Str_22278;
             }
-            Util._Str_2930(this._popup);
+            Util.hideChildren(this._popup);
             this.refreshContent(this._popup);
             this._popup.height = (Util.getLowestPoint(this._popup) + 5);
             var _local_2:Point = new Point();

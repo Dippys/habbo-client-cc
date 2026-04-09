@@ -58,7 +58,7 @@
         public function refresh(k:IWindowContainer, _arg_2:Array):void
         {
             var _local_5:IWindowContainer;
-            Util._Str_2930(k);
+            Util.hideChildren(k);
             var _local_3:int;
             var _local_4:int;
             while (_local_4 < _arg_2.length)

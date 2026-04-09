@@ -83,7 +83,7 @@
             }
         }
 
-        public static function _Str_2930(k:IWindowContainer):void
+        public static function hideChildren(k:IWindowContainer):void
         {
             var _local_2:int;
             while (_local_2 < k.numChildren)

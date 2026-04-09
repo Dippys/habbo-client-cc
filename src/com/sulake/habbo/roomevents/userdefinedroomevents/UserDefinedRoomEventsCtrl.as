@@ -587,7 +587,7 @@
         {
             var _local_2:IWindowContainer;
             var k:IWindowContainer = IWindowContainer(this._configureContainer.findChildByName("custom_inputs_container"));
-            Util._Str_2930(k);
+            Util.hideChildren(k);
             if (this._Str_3959().hasSpecialInputs)
             {
                 _local_2 = this._Str_10876();

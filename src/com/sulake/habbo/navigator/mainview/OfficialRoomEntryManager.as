@@ -92,7 +92,7 @@
 
         public function refreshEntry(k:IWindowContainer, _arg_2:Boolean, _arg_3:OfficialRoomEntryData):void
         {
-            Util._Str_2930(k);
+            Util.hideChildren(k);
             if (_arg_2)
             {
                 k.id = _arg_3.index;
@@ -404,7 +404,7 @@
             {
                 return;
             }
-            Util._Str_2930(_local_3);
+            Util.hideChildren(_local_3);
             this._Str_22428(_local_3, _arg_2);
             this._Str_25192(_local_3, _arg_2);
         }

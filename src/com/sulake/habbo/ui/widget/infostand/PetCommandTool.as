@@ -50,7 +50,7 @@
             this._disableTimer.addEventListener(TimerEvent.TIMER, this._Str_24724);
         }
 
-        public static function _Str_2930(k:IWindowContainer):void
+        public static function hideChildren(k:IWindowContainer):void
         {
             var _local_2:int;
             while (_local_2 < k.numChildren)
@@ -279,7 +279,7 @@
                 return;
             }
             var _local_2:IWindowContainer = IWindowContainer(this._commandWindow.findChildByName("commands_container"));
-            _Str_2930(_local_2);
+            hideChildren(_local_2);
             var _local_3:Array = k.allCommandIds;
             var _local_4:int = 25;
             var _local_5:int;

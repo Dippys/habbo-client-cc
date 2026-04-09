@@ -548,7 +548,7 @@
 
         public function close():void
         {
-            this._Str_2930();
+            this.hideChildren();
             if (this._updateTimer)
             {
                 this._updateTimer.stop();
@@ -564,7 +564,7 @@
             }
         }
 
-        private function _Str_2930():void
+        private function hideChildren():void
         {
             var k:int;
             if (this._mainContainer != null)
@@ -594,7 +594,7 @@
 
         private function _Str_3734(view:String):void
         {
-            this._Str_2930();
+            this.hideChildren();
             var _local_2:IWindow = (this.mainContainer.getChildByName(view) as IWindow);
             if (_local_2 == null)
             {

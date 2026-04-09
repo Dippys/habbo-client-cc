@@ -116,7 +116,7 @@
             }
             this._tagRenderer._Str_8651 = true;
             this.prepareWindow();
-            Util._Str_2930(this._window.content);
+            Util.hideChildren(this._window.content);
             this.refreshRoomDetails(this._navigator.data.enteredGuestRoom);
             this.refreshEmbed();
             this._guildInfoCtrl.refresh(this._window.content, this._navigator.data.enteredGuestRoom);

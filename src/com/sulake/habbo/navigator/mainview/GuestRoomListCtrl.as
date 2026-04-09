@@ -167,7 +167,7 @@
                 this._list.addListItem(_local_4);
                 _local_5 = true;
             }
-            Util._Str_2930(_local_4);
+            Util.hideChildren(_local_4);
             if (k)
             {
                 this.refreshEntryDetails(_local_4, _arg_3);
@@ -190,7 +190,7 @@
         protected function refreshEntryDetails(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             k.visible = true;
-            Util._Str_2930(k);
+            Util.hideChildren(k);
             this.refreshFavouriteIcon(k, _arg_2);
             var _local_3:String = ((((_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_CLOSED) || (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_PASSWORD)) || (_arg_2.doorMode == RoomSettingsFlatInfo.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
             this._navigator.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
