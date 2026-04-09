@@ -491,7 +491,7 @@
             {
                 _local_3 = UnseenItemCategoryEnum.FURNI;
             }
-            var _local_6:Boolean = this._controller._Str_3455._Str_3613(_local_3, k);
+            var _local_6:Boolean = this._controller._Str_3455.isUnseen(_local_3, k);
             if (_local_6)
             {
                 _local_2 = _local_4._Str_16745(_local_3, k);
@@ -1109,7 +1109,7 @@
             return null;
         }
 
-        private function _Str_3613(k:FurnitureItem):Boolean
+        private function isUnseen(k:FurnitureItem):Boolean
         {
             var _local_2:int;
             if (k.rentable)
@@ -1120,7 +1120,7 @@
             {
                 _local_2 = UnseenItemCategoryEnum.FURNI;
             }
-            return this._controller._Str_3455._Str_3613(_local_2, k.id);
+            return this._controller._Str_3455.isUnseen(_local_2, k.id);
         }
 
         private function _Str_22387(k:FurnitureItem, _arg_2:Boolean):GroupItem
@@ -1142,7 +1142,7 @@
                     return _local_3;
                 }
             }
-            _local_5 = this._Str_3613(k);
+            _local_5 = this.isUnseen(k);
             _local_3 = this.createGroupItem(k.type, k.category, k.stuffData, k.extra, _arg_2);
             _local_3.push(k, _local_5);
             if (_local_5)
@@ -1165,7 +1165,7 @@
         {
             var _local_4:GroupItem;
             var _local_5:GroupItem;
-            var _local_3:Boolean = this._Str_3613(k);
+            var _local_3:Boolean = this.isUnseen(k);
             for each (_local_5 in this._furniData)
             {
                 if ((((_local_5.type == k.type) && (_local_5.isWallItem == k.isWallItem)) && (_local_5.isGroupable)))

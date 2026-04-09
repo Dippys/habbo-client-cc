@@ -119,7 +119,7 @@
             {
                 return;
             }
-            var _local_2:PetsGridItem = new PetsGridItem(this, k, this._windowManager, this._assetLibrary, this._model._Str_3613(k.id));
+            var _local_2:PetsGridItem = new PetsGridItem(this, k, this._windowManager, this._assetLibrary, this._model.isUnseen(k.id));
             if (_local_2 != null)
             {
                 this._grid.addGridItem(_local_2.window);
@@ -305,7 +305,7 @@
                     this._Str_9947(this._model.pets.getValue(_local_3));
                 }
                 _local_4 = this._gridItems.getValue(_local_3);
-                _local_4.setUnseen(this._model._Str_3613(_local_3));
+                _local_4.setUnseen(this._model.isUnseen(_local_3));
             }
             this._grid.unlock();
         }

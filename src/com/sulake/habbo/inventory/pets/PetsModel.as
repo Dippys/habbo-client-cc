@@ -280,15 +280,15 @@
             this._view.update();
         }
 
-        public function _Str_3613(k:int):Boolean
+        public function isUnseen(k:int):Boolean
         {
-            return this._controller._Str_3455._Str_3613(UnseenItemCategoryEnum.PET, k);
+            return this._controller._Str_3455.isUnseen(UnseenItemCategoryEnum.PET, k);
         }
 
         public function _Str_7938(k:int):Boolean
         {
             var _local_2:Boolean;
-            if (this._Str_3613(k))
+            if (this.isUnseen(k))
             {
                 _local_2 = this._controller._Str_3455._Str_16745(UnseenItemCategoryEnum.PET, k);
                 if (_local_2)

@@ -64,7 +64,7 @@
             this._window.findChildByName("outline").visible = k;
         }
 
-        public function set _Str_3613(k:Boolean):void
+        public function set isUnseen(k:Boolean):void
         {
             if (this._isUnseen != k)
             {

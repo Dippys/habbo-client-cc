@@ -73,7 +73,7 @@
             return false;
         }
 
-        public function _Str_3613(k:int, _arg_2:int):Boolean
+        public function isUnseen(k:int, _arg_2:int):Boolean
         {
             var _local_3:Array;
             if (this._unseenItems[k] != null)

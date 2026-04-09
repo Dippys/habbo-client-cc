@@ -261,9 +261,9 @@
             this._view.update();
         }
 
-        public function _Str_3613(k:int):Boolean
+        public function isUnseen(k:int):Boolean
         {
-            return this._controller._Str_3455._Str_3613(UnseenItemCategoryEnum.BOT, k);
+            return this._controller._Str_3455.isUnseen(UnseenItemCategoryEnum.BOT, k);
         }
 
         public function _Str_5725(k:String):void
