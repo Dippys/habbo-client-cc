@@ -1292,7 +1292,7 @@
             if (((this._isObjectMoverRequested) && (k.type == RoomEngineObjectEvent.PLACED)))
             {
                 this._isObjectMoverRequested = false;
-                if (!(k as RoomEngineObjectPlacedEvent)._Str_4057)
+                if (!(k as RoomEngineObjectPlacedEvent).isPlacedInRoom)
                 {
                     this._controller.showView();
                 }

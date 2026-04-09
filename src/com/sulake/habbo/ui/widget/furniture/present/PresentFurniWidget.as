@@ -152,7 +152,7 @@
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
                     this._placedItemType = k.placedItemType;
-                    this._placedInRoom = k._Str_4057;
+                     this._placedInRoom = k.isPlacedInRoom;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_floor");
                     return;
@@ -168,7 +168,7 @@
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
                     this._placedItemType = k.placedItemType;
-                    this._placedInRoom = k._Str_4057;
+                     this._placedInRoom = k.isPlacedInRoom;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_landscape");
                     return;
@@ -184,7 +184,7 @@
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
                     this._placedItemType = k.placedItemType;
-                    this._placedInRoom = k._Str_4057;
+                     this._placedInRoom = k.isPlacedInRoom;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_wallpaper");
                     return;
@@ -213,7 +213,7 @@
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
                     this._placedItemType = k.placedItemType;
-                    this._placedInRoom = k._Str_4057;
+                     this._placedInRoom = k.isPlacedInRoom;
                     this._Str_10146();
                     this._Str_9278(k._Str_11625);
                     return;

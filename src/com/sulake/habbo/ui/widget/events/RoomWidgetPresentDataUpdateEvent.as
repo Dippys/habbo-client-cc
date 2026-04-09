@@ -95,12 +95,12 @@
             this._placedItemId = k;
         }
 
-        public function get _Str_4057():Boolean
+        public function get isPlacedInRoom():Boolean
         {
             return this._placedInRoom;
         }
 
-        public function set _Str_4057(k:Boolean):void
+        public function set isPlacedInRoom(k:Boolean):void
         {
             this._placedInRoom = k;
         }

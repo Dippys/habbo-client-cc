@@ -51,7 +51,7 @@
             return this._direction;
         }
 
-        public function get _Str_4057():Boolean
+        public function get isPlacedInRoom():Boolean
         {
             return this._placedInRoom;
         }

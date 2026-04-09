@@ -193,7 +193,7 @@
                                 }
                             }
                             _local_6 = false;
-                            if (_local_2._Str_4057)
+                            if (_local_2.isPlacedInRoom)
                             {
                                 _local_8 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, _local_2.placedItemId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                                 if (_local_8 != null)
@@ -305,7 +305,7 @@
                                 _local_5.classId = _local_2.classId;
                                 _local_5.itemType = _local_2.itemType;
                                 _local_5.placedItemId = _local_2.placedItemId;
-                                _local_5._Str_4057 = _local_2._Str_4057;
+                                 _local_5.isPlacedInRoom = _local_2.isPlacedInRoom;
                                 _local_5.placedItemType = _local_2.placedItemType;
                                 this._container.events.dispatchEvent(_local_5);
                             }

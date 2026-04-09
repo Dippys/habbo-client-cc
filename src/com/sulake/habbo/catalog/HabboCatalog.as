@@ -2562,12 +2562,12 @@
                             _local_4 = ((k.placedOnFloor) || (k.placedOnWall));
                             break;
                         default:
-                            _local_4 = k._Str_4057;
+                             _local_4 = k.isPlacedInRoom;
                     }
                 }
                 else
                 {
-                    _local_4 = k._Str_4057;
+                     _local_4 = k.isPlacedInRoom;
                 }
                 if (!_local_4)
                 {
