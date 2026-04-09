@@ -4,7 +4,7 @@
 
     public interface IHabboAvatarEditorAvatarEffect 
     {
-        function get _Str_4225():int;
+        function get amount():int;
         function get type():int;
         function get subType():int;
         function get secondsRemaining():int;

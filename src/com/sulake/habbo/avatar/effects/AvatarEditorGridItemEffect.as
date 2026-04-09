@@ -26,7 +26,7 @@
             if (k != null)
             {
                 this.bitmap = k.icon;
-                this.amount = k._Str_4225;
+                this.amount = k.amount;
                 if (k._Str_4010)
                 {
                     this._Str_10660(k.duration, k.duration);

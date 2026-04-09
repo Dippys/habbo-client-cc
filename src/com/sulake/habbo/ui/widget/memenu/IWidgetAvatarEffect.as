@@ -4,7 +4,7 @@
 
     public interface IWidgetAvatarEffect 
     {
-        function get _Str_4225():int;
+        function get amount():int;
         function get type():int;
         function get secondsRemaining():int;
         function get duration():int;

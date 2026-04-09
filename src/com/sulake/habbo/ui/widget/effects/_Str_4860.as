@@ -189,10 +189,10 @@
             var _local_5:ITextWindow = (this._window.findChildByName("effect_amount") as ITextWindow);
             if (_local_5 != null)
             {
-                _local_5.caption = (this._effect._Str_4225 + "");
+                _local_5.caption = (this._effect.amount + "");
             }
             var _local_6:IWindowContainer = (this._window.findChildByName("effect_amount_bg1") as IWindowContainer);
-            if (this._effect._Str_4225 < 2)
+            if (this._effect.amount < 2)
             {
                 if (_local_6 != null)
                 {

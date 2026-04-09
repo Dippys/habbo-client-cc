@@ -188,7 +188,7 @@
                     _local_2.text = "${inventory.effects.active}";
                     this._windowManager.registerLocalizationParameter("inventory.effects.active", "timeleft", this._Str_9437(_local_3.secondsRemaining));
                     this._windowManager.registerLocalizationParameter("inventory.effects.active", "duration", this._Str_9437(_local_3.duration));
-                    this._windowManager.registerLocalizationParameter("inventory.effects.active", "itemcount", String(_local_3._Str_4225));
+                    this._windowManager.registerLocalizationParameter("inventory.effects.active", "itemcount", String(_local_3.amount));
                 }
                 else
                 {
@@ -196,7 +196,7 @@
                     this._Str_15925(_local_3._Str_3093);
                     _local_2.text = "${inventory.effects.inactive}";
                     this._windowManager.registerLocalizationParameter("inventory.effects.inactive", "duration", this._Str_9437(_local_3.duration));
-                    this._windowManager.registerLocalizationParameter("inventory.effects.inactive", "itemcount", String(_local_3._Str_4225));
+                    this._windowManager.registerLocalizationParameter("inventory.effects.inactive", "itemcount", String(_local_3.amount));
                 }
             }
         }

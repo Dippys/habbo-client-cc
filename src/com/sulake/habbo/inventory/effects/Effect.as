@@ -36,7 +36,7 @@
             return this._duration;
         }
 
-        public function get _Str_4225():int
+        public function get amount():int
         {
             return this._effectsInInventory;
         }
@@ -127,7 +127,7 @@
             this._iconImage = k;
         }
 
-        public function set _Str_4225(k:int):void
+        public function set amount(k:int):void
         {
             this._effectsInInventory = k;
         }

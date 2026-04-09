@@ -317,12 +317,12 @@
                 _local_7.subType = _local_6.subType;
                 _local_7.duration = _local_6.duration;
                 _local_7._Str_4010 = _local_6._Str_4010;
-                _local_7._Str_4225 = _local_6._Str_18572;
+                _local_7.amount = _local_6._Str_18572;
                 if (_local_6._Str_12185 >= 0)
                 {
                     _local_7.isActive = true;
                     _local_7.secondsRemaining = _local_6._Str_12185;
-                    _local_7._Str_4225++;
+                    _local_7.amount++;
                 }
                 else
                 {

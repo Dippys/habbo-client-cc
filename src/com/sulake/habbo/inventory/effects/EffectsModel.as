@@ -86,7 +86,7 @@
             var _local_3:Effect = this._Str_5810(k.type);
             if (_local_3 != null)
             {
-                _local_3._Str_4225++;
+                _local_3.amount++;
             }
             else
             {
@@ -324,7 +324,7 @@
             var _local_2:Effect = this._Str_5810(k);
             if (_local_2 != null)
             {
-                if (_local_2._Str_4225 > 1)
+                if (_local_2.amount > 1)
                 {
                     _local_2._Str_24370();
                     this._Str_4879();
