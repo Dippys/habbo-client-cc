@@ -136,8 +136,8 @@ package com.sulake.habbo.ui.widget.avatarinfo
                     _window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
                     _window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, _Str_4457);
-                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
-                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
+                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, onMinimizeButtonEvent);
+                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, onMinimizeButtonEvent);
                 }
                 _buttons = (_window.findChildByName("buttons") as IItemListWindow);
                 _buttons.procedure = this.buttonEventProc;

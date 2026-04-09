@@ -44,8 +44,8 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
                     if (_local_2 != null)
                     {
                         _local_2.addEventListener(WindowMouseEvent.CLICK, _Str_4457);
-                        _local_2.addEventListener(WindowMouseEvent.OVER, _Str_3052);
-                        _local_2.addEventListener(WindowMouseEvent.OUT, _Str_3052);
+                        _local_2.addEventListener(WindowMouseEvent.OVER, onMinimizeButtonEvent);
+                        _local_2.addEventListener(WindowMouseEvent.OUT, onMinimizeButtonEvent);
                     }
                 }
                 _window.findChildByName("furni_name").caption = "${furni.mnstr_seed.name}";

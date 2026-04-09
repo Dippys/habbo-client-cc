@@ -41,8 +41,8 @@ package com.sulake.habbo.ui.widget.furniture.contextmenu
                     _window.addEventListener(WindowMouseEvent.OVER, onMouseOverOut);
                     _window.addEventListener(WindowMouseEvent.OUT, onMouseOverOut);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, _Str_4457);
-                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
-                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
+                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, onMinimizeButtonEvent);
+                    _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, onMinimizeButtonEvent);
                 }
                 _window.findChildByName("furni_name").caption = "${furni.generic_usable.name}";
                 _window.findChildByName("buttons").procedure = this.buttonEventProc;
