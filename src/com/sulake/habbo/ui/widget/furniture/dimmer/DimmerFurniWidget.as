@@ -102,7 +102,7 @@
             while (_local_2 < k._Str_8447.length)
             {
                 _local_3 = k._Str_8447[_local_2];
-                _local_4 = new DimmerFurniWidgetPresetItem(_local_3.id, _local_3.type, _local_3.color, _local_3._Str_4272);
+                _local_4 = new DimmerFurniWidgetPresetItem(_local_3.id, _local_3.type, _local_3.color, _local_3.brightness);
                 this._presets.push(_local_4);
                 _local_2++;
             }
@@ -133,7 +133,7 @@
             this._dimmerState = k.state;
             this._effectId = k.effectId;
             this._color = k.color;
-            this._brightness = k._Str_5123;
+            this._brightness = k.brightness;
             if (this._view != null)
             {
                 this._view.update();
@@ -178,13 +178,13 @@
             var _local_4:uint = this.colors[this._view._Str_4246];
             var _local_5:int = this._view._Str_7404;
             var _local_6:DimmerFurniWidgetPresetItem = (this._presets[this._selectedPresetIndex] as DimmerFurniWidgetPresetItem);
-            if ((((((!(_local_6 == null)) && (_local_6.type == _local_3)) && (_local_6.color == _local_4)) && (_local_6._Str_4272 == _local_5)) && (!(k))))
+            if ((((((!(_local_6 == null)) && (_local_6.type == _local_3)) && (_local_6.color == _local_4)) && (_local_6.brightness == _local_5)) && (!(k))))
             {
                 return;
             }
             _local_6.type = _local_3;
             _local_6.color = _local_4;
-            _local_6._Str_4272 = _local_5;
+            _local_6.brightness = _local_5;
             if (!this._Str_12911(_local_5, _local_3))
             {
                 return;

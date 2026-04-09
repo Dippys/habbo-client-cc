@@ -30,7 +30,7 @@
             return this._color;
         }
 
-        public function get _Str_4272():uint
+        public function get brightness():uint
         {
             return this._light;
         }

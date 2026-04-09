@@ -21,7 +21,7 @@
             return this._color;
         }
 
-        public function get _Str_5123():int
+        public function get brightness():int
         {
             return this._brightness;
         }

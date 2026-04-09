@@ -49,12 +49,12 @@
             }
         }
 
-        public function get _Str_4272():int
+        public function get brightness():int
         {
             return this._Str_3576;
         }
 
-        public function set _Str_4272(k:int):void
+        public function set brightness(k:int):void
         {
             if (!this._isReadOnly)
             {

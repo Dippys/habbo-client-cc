@@ -67,7 +67,7 @@
                     if (this._Str_6826())
                     {
                         _local_4 = (k as RoomWidgetDimmerSavePresetMessage);
-                        this._container.roomSession.sendRoomDimmerSavePresetMessage(_local_4._Str_25037, _local_4._Str_24446, _local_4.color, _local_4._Str_5123, _local_4.apply);
+                        this._container.roomSession.sendRoomDimmerSavePresetMessage(_local_4._Str_25037, _local_4._Str_24446, _local_4.color, _local_4.brightness, _local_4.apply);
                     }
                     break;
                 case RoomWidgetDimmerChangeStateMessage.RWCDSM_CHANGE_STATE:
@@ -83,7 +83,7 @@
                     {
                         return null;
                     }
-                    this._container.roomEngine.updateObjectRoomColor(_local_2, _local_3.color, _local_3._Str_5123, _local_3.bgOnly);
+                    this._container.roomEngine.updateObjectRoomColor(_local_2, _local_3.color, _local_3.brightness, _local_3.bgOnly);
                     break;
             }
             return null;
@@ -130,7 +130,7 @@
                         _local_7 = _local_2.getPreset(_local_6);
                         if (_local_7 != null)
                         {
-                            _local_3.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
+                            _local_3.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7.brightness);
                         }
                         _local_6++;
                     }
@@ -138,7 +138,7 @@
                     return;
                 case RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR:
                     _local_4 = (k as RoomEngineDimmerStateEvent);
-                    _local_5 = new _Str_5572(_local_4.state, _local_4._Str_14686, _local_4.effectId, _local_4.color, _local_4._Str_5123);
+                    _local_5 = new _Str_5572(_local_4.state, _local_4._Str_14686, _local_4.effectId, _local_4.color, _local_4.brightness);
                     this._container.events.dispatchEvent(_local_5);
                     return;
                 case RoomEngineTriggerWidgetEvent.RETWE_REMOVE_DIMMER:

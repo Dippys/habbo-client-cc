@@ -270,7 +270,7 @@
                 return;
             }
             this.selectTab(k);
-            this._selectedBrightness = _local_2._Str_4272;
+            this._selectedBrightness = _local_2.brightness;
             if (this._alphaSlider != null)
             {
                 this._alphaSlider.setValue(this._selectedBrightness);

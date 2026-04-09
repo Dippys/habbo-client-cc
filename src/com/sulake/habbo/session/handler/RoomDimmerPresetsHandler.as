@@ -43,7 +43,7 @@
                 _local_7 = _local_3.getPreset(_local_6);
                 if (_local_7 != null)
                 {
-                    _local_5.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
+                    _local_5.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7.brightness);
                 }
                 _local_6++;
             }

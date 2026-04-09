@@ -21,7 +21,7 @@
             return this._color;
         }
 
-        public function get _Str_5123():uint
+        public function get brightness():uint
         {
             return this._Str_21672;
         }

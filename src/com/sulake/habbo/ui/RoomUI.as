@@ -1016,7 +1016,7 @@
                     }
                     else
                     {
-                        _local_3.setRoomViewColor(_local_5.color, _local_5._Str_5123);
+                        _local_3.setRoomViewColor(_local_5.color, _local_5.brightness);
                     }
                     return;
                 case RoomZoomEvent.ROOM_ZOOM:

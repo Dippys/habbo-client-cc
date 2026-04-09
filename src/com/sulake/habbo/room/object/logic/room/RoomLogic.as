@@ -266,7 +266,7 @@
         private function updateColors(k:RoomObjectRoomColorUpdateMessage, _arg_2:IRoomObjectModelController):void
         {
             var _local_3:int = k.color;
-            var _local_4:int = k._Str_4272;
+            var _local_4:int = k.brightness;
             _arg_2.setNumber(RoomObjectVariableEnum.ROOM_COLORIZE_BG_ONLY, int(k.bgOnly));
             this._Str_14932 = this._color;
             this._Str_17003 = this._Str_3576;
