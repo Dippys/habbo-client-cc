@@ -29,7 +29,7 @@
                 _local_4.duration = k.readInteger();
                 _local_4._Str_18572 = k.readInteger();
                 _local_4._Str_12185 = k.readInteger();
-                _local_4._Str_4010 = k.readBoolean();
+                _local_4.isPermanent = k.readBoolean();
                 this._effects.push(_local_4);
                 _local_3++;
             }

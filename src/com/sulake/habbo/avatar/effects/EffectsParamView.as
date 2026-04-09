@@ -65,7 +65,7 @@
             else
             {
                 this._container.findChildByName("effect_name").visible = true;
-                if (((!(k.isActive)) && (!(k._Str_4010))))
+                if (((!(k.isActive)) && (!(k.isPermanent))))
                 {
                     this._container.findChildByName("time_left_bg").visible = false;
                     this._container.findChildByName("save_to_activate").visible = true;
@@ -74,7 +74,7 @@
                 else
                 {
                     this._storedSeconds = k.secondsRemaining;
-                    this._Str_10660(k.secondsRemaining, k.duration, k._Str_4010);
+                    this._Str_10660(k.secondsRemaining, k.duration, k.isPermanent);
                     this._container.findChildByName("time_left_bg").visible = true;
                     this._container.findChildByName("save_to_activate").visible = false;
                     this._secondsCounterTimer.start();
@@ -149,7 +149,7 @@
         {
             if (((!(this._storedEffect == null)) && (this._storedEffect.isActive)))
             {
-                this._Str_10660(this._storedSeconds--, this._storedEffect.duration, this._storedEffect._Str_4010);
+                this._Str_10660(this._storedSeconds--, this._storedEffect.duration, this._storedEffect.isPermanent);
             }
         }
     }

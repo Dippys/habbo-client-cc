@@ -9,7 +9,7 @@
         function get subType():int;
         function get secondsRemaining():int;
         function get duration():int;
-        function get _Str_4010():Boolean;
+        function get isPermanent():Boolean;
         function get isActive():Boolean;
         function get isInUse():Boolean;
         function get icon():BitmapData;

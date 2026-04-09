@@ -43,7 +43,7 @@
             return this._duration;
         }
 
-        public function get _Str_4010():Boolean
+        public function get isPermanent():Boolean
         {
             return this._Str_5145;
         }

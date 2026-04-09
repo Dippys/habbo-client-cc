@@ -27,7 +27,7 @@
             {
                 this.bitmap = k.icon;
                 this.amount = k.amount;
-                if (k._Str_4010)
+                if (k.isPermanent)
                 {
                     this._Str_10660(k.duration, k.duration);
                 }

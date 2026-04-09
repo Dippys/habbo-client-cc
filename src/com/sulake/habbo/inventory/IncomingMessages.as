@@ -316,7 +316,7 @@
                 _local_7.type = _local_6.type;
                 _local_7.subType = _local_6.subType;
                 _local_7.duration = _local_6.duration;
-                _local_7._Str_4010 = _local_6._Str_4010;
+                _local_7.isPermanent = _local_6.isPermanent;
                 _local_7.amount = _local_6._Str_18572;
                 if (_local_6._Str_12185 >= 0)
                 {
@@ -355,12 +355,12 @@
             var _local_4:int = _local_3.type;
             var _local_5:int = _local_3.subType;
             var _local_6:int = _local_3.duration;
-            var _local_7:Boolean = _local_3._Str_4010;
+            var _local_7:Boolean = _local_3.isPermanent;
             var _local_8:Effect = new Effect();
             _local_8.type = _local_4;
             _local_8.subType = _local_5;
             _local_8.duration = _local_6;
-            _local_8._Str_4010 = _local_7;
+            _local_8.isPermanent = _local_7;
             _local_8.secondsRemaining = _local_6;
             _local_2._Str_2428(_local_8);
             this._inventory._Str_7796();

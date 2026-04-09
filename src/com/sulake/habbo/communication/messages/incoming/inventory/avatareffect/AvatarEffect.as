@@ -60,12 +60,12 @@
             this._Str_22152 = k;
         }
 
-        public function get _Str_4010():Boolean
+        public function get isPermanent():Boolean
         {
             return this._Str_5145;
         }
 
-        public function set _Str_4010(k:Boolean):void
+        public function set isPermanent(k:Boolean):void
         {
             this._Str_5145 = k;
         }
