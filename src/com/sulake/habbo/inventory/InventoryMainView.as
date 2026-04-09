@@ -144,7 +144,7 @@
                     _local_4 = [];
                     while (_local_3._Str_4277 > 0)
                     {
-                        _local_5 = _local_3._Str_3363(0);
+                        _local_5 = _local_3.getTabButtonAt(0);
                         _local_4.push(_local_5);
                         _local_3._Str_5897(_local_5);
                     }

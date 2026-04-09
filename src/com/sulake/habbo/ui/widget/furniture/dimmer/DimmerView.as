@@ -168,7 +168,7 @@
             var _local_2:int;
             while (_local_2 < this._tabContext._Str_4277)
             {
-                _local_6 = this._tabContext._Str_3363(_local_2);
+                _local_6 = this._tabContext.getTabButtonAt(_local_2);
                 _local_6.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);
                 _local_6.procedure = this._Str_16089;
                 _local_2++;
@@ -290,7 +290,7 @@
             {
                 return;
             }
-            var _local_2:IWindow = this._tabContext._Str_3363(k);
+            var _local_2:IWindow = this._tabContext.getTabButtonAt(k);
             if (_local_2 != null)
             {
                 this._tabContext.selector.setSelected((_local_2 as ISelectableWindow));

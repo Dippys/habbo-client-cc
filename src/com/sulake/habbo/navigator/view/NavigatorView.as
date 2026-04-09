@@ -320,7 +320,7 @@
             IItemListWindow(k.findChildByName("quicklinks_list")).removeListItems();
             _local_8.destroy();
             var _local_9:ITabContextWindow = ITabContextWindow(k.findChildByName("top_view_select_tab_context"));
-            var _local_10:ITabButtonWindow = ITabButtonWindow(_local_9._Str_3363(0).clone());
+            var _local_10:ITabButtonWindow = ITabButtonWindow(_local_9.getTabButtonAt(0).clone());
             this._Str_4000.template = _local_10;
             this._Str_4000._Str_23159 = _local_9;
             _local_9._Str_5897(_local_10);

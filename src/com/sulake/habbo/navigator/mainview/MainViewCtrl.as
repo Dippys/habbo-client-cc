@@ -296,7 +296,7 @@
                 _local_5 = [];
                 while (this._tabContext._Str_4277 > 0)
                 {
-                    _local_6 = this._tabContext._Str_3363(0);
+                    _local_6 = this._tabContext.getTabButtonAt(0);
                     _local_5.push(_local_6);
                     this._tabContext._Str_5897(_local_6);
                 }

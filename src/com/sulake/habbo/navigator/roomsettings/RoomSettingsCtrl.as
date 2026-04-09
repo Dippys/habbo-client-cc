@@ -532,7 +532,7 @@
             this._Str_2498 = ITabContextWindow(this._window.findChildByName("tab_context"));
             while (this._Str_2498._Str_4277 > 0)
             {
-                _local_2 = this._Str_2498._Str_3363(0);
+                _local_2 = this._Str_2498.getTabButtonAt(0);
                 k.push(_local_2);
                 this._Str_2498._Str_5897(_local_2);
             }
@@ -557,7 +557,7 @@
             var _local_2:int;
             while (_local_2 < this._Str_2498._Str_4277) //Changed from < to <=
             {
-                _local_3 = this._Str_2498._Str_3363(_local_2);
+                _local_3 = this._Str_2498.getTabButtonAt(_local_2);
                 _local_3.width = k;
                 _local_2++;
             }

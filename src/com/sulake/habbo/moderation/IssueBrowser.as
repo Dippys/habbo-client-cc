@@ -98,7 +98,7 @@
                 _local_6 = 0;
                 while (_local_6 < this._tabContext._Str_4277)
                 {
-                    _local_5 = this._tabContext._Str_3363(_local_6);
+                    _local_5 = this._tabContext.getTabButtonAt(_local_6);
                     _local_5.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onTabSelected);
                     _local_6++;
                 }

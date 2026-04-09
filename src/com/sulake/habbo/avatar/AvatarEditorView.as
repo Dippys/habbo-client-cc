@@ -309,7 +309,7 @@
             var _local_2:int = (this._tabContainer._Str_4277 - 1);
             while (_local_2 >= 0)
             {
-                _local_5 = this._tabContainer._Str_3363(_local_2);
+                _local_5 = this._tabContainer.getTabButtonAt(_local_2);
                 k.push(_local_5.name);
                 if (((!(_local_5 == null)) && (this._availableCategories.indexOf(_local_5.name) < 0)))
                 {
@@ -317,7 +317,7 @@
                     _local_6 = (_local_2 + 1);
                     while (_local_6 < this._tabContainer._Str_4277)
                     {
-                        this._tabContainer._Str_3363(_local_6).x = (this._tabContainer._Str_3363(_local_6).x - _local_5.width);
+                        this._tabContainer.getTabButtonAt(_local_6).x = (this._tabContainer.getTabButtonAt(_local_6).x - _local_5.width);
                         _local_6++;
                     }
                 }
@@ -335,7 +335,7 @@
             }
             this._gridView = new AvatarEditorGridView((this._editorContent.findChildByName("grid_container") as IWindowContainer));
             this._effectsGridView = new AvatarEditorGridViewEffects((this._editorContent.findChildByName("grid_container") as IWindowContainer));
-            this._tabContainer.selector.setSelected(this._tabContainer._Str_3363(0));
+            this._tabContainer.selector.setSelected(this._tabContainer.getTabButtonAt(0));
             this.update();
         }
 

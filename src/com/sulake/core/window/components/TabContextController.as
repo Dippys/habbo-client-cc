@@ -80,7 +80,7 @@
             this.selector.removeSelectable(k);
         }
 
-        public function _Str_3363(k:uint):ITabButtonWindow
+        public function getTabButtonAt(k:uint):ITabButtonWindow
         {
             return this.selector.getSelectableAt(k) as ITabButtonWindow;
         }

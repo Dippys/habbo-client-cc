@@ -48,7 +48,7 @@
 
         public function _Str_12925(k:int):void
         {
-            this._tabContext.selector.setSelected(this._tabContext._Str_3363(k));
+            this._tabContext.selector.setSelected(this._tabContext.getTabButtonAt(k));
         }
 
         private function _Str_17441():void
@@ -56,7 +56,7 @@
             var k:int;
             while (k < this._tabContext._Str_4277)
             {
-                this._tabContext._Str_5897(this._tabContext._Str_3363(0));
+                this._tabContext._Str_5897(this._tabContext.getTabButtonAt(0));
                 k++;
             }
         }
