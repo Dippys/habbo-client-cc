@@ -336,7 +336,7 @@
             }
             if (((!(_local_6 == null)) && (!(_local_4 == null))))
             {
-                _local_6.assetUri = ((page.mode == CatalogPage._Str_7035) ? "common_small_pen" : ((this._catalog.catalogType == CatalogType.BUILDER) ? (this._catalog.imageGalleryHost + "icon_193.png") : ((this._catalog.imageGalleryHost + _local_4._Str_4856) + ".png")));
+                _local_6.assetUri = ((page.mode == CatalogPage._Str_7035) ? "common_small_pen" : ((this._catalog.catalogType == CatalogType.BUILDER) ? (this._catalog.imageGalleryHost + "icon_193.png") : ((this._catalog.imageGalleryHost + _local_4.iconName) + ".png")));
             }
         }
 

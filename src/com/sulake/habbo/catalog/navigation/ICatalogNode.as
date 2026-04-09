@@ -21,7 +21,7 @@
         function open():void;
         function close():void;
         function get parent():ICatalogNode;
-        function get _Str_4856():String;
+        function get iconName():String;
         function get offsetV():int;
     }
 }

@@ -227,7 +227,7 @@
             {
                 _local_2.visible = (!(isLeaf));
             }
-            IStaticBitmapWrapperWindow(this._window.findChildByName("icon")).assetUri = ((navigator.catalog.imageGalleryHost + _Str_4856) + ".png");
+            IStaticBitmapWrapperWindow(this._window.findChildByName("icon")).assetUri = ((navigator.catalog.imageGalleryHost + iconName) + ".png");
             if (navigator.isDeepHierarchy)
             {
                 if (depth == 1)

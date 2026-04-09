@@ -199,7 +199,7 @@
             {
                 if (this._widget)
                 {
-                    this._widget.startTakingPhoto(k._Str_4856);
+                    this._widget.startTakingPhoto(k.iconName);
                 }
             }
         }

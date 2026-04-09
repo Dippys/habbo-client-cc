@@ -135,7 +135,7 @@
         {
         }
 
-        public function get _Str_4856():String
+        public function get iconName():String
         {
             if (this._iconId < 1)
             {

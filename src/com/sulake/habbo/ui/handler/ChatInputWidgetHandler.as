@@ -349,7 +349,7 @@
                                         if (this._container.sessionDataManager.isPerkAllowed(PerkEnum.CAMERA))
                                         {
                                             _local_21 = new HabboToolbarEvent(HabboToolbarEvent.HTE_ICON_CAMERA);
-                                            _local_21._Str_4856 = HabboToolbarEvent.CHATCAMERACOMMAND;
+                                            _local_21.iconName = HabboToolbarEvent.CHATCAMERACOMMAND;
                                             this._container.toolbar.events.dispatchEvent(_local_21);
                                         }
                                         return null;

@@ -33,12 +33,12 @@
             return this._iconId;
         }
 
-        public function set _Str_4856(k:String):void
+        public function set iconName(k:String):void
         {
             this._iconName = k;
         }
 
-        public function get _Str_4856():String
+        public function get iconName():String
         {
             return this._iconName;
         }

@@ -296,7 +296,7 @@
                             break;
                         case "button_camera":
                             openCameraEvent = new HabboToolbarEvent(HabboToolbarEvent.HTE_ICON_CAMERA);
-                            openCameraEvent._Str_4856 = HabboToolbarEvent.ROOMTOOLSMENU;
+                            openCameraEvent.iconName = HabboToolbarEvent.ROOMTOOLSMENU;
                             handler.container.toolbar.events.dispatchEvent(openCameraEvent);
                             break;
                     }

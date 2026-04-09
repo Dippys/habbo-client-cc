@@ -545,7 +545,7 @@
                     if (this.getType() == PHOTO_POSTER)
                     {
                         _local_5 = new HabboToolbarEvent(HabboToolbarEvent.HTE_ICON_CAMERA);
-                        _local_5._Str_4856 = HabboToolbarEvent.IMAGEWIDGETMAKEOWN;
+                        _local_5.iconName = HabboToolbarEvent.IMAGEWIDGETMAKEOWN;
                         this.ownHandler.container.toolbar.events.dispatchEvent(_local_5);
                         this.hide();
                     }

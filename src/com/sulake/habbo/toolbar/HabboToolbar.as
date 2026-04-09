@@ -551,7 +551,7 @@
             if (_local_2 == HabboToolbarIconEnum.CAMERA)
             {
                 _local_4 = new HabboToolbarEvent(HabboToolbarEvent.HTE_ICON_CAMERA);
-                _local_4._Str_4856 = HabboToolbarEvent.TOOLBARCAMERAICON;
+                _local_4.iconName = HabboToolbarEvent.TOOLBARCAMERAICON;
                 events.dispatchEvent(_local_4);
             }
 			else if (_local_2 == HabboToolbarIconEnum.MODTOOL)
@@ -563,7 +563,7 @@
             {
                 _local_5 = new HabboToolbarEvent(HabboToolbarEvent.HTE_TOOLBAR_CLICK);
                 _local_5.iconId = _local_2;
-                _local_5._Str_4856 = k;
+                _local_5.iconName = k;
                 events.dispatchEvent(_local_5);
             }
             var _local_3:EventLogMessageComposer = new EventLogMessageComposer("Toolbar", k, "client.toolbar.clicked");

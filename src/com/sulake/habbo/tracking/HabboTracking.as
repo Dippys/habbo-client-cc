@@ -714,7 +714,7 @@
         {
             if (this._toolbarClickTracker)
             {
-                this._toolbarClickTracker.track(k._Str_4856);
+                this._toolbarClickTracker.track(k.iconName);
             }
         }
 
