@@ -72,7 +72,7 @@
             }
         }
 
-        public function _Str_4889():void
+        public function onInventoryOpen():void
         {
         }
 
@@ -352,7 +352,7 @@
             return (this._view) ? this._view.getWindowContainer() : null;
         }
 
-        public function _Str_5100():void
+        public function onInventoryClose():void
         {
         }
 
