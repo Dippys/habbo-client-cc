@@ -27,8 +27,8 @@ The Habbo client follows a carefully orchestrated bootstrap sequence from SWF lo
 │           │                   │                                                  │
 │           │                   ▼                                                  │
 │           │          ┌────────────────────┐                                   │
-│           │          │ createLoadingScreen│  src/Habbo.as:324-341            │
-│           │          │  (IHabboLoading)   │  - Creates progress UI           │
+│           │          │ createNewUserLobby │  src/Habbo.as:324                │
+│           │          │  OrLoadingScreen() │  - Wraps createLoadingScreen:343 │
 │           │          └────────┬───────────┘                                   │
 │           │                   │                                                  │
 │           │                   ▼                                                  │
