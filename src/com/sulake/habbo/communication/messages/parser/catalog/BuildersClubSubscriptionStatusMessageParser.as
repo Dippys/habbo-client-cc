@@ -32,7 +32,7 @@
             return true;
         }
 
-        public function get _Str_3709():int
+        public function get secondsRemaining():int
         {
             return this._Str_16456;
         }

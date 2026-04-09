@@ -321,7 +321,7 @@
                 if (_local_6._Str_12185 >= 0)
                 {
                     _local_7.isActive = true;
-                    _local_7._Str_3709 = _local_6._Str_12185;
+                    _local_7.secondsRemaining = _local_6._Str_12185;
                     _local_7._Str_4225++;
                 }
                 else
@@ -329,7 +329,7 @@
                     if (_local_6._Str_12185 == -1)
                     {
                         _local_7.isActive = false;
-                        _local_7._Str_3709 = _local_6.duration;
+                        _local_7.secondsRemaining = _local_6.duration;
                     }
                 }
                 _local_2._Str_2428(_local_7, false);
@@ -361,7 +361,7 @@
             _local_8.subType = _local_5;
             _local_8.duration = _local_6;
             _local_8._Str_4010 = _local_7;
-            _local_8._Str_3709 = _local_6;
+            _local_8.secondsRemaining = _local_6;
             _local_2._Str_2428(_local_8);
             this._inventory._Str_7796();
         }

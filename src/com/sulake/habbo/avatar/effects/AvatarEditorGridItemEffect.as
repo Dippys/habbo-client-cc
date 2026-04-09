@@ -35,7 +35,7 @@
                 {
                     if (k.isActive)
                     {
-                        this._Str_10660(k._Str_3709, k.duration);
+                        this._Str_10660(k.secondsRemaining, k.duration);
                     }
                 }
             }

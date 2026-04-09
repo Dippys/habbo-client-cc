@@ -71,7 +71,7 @@
             return this._iconImage;
         }
 
-        public function get _Str_3709():int
+        public function get secondsRemaining():int
         {
             var k:int;
             if (this._isActive)
@@ -102,7 +102,7 @@
             this._duration = k;
         }
 
-        public function set _Str_3709(k:int):void
+        public function set secondsRemaining(k:int):void
         {
             this._secondsLeftStamped = k;
         }

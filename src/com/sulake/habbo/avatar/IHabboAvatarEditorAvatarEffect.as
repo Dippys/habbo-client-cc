@@ -7,7 +7,7 @@
         function get _Str_4225():int;
         function get type():int;
         function get subType():int;
-        function get _Str_3709():int;
+        function get secondsRemaining():int;
         function get duration():int;
         function get _Str_4010():Boolean;
         function get isActive():Boolean;

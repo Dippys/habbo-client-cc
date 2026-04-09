@@ -73,8 +73,8 @@
                 }
                 else
                 {
-                    this._storedSeconds = k._Str_3709;
-                    this._Str_10660(k._Str_3709, k.duration, k._Str_4010);
+                    this._storedSeconds = k.secondsRemaining;
+                    this._Str_10660(k.secondsRemaining, k.duration, k._Str_4010);
                     this._container.findChildByName("time_left_bg").visible = true;
                     this._container.findChildByName("save_to_activate").visible = false;
                     this._secondsCounterTimer.start();

@@ -154,7 +154,7 @@
         private function _Str_22764(k:BuildersClubSubscriptionStatusMessageEvent):void
         {
             var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
-            this._bcSecondsLeft = _local_2._Str_3709;
+            this._bcSecondsLeft = _local_2.secondsRemaining;
             if (!this._bcSecondsCountdownTimer)
             {
                 this._bcSecondsCountdownTimer = new Timer(10000);

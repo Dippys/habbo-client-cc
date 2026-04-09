@@ -80,7 +80,7 @@
             }
             if (this._effect.isActive)
             {
-                _local_2 = (this._effect._Str_3709 / Number(this._effect.duration));
+                _local_2 = (this._effect.secondsRemaining / Number(this._effect.duration));
                 this._bar.width = (_local_2 * this._maxWidth);
             }
             else
@@ -115,18 +115,18 @@
                 this._timeLeftField.caption = "${widgets.memenu.effects.activate}";
                 return;
             }
-            if (this._effect._Str_3709 > ((60 * 60) * 24))
+            if (this._effect.secondsRemaining > ((60 * 60) * 24))
             {
                 this._timeLeftField.caption = "${widgets.memenu.effects.active.daysleft}";
                 k = this._timeLeftField.text;
-                _local_2 = Math.floor((this._effect._Str_3709 / ((60 * 60) * 24)));
+                _local_2 = Math.floor((this._effect.secondsRemaining / ((60 * 60) * 24)));
                 k = k.replace("%days_left%", _local_2);
             }
             else
             {
                 this._timeLeftField.caption = "${widgets.memenu.effects.active.timeleft}";
                 k = this._timeLeftField.text;
-                _local_3 = this._effect._Str_3709;
+                _local_3 = this._effect.secondsRemaining;
                 _local_4 = Math.floor((_local_3 / (60 * 60)));
                 _local_5 = (Math.floor((_local_3 / 60)) % 60);
                 _local_6 = (_local_3 % 60);

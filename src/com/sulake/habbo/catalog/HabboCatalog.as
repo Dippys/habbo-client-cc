@@ -3006,7 +3006,7 @@
             var _local_2:BuildersClubSubscriptionStatusMessageParser = k.getParser();
             this._builderFurniLimit = _local_2._Str_15864;
             this._builderMaxFurniLimit = _local_2._Str_24094;
-            this._builderMembershipSecondsLeft = _local_2._Str_3709;
+            this._builderMembershipSecondsLeft = _local_2.secondsRemaining;
             this._builderMembershipUpdateTime = getTimer();
             this._builderMembershipSecondsLeftWithGrace = _local_2._Str_24379;
             if (ExternalInterface.available)
