@@ -27,8 +27,8 @@
                 _local_4.type = k.readInteger();
                 _local_4.subType = k.readInteger();
                 _local_4.duration = k.readInteger();
-                _local_4._Str_18572 = k.readInteger();
-                _local_4._Str_12185 = k.readInteger();
+                _local_4.amount = k.readInteger();
+                _local_4.secondsRemaining = k.readInteger();
                 _local_4.isPermanent = k.readBoolean();
                 this._effects.push(_local_4);
                 _local_3++;

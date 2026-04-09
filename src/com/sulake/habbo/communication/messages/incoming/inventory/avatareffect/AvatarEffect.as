@@ -40,22 +40,22 @@
             this._duration = k;
         }
 
-        public function get _Str_18572():int
+        public function get amount():int
         {
             return this._Str_20427;
         }
 
-        public function set _Str_18572(k:int):void
+        public function set amount(k:int):void
         {
             this._Str_20427 = k;
         }
 
-        public function get _Str_12185():int
+        public function get secondsRemaining():int
         {
             return this._Str_22152;
         }
 
-        public function set _Str_12185(k:int):void
+        public function set secondsRemaining(k:int):void
         {
             this._Str_22152 = k;
         }

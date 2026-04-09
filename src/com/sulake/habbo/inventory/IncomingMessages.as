@@ -317,16 +317,16 @@
                 _local_7.subType = _local_6.subType;
                 _local_7.duration = _local_6.duration;
                 _local_7.isPermanent = _local_6.isPermanent;
-                _local_7.amount = _local_6._Str_18572;
-                if (_local_6._Str_12185 >= 0)
+                _local_7.amount = _local_6.amount;
+                if (_local_6.secondsRemaining >= 0)
                 {
                     _local_7.isActive = true;
-                    _local_7.secondsRemaining = _local_6._Str_12185;
+                    _local_7.secondsRemaining = _local_6.secondsRemaining;
                     _local_7.amount++;
                 }
                 else
                 {
-                    if (_local_6._Str_12185 == -1)
+                    if (_local_6.secondsRemaining == -1)
                     {
                         _local_7.isActive = false;
                         _local_7.secondsRemaining = _local_6.duration;
