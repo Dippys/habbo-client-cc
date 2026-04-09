@@ -440,7 +440,7 @@
                     _local_27 = (AvatarEditorView._Str_6802.clone() as IWindowContainer);
                     _local_27.name = AvatarEditorGridView.REMOVE_ITEM;
                     _local_7 = new AvatarEditorGridPartItem(_local_27, k, null, null, false);
-                    _local_7._Str_3093 = _local_26;
+                    _local_7.icon = _local_26;
                     _local_3.push(_local_7);
                 }
                 _local_16 = (!(_arg_2 == FigureData.FACE));
@@ -487,7 +487,7 @@
                 _local_33 = (AvatarEditorView._Str_6802.clone() as IWindowContainer);
                 _local_33.name = AvatarEditorGridView.GET_MORE;
                 _local_7 = new AvatarEditorGridPartItem(_local_33, k, null, null, false);
-                _local_7._Str_3093 = _local_32;
+                _local_7.icon = _local_32;
                 _local_3.push(_local_7);
             }
             _local_5 = 0;

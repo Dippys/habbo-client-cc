@@ -146,12 +146,12 @@
             return this._type;
         }
 
-        public function get _Str_3093():BitmapData
+        public function get icon():BitmapData
         {
             return this._Str_3155;
         }
 
-        public function set _Str_3093(k:BitmapData):void
+        public function set icon(k:BitmapData):void
         {
             this._Str_3155 = k;
         }

@@ -21,7 +21,7 @@
         private function _Str_25180(k:GenericNotificationItemData):IFeedEntity
         {
             var _local_2:FeedEntity = FeedEntity._Str_2363();
-            _local_2.icon = k._Str_3093;
+            _local_2.icon = k.icon;
             _local_2.title = k.title;
             _local_2._Str_19059 = (((k.timeStamp - getTimer()) / 1000) / 60);
             _local_2.message = k.description;

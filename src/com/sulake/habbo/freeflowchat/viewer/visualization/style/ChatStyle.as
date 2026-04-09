@@ -108,7 +108,7 @@
             return this._iconOffset;
         }
 
-        public function get _Str_3093():BitmapData
+        public function get icon():BitmapData
         {
             return this._iconImage;
         }

@@ -66,11 +66,6 @@
             return this._iconImage;
         }
 
-        public function get _Str_3093():BitmapData
-        {
-            return this._iconImage;
-        }
-
         public function get secondsRemaining():int
         {
             var k:int;
@@ -122,7 +117,7 @@
             this._isInUse = k;
         }
 
-        public function set _Str_3093(k:BitmapData):void
+        public function set icon(k:BitmapData):void
         {
             this._iconImage = k;
         }

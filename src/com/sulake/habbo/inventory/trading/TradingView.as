@@ -542,7 +542,7 @@
                 _local_4 = (_local_5.getWithIndex(_local_3) as GroupItem);
                 if (_local_4._Str_15216 == k)
                 {
-                    _local_4._Str_3093 = _arg_2;
+                    _local_4.icon = _arg_2;
                     _local_6 = true;
                 }
                 _local_3++;
@@ -559,7 +559,7 @@
                 _local_4 = (_local_5[_local_3] as GroupItem);
                 if (_local_4._Str_15216 == k)
                 {
-                    _local_4._Str_3093 = _arg_2;
+                    _local_4.icon = _arg_2;
                     _local_6 = true;
                 }
                 _local_3++;
@@ -618,7 +618,7 @@
         protected function resolveItemThumbnail(k:GroupItem):BitmapData
         {
             var _local_3:ImageResult;
-            var _local_2:BitmapData = k._Str_3093;
+            var _local_2:BitmapData = k.icon;
             if (_local_2 == null)
             {
                 if (k.isWallItem)
@@ -634,7 +634,7 @@
                     k._Str_15216 = _local_3.id;
                 }
                 _local_2 = _local_3.data;
-                k._Str_3093 = _local_2;
+                k.icon = _local_2;
             }
             return _local_2;
         }

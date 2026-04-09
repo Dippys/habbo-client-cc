@@ -33,7 +33,7 @@
             return this._decorationImage;
         }
 
-        public function get _Str_3093():BitmapData
+        public function get icon():BitmapData
         {
             return this._iconImage;
         }
@@ -68,7 +68,7 @@
             this._decorationImage = k;
         }
 
-        public function set _Str_3093(k:BitmapData):void
+        public function set icon(k:BitmapData):void
         {
             this._iconImage = k;
         }
