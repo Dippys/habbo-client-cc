@@ -46,7 +46,7 @@
             this._window.procedure = this.eventHandler;
             var _local_7:BitmapData = k._Str_20649(_arg_2);
             this.setImage(_local_7);
-            this._Str_7681();
+            this._updateOutline();
         }
 
         public function dispose():void
@@ -101,12 +101,12 @@
             _local_2.bitmap = _local_3;
         }
 
-        public function _Str_17526(k:Boolean):void
+        public function setUnseen(k:Boolean):void
         {
             if (this._isUnseen != k)
             {
                 this._isUnseen = k;
-                this._Str_7681();
+                this._updateOutline();
             }
         }
 
@@ -119,11 +119,11 @@
                 {
                     return;
                 }
-                this._Str_7681();
+                this._updateOutline();
             }
         }
 
-        private function _Str_7681():void
+        private function _updateOutline():void
         {
             var k:IWindow = this._window.findChildByName("outline");
             if (k != null)

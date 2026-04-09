@@ -83,7 +83,7 @@
             }
             var _local_11:BitmapData = k.getPetImage(_arg_2, _local_8, _local_9, this, _local_7, _local_10);
             this._Str_19232(_local_11);
-            this._Str_7681();
+            this._updateOutline();
         }
 
         public function dispose():void
@@ -138,12 +138,12 @@
             _local_2.bitmap = _local_3;
         }
 
-        public function _Str_17526(k:Boolean):void
+        public function setUnseen(k:Boolean):void
         {
             if (this._isUnseen != k)
             {
                 this._isUnseen = k;
-                this._Str_7681();
+                this._updateOutline();
             }
         }
 
@@ -156,11 +156,11 @@
                 {
                     return;
                 }
-                this._Str_7681();
+                this._updateOutline();
             }
         }
 
-        private function _Str_7681():void
+        private function _updateOutline():void
         {
             var k:IWindow = this._window.findChildByName("outline");
             if (k != null)

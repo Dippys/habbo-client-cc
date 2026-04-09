@@ -305,7 +305,7 @@
                     this._Str_9947(this._model.pets.getValue(_local_3));
                 }
                 _local_4 = this._gridItems.getValue(_local_3);
-                _local_4._Str_17526(this._model._Str_3613(_local_3));
+                _local_4.setUnseen(this._model._Str_3613(_local_3));
             }
             this._grid.unlock();
         }
