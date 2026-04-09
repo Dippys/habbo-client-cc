@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.widget.furniture.dimmer
+package com.sulake.habbo.ui.widget.furniture.dimmer
 {
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.ITabContextWindow;
@@ -166,7 +166,7 @@
             this._tabContext = ITabContextWindow(this._window.findChildByName("tab_context"));
             this.selectTab(this._widget._Str_13894);
             var _local_2:int;
-            while (_local_2 < this._tabContext._Str_4277)
+            while (_local_2 < this._tabContext.numTabs)
             {
                 _local_6 = this._tabContext.getTabButtonAt(_local_2);
                 _local_6.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);

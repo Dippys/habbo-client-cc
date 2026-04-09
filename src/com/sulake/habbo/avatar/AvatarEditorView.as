@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.avatar
+package com.sulake.habbo.avatar
 {
     import com.sulake.core.window.IWindowContainer;
     import flash.geom.Point;
@@ -306,7 +306,7 @@
             this._editorContent.procedure = this.windowEventProc;
             this._tabContainer = (this._editorContent.findChildByName("mainTabs") as ITabContextWindow);
             var k:Vector.<String> = new Vector.<String>(0);
-            var _local_2:int = (this._tabContainer._Str_4277 - 1);
+            var _local_2:int = (this._tabContainer.numTabs - 1);
             while (_local_2 >= 0)
             {
                 _local_5 = this._tabContainer.getTabButtonAt(_local_2);
@@ -315,7 +315,7 @@
                 {
                     this._tabContainer._Str_5897(_local_5);
                     _local_6 = (_local_2 + 1);
-                    while (_local_6 < this._tabContainer._Str_4277)
+                    while (_local_6 < this._tabContainer.numTabs)
                     {
                         this._tabContainer.getTabButtonAt(_local_6).x = (this._tabContainer.getTabButtonAt(_local_6).x - _local_5.width);
                         _local_6++;

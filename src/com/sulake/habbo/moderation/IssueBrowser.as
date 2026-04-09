@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.moderation
+package com.sulake.habbo.moderation
 {
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -96,7 +96,7 @@
                 }
                 this._tabContext = (this._window.findChildByName("tab_context") as ITabContextWindow);
                 _local_6 = 0;
-                while (_local_6 < this._tabContext._Str_4277)
+                while (_local_6 < this._tabContext.numTabs)
                 {
                     _local_5 = this._tabContext.getTabButtonAt(_local_6);
                     _local_5.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this.onTabSelected);

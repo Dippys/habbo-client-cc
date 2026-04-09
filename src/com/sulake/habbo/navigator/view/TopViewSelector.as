@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.navigator.view
+package com.sulake.habbo.navigator.view
 {
     import com.sulake.habbo.navigator.HabboNewNavigator;
     import com.sulake.core.window.components.ITabButtonWindow;
@@ -54,7 +54,7 @@
         private function _Str_17441():void
         {
             var k:int;
-            while (k < this._tabContext._Str_4277)
+            while (k < this._tabContext.numTabs)
             {
                 this._tabContext._Str_5897(this._tabContext.getTabButtonAt(0));
                 k++;

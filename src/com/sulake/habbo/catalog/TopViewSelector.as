@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.catalog
+package com.sulake.habbo.catalog
 {
     import com.sulake.habbo.catalog.navigation.CatalogNavigator;
     import com.sulake.core.window.components.ITabButtonWindow;
@@ -36,16 +36,16 @@
         private function _Str_23691():void
         {
             var k:int;
-            while (k < this._tabContext._Str_4277)
+            while (k < this._tabContext.numTabs)
             {
-                this._tabContext.getTabButtonAt(k).width = (this._tabContext.getTabButtonAt(k).parent.width / this._tabContext._Str_4277);
+                this._tabContext.getTabButtonAt(k).width = (this._tabContext.getTabButtonAt(k).parent.width / this._tabContext.numTabs);
                 k++;
             }
         }
 
         public function _Str_17441():void
         {
-            while (this._tabContext._Str_4277 > 0)
+            while (this._tabContext.numTabs > 0)
             {
                 this._tabContext._Str_5897(this._tabContext.getTabButtonAt(0));
             }

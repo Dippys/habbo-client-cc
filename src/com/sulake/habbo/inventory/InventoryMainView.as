@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.inventory
+package com.sulake.habbo.inventory
 {
     import flash.geom.Point;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -142,7 +142,7 @@
                     this._Str_15287(InventoryCategory.BADGES);
                     _local_3 = (this._mainWindow.findChildByName("tabs") as ITabContextWindow);
                     _local_4 = [];
-                    while (_local_3._Str_4277 > 0)
+                    while (_local_3.numTabs > 0)
                     {
                         _local_5 = _local_3.getTabButtonAt(0);
                         _local_4.push(_local_5);

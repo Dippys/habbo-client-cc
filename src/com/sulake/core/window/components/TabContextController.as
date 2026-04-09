@@ -1,4 +1,4 @@
-﻿package com.sulake.core.window.components
+package com.sulake.core.window.components
 {
     import com.sulake.core.window.WindowController;
     import com.sulake.core.window.utils.IIterable;
@@ -60,7 +60,7 @@
             return (this._initialized) ? this.selector.iterator : null;
         }
 
-        public function get _Str_4277():uint
+        public function get numTabs():uint
         {
             return this._Str_9660.numSelectables;
         }

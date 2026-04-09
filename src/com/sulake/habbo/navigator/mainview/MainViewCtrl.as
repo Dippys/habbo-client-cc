@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.navigator.mainview
+package com.sulake.habbo.navigator.mainview
 {
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.core.runtime.IDisposable;
@@ -294,7 +294,7 @@
             if (((!(k)) || (!(this._phaseOneNavigator))))
             {
                 _local_5 = [];
-                while (this._tabContext._Str_4277 > 0)
+                while (this._tabContext.numTabs > 0)
                 {
                     _local_6 = this._tabContext.getTabButtonAt(0);
                     _local_5.push(_local_6);

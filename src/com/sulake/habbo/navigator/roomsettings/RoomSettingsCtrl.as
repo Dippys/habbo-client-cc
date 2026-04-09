@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.navigator.roomsettings
+package com.sulake.habbo.navigator.roomsettings
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.runtime.events.ILinkEventTracker;
@@ -530,7 +530,7 @@
             var _local_2:ITabButtonWindow;
             var k:Array = [];
             this._Str_2498 = ITabContextWindow(this._window.findChildByName("tab_context"));
-            while (this._Str_2498._Str_4277 > 0)
+            while (this._Str_2498.numTabs > 0)
             {
                 _local_2 = this._Str_2498.getTabButtonAt(0);
                 k.push(_local_2);
@@ -552,10 +552,10 @@
         private function _Str_25046():void
         {
             var _local_3:ITabButtonWindow;
-            var k:int = (this._window.width / this._Str_2498._Str_4277);
+            var k:int = (this._window.width / this._Str_2498.numTabs);
             k--;
             var _local_2:int;
-            while (_local_2 < this._Str_2498._Str_4277) //Changed from < to <=
+            while (_local_2 < this._Str_2498.numTabs) //Changed from < to <=
             {
                 _local_3 = this._Str_2498.getTabButtonAt(_local_2);
                 _local_3.width = k;
