@@ -33,7 +33,7 @@
             return this._text;
         }
 
-        public function get _Str_10471():String
+        public function get colorHex():String
         {
             return this._colorHex;
         }

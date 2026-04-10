@@ -105,7 +105,7 @@
                     {
                         if (this._connection != null)
                         {
-                            _local_3 = new AddSpamWallPostItMessageComposer(_local_2.objectId, _local_2.location, _local_2._Str_10471, _local_2.text);
+                            _local_3 = new AddSpamWallPostItMessageComposer(_local_2.objectId, _local_2.location, _local_2.colorHex, _local_2.text);
                             this._connection.send(_local_3);
                         }
                     }

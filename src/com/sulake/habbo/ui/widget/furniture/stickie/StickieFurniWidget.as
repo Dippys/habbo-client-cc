@@ -88,7 +88,7 @@
             this._objectId = k.objectId;
             this._objectType = k.objectType;
             this._text = k.text;
-            this._colorHex = k._Str_10471;
+            this._colorHex = k.colorHex;
             this._controller = k.controller;
             this.showInterface();
         }

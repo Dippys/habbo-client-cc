@@ -97,7 +97,7 @@
                     }
                     if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._container.roomEngine.modifyRoomObjectData(_local_4.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_4._Str_10471, _local_4.text);
+                        this._container.roomEngine.modifyRoomObjectData(_local_4.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_4.colorHex, _local_4.text);
                     }
                     break;
                 case RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE:
