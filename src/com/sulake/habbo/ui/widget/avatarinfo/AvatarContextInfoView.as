@@ -12,7 +12,7 @@
     public class AvatarContextInfoView extends ContextInfoView 
     {
         protected var _Str_2306:int;
-        protected var _Str_2360:String;
+        protected var _userName:String;
         protected var _userType:int;
         protected var _allowNameChange:Boolean;
         protected var _roomIndex:int;
@@ -26,7 +26,7 @@
         public static function setup(k:AvatarContextInfoView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:Boolean=false):void
         {
             k._Str_2306 = _arg_2;
-            k._Str_2360 = _arg_3;
+            k._userName = _arg_3;
             k._userType = _arg_5;
             k._roomIndex = _arg_4;
             k._allowNameChange = _arg_6;
@@ -51,7 +51,7 @@
 
         public function get userName():String
         {
-            return this._Str_2360;
+            return this._userName;
         }
 
         public function get allowNameChange():Boolean
@@ -76,7 +76,7 @@
                 }
             }
             var k:IWindow = _window.findChildByName("name");
-            k.caption = this._Str_2360;
+            k.caption = this._userName;
             this._Str_11603();
             _window.findChildByName("change_name_container").visible = false;
             _window.height = 39;

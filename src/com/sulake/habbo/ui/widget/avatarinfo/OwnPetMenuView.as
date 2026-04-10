@@ -117,7 +117,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
                 }
                 _buttons = (_window.findChildByName("buttons") as IItemListWindow);
                 _buttons.procedure = this.buttonEventProc;
-                _window.findChildByName("name").caption = _Str_2360;
+                _window.findChildByName("name").caption = _userName;
                 _window.visible = false;
                 activeView = _window;
                 this._Str_2771();

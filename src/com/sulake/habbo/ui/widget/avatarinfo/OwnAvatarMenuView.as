@@ -132,7 +132,7 @@ package com.sulake.habbo.ui.widget.avatarinfo
                     _local_5.toolTipCaption = this.widget.localizations.getLocalization("infostand.profile.link.tooltip", "Click to view profile");
                     _local_5._Str_3099 = 100;
                 }
-                _window.findChildByName("name").caption = _Str_2360;
+                _window.findChildByName("name").caption = _userName;
                 _window.visible = false;
                 activeView = _window;
                 this._Str_2771();
