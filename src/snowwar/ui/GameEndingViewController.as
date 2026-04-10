@@ -467,7 +467,7 @@
             if (_local_6)
             {
                 _local_6.setDirection(AvatarSetType.FULL, this._SafeStr_18896(k));
-                return _local_6._Str_818(AvatarSetType.FULL);
+return _local_6.getCroppedImage(AvatarSetType.FULL);
             }
             return _local_5;
         }

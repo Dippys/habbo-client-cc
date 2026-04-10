@@ -264,7 +264,7 @@
             if (_local_6)
             {
                 _local_6.setDirection(AvatarSetType.FULL, _arg_4);
-                return _local_6._Str_818(AvatarSetType.FULL);
+return _local_6.getCroppedImage(AvatarSetType.FULL);
             }
             return null;
         }

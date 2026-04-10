@@ -645,7 +645,7 @@
             if (_local_5)
             {
                 _local_5.setDirection(AvatarSetType.FULL, 2);
-                _local_4 = _local_5._Str_818(AvatarSetType.HEAD);
+_local_4 = _local_5.getCroppedImage(AvatarSetType.HEAD);
                 WindowUtils.setElementImage(k, _local_4);
                 _local_4.dispose();
             }

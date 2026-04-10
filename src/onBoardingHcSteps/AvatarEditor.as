@@ -364,7 +364,7 @@
                         this._hairButtons.push(_local_10);
                     }
                     _local_11 = this._context._Str_1458.createAvatarImage(_local_7.concat(_local_13).join("-"), AvatarScaleType.LARGE);
-                    _local_12 = _local_11._Str_818(((_local_8 == AvatarFigurePartType.HEAD) ? AvatarSetType.HEAD : AvatarSetType.FULL));
+_local_12 = _local_11.getCroppedImage(((_local_8 == AvatarFigurePartType.HEAD) ? AvatarSetType.HEAD : AvatarSetType.FULL));
                     _local_10._Str_2233(_local_12);
                     _local_10.name = ((_local_8 + "_") + _local_9);
                     if (((!(this._selectedFigureSet == null)) && (_local_10.name == this._selectedFigureSet.name)))
@@ -398,7 +398,7 @@
                     this._gridButtons.push(_local_10);
                     _local_16 = ((_local_13 != null) ? _local_7.concat(_local_13).join("-") : _local_6);
                     _local_11 = this._context._Str_1458.createAvatarImage(_local_16, AvatarScaleType.LARGE);
-                    _local_10._Str_2233(_local_11._Str_818(((_local_8 == AvatarFigurePartType.HEAD) ? AvatarSetType.HEAD : AvatarSetType.FULL)));
+_local_10._Str_2233(_local_11.getCroppedImage(((_local_8 == AvatarFigurePartType.HEAD) ? AvatarSetType.HEAD : AvatarSetType.FULL)));
                     _local_10.name = ((_local_8 + "_") + _local_9);
                     if (((!(this._selectedFigureSet == null)) && (_local_10.name == this._selectedFigureSet.name)))
                     {

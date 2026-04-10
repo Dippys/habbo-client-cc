@@ -51,8 +51,8 @@
                     if (avatarImage != null)
                     {
                         avatarImage.setDirection(AvatarSetType.FULL, 2);
-                        fullImage = avatarImage._Str_818(AvatarSetType.FULL);
-                        headImage = avatarImage._Str_818(AvatarSetType.HEAD);
+fullImage = avatarImage.getCroppedImage(AvatarSetType.FULL);
+headImage = avatarImage.getCroppedImage(AvatarSetType.HEAD);
                         avatarImage.dispose();
                     }
                     this._lastFigure = _local_4;

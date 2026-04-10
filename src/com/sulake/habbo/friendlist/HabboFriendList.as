@@ -410,7 +410,7 @@
             {
                 return null;
             }
-            var _local_4:BitmapData = _local_3._Str_818(AvatarSetType.HEAD, ((_local_2) ? 0.5 : 1));
+var _local_4:BitmapData = _local_3.getCroppedImage(AvatarSetType.HEAD, ((_local_2) ? 0.5 : 1));
             _local_3.dispose();
             return _local_4;
         }

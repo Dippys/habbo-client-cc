@@ -751,7 +751,7 @@
             var _local_4:IAvatarImage = _local_2.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
             if (_local_4 != null)
             {
-                _local_3 = _local_4._Str_818(AvatarSetType.HEAD);
+_local_3 = _local_4.getCroppedImage(AvatarSetType.HEAD);
                 _local_4.dispose();
             }
             return _local_3;

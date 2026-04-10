@@ -67,7 +67,7 @@
 					return;
 				};
 				_local_3.setDirection(AvatarSetType.HEAD, 2);
-				var _local_4:BitmapData = _local_3._Str_818(AvatarSetType.HEAD, 0.5);
+var _local_4:BitmapData = _local_3.getCroppedImage(AvatarSetType.HEAD, 0.5);
 			
 				if (_local_4 != null)
 				{

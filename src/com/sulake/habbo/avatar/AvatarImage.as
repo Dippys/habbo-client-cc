@@ -423,7 +423,7 @@
             return new ConvolutionFilter(3, 3, _local_4, 1);
         }
 
-        public function _Str_818(k:String, _arg_2:Number=1):BitmapData
+public function getCroppedImage(k:String, _arg_2:Number=1):BitmapData
         {
             var _local_6:Rectangle;
             var _local_7:String;

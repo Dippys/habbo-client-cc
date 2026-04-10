@@ -105,7 +105,7 @@
                 if (_local_6)
                 {
                     _local_6.setDirection(AvatarSetType.FULL, FigureDataView._Str_9887);
-                    k = _local_6._Str_818(AvatarSetType.FULL, ((_local_3) ? 0.5 : 1));
+k = _local_6.getCroppedImage(AvatarSetType.FULL, ((_local_3) ? 0.5 : 1));
                     _local_6.dispose();
                 }
             }

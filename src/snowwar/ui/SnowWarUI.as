@@ -194,7 +194,7 @@
             if (_local_4 != null)
             {
                 _local_4.setDirection(AvatarSetType.FULL, 2);
-                k = _local_4._Str_818(AvatarSetType.HEAD);
+k = _local_4.getCroppedImage(AvatarSetType.HEAD);
                 _local_4.dispose();
                 WindowUtils.setElementImage(this._ownStats.findChildByName("user_image"), k);
                 k.dispose();

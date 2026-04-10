@@ -54,8 +54,8 @@
                     if (_local_6 != null)
                     {
                         _local_6.setDirection(AvatarSetType.FULL, 2);
-                        _local_2 = _local_6._Str_818(AvatarSetType.FULL);
-                        _local_3 = _local_6._Str_818(AvatarSetType.HEAD);
+_local_2 = _local_6.getCroppedImage(AvatarSetType.FULL);
+_local_3 = _local_6.getCroppedImage(AvatarSetType.HEAD);
                         _local_6.dispose();
                     }
                     this._lastFigure = _local_4;

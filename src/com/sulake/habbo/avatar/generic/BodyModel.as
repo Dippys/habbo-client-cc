@@ -81,7 +81,7 @@
             {
                 _local_6 = _controller.figureData.getFigureStringWithFace(_local_5.id);
                 _local_7 = _controller.manager.avatarRenderManager.createAvatarImage(_local_6, AvatarScaleType.LARGE, null, this);
-                _local_5.icon = _local_7._Str_818(AvatarSetType.HEAD);
+_local_5.icon = _local_7.getCroppedImage(AvatarSetType.HEAD);
                 _local_7.dispose();
             }
         }

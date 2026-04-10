@@ -293,7 +293,7 @@
             if (_local_6)
             {
                 _local_6.setDirection(AvatarSetType.FULL, 2);
-                _local_5 = _local_6._Str_818(AvatarSetType.HEAD, ((_local_4) ? 0.5 : 1));
+_local_5 = _local_6.getCroppedImage(AvatarSetType.HEAD, ((_local_4) ? 0.5 : 1));
                 WindowUtils.setElementImage(k, _local_5);
                 _local_5.dispose();
             }
@@ -343,7 +343,7 @@
             if (_local_4)
             {
                 _local_4.setDirection(AvatarSetType.FULL, 4);
-                _local_3 = _local_4._Str_818(AvatarSetType.FULL);
+_local_3 = _local_4.getCroppedImage(AvatarSetType.FULL);
                 this._Str_20297(_local_3);
                 _local_3.dispose();
             }

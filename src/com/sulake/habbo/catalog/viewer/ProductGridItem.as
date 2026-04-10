@@ -217,7 +217,7 @@
         protected function _Str_12672(k:String, _arg_2:IAvatarImageListener):BitmapData
         {
             var _local_3:IAvatarImage = this._habboCatalog.avatarRenderManager.createAvatarImage(k, AvatarScaleType.LARGE, null, _arg_2);
-            var _local_4:BitmapData = _local_3._Str_818(AvatarSetType.HEAD, 0.5);
+var _local_4:BitmapData = _local_3.getCroppedImage(AvatarSetType.HEAD, 0.5);
             _local_3.dispose();
             return _local_4;
         }

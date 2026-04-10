@@ -557,7 +557,7 @@
                 _local_3 = _avatarManager.createAvatarImage(k, AvatarScaleType.LARGE, null, this);
                 if (_local_3)
                 {
-                    _local_2 = _local_3._Str_818(AvatarSetType.HEAD);
+_local_2 = _local_3.getCroppedImage(AvatarSetType.HEAD);
                     _local_3.dispose();
                 }
             }

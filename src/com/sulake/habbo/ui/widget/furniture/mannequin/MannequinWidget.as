@@ -239,7 +239,7 @@
         {
             var _local_2:IAvatarRenderManager = (_handler as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_3:IAvatarImage = _local_2.createAvatarImage(k, AvatarScaleType.LARGE);
-            var _local_4:BitmapData = _local_3._Str_818(AvatarSetType.FULL);
+var _local_4:BitmapData = _local_3.getCroppedImage(AvatarSetType.FULL);
             _local_3.dispose();
             return _local_4;
         }

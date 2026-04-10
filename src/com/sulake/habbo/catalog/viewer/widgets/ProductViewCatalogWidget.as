@@ -431,7 +431,7 @@
                                 _local_10.appendAction(AvatarAction.GESTURE, AvatarAction.GESTURE_SMILE);
                                 _local_10.setDirection(AvatarSetType.FULL, 4);
                                 _local_10.setDirection(AvatarSetType.HEAD, 3);
-                                _local_4 = _local_10._Str_818(AvatarSetType.FULL);
+_local_4 = _local_10.getCroppedImage(AvatarSetType.FULL);
                                 break;
                             case ProductTypeEnum.EFFECT:
                                 if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))

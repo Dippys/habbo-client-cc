@@ -354,7 +354,7 @@
                 _local_4 = this._component.avatarRenderManager.createAvatarImage(k, ((_local_2) ? AvatarScaleType.LARGE : AvatarScaleType.SMALL), null, this);
                 if (_local_4 != null)
                 {
-                    _local_3 = _local_4._Str_818(AvatarSetType.HEAD, ((_local_2) ? 0.5 : 1));
+_local_3 = _local_4.getCroppedImage(AvatarSetType.HEAD, ((_local_2) ? 0.5 : 1));
                     _local_5 = _local_4._Str_867(AvatarFigurePartType.CHEST);
                     _local_4.dispose();
                     if (_local_5 != null)

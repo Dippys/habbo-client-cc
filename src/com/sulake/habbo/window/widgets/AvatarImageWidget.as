@@ -244,7 +244,7 @@
                     _local_4.setDirection(((this._onlyHead) ? AvatarSetType.HEAD : AvatarSetType.FULL), this._direction);
                     if (this._cropped)
                     {
-                        this._bitmap.bitmap = _local_4._Str_818(((this._onlyHead) ? AvatarSetType.HEAD : AvatarSetType.FULL), _local_3);
+this._bitmap.bitmap = _local_4.getCroppedImage(((this._onlyHead) ? AvatarSetType.HEAD : AvatarSetType.FULL), _local_3);
                     }
                     else
                     {

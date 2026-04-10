@@ -284,7 +284,7 @@
                     if (_local_15)
                     {
                         _local_15.setDirection(AvatarSetType.HEAD, 2);
-                        _local_16 = _local_15._Str_818(AvatarSetType.HEAD);
+_local_16 = _local_15.getCroppedImage(AvatarSetType.HEAD);
                         _local_11 = (_local_10.getGridItemAt(_local_9) as IRegionWindow);
                         if (_local_11)
                         {

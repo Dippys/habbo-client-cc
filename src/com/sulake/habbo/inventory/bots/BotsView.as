@@ -220,11 +220,11 @@
             _local_5.setDirection(AvatarSetType.FULL, _arg_2);
             if (_arg_3)
             {
-                _local_6 = _local_5._Str_818(AvatarSetType.FULL);
+_local_6 = _local_5.getCroppedImage(AvatarSetType.FULL);
             }
             else
             {
-                _local_6 = _local_5._Str_818(AvatarSetType.HEAD);
+_local_6 = _local_5.getCroppedImage(AvatarSetType.HEAD);
             }
             _local_5.dispose();
             return _local_6;
