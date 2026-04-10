@@ -14,7 +14,6 @@
         function get isInUse():Boolean;
         function get icon():BitmapData;
         function set icon(_arg_1:BitmapData):void;
-        function get icon():BitmapData;
         function set Selected(_arg_1:Boolean):void;
         function get Selected():Boolean;
     }
