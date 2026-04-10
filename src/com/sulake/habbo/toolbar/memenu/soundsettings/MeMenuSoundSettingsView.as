@@ -87,9 +87,9 @@
 
         public function _Str_7269():void
         {
-            this._genericVolume = this._widget.widget.toolbar._Str_2476.genericVolume;
-            this._furniVolume = this._widget.widget.toolbar._Str_2476.furniVolume;
-            this._traxVolume = this._widget.widget.toolbar._Str_2476.traxVolume;
+            this._genericVolume = this._widget.widget.toolbar.soundManager.genericVolume;
+            this._furniVolume = this._widget.widget.toolbar.soundManager.furniVolume;
+            this._traxVolume = this._widget.widget.toolbar.soundManager.traxVolume;
             if (this._uiSoundsSettings != null)
             {
                 this._uiSoundsSettings.setValue(this._genericVolume);
@@ -151,13 +151,13 @@
                 {
                     return;
                 }
-                this._widget.widget.toolbar._Str_2476.furniVolume = _local_5;
-                this._widget.widget.toolbar._Str_2476.genericVolume = _local_6;
-                this._widget.widget.toolbar._Str_2476.traxVolume = _local_7;
+                this._widget.widget.toolbar.soundManager.furniVolume = _local_5;
+                this._widget.widget.toolbar.soundManager.genericVolume = _local_6;
+                this._widget.widget.toolbar.soundManager.traxVolume = _local_7;
             }
             else
             {
-                this._widget.widget.toolbar._Str_2476.previewVolume(_local_6, _local_5, _local_7);
+                this._widget.widget.toolbar.soundManager.previewVolume(_local_6, _local_5, _local_7);
             }
         }
 

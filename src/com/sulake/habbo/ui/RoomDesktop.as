@@ -336,7 +336,7 @@
             return this._config;
         }
 
-        public function get _Str_2476():IHabboSoundManager
+        public function get soundManager():IHabboSoundManager
         {
             return this._soundManager;
         }
@@ -482,7 +482,7 @@
             this._config = k;
         }
 
-        public function set _Str_2476(k:IHabboSoundManager):void
+        public function set soundManager(k:IHabboSoundManager):void
         {
             this._soundManager = k;
         }

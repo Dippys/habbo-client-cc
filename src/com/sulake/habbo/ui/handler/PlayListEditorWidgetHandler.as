@@ -50,14 +50,14 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            if (this._container._Str_2476)
+            if (this._container.soundManager)
             {
-                this._container._Str_2476.events.addEventListener(SongDiskInventoryReceivedEvent.SDIR_SONG_DISK_INVENTORY_RECEIVENT_EVENT, this._Str_4671);
-                this._container._Str_2476.events.addEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_UPDATED, this._Str_4671);
-                this._container._Str_2476.events.addEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_FULL, this._Str_4671);
-                this._container._Str_2476.events.addEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_4671);
-                this._container._Str_2476.events.addEventListener(NowPlayingEvent.NPE_USER_PLAY_SONG, this._Str_4671);
-                this._container._Str_2476.events.addEventListener(NowPlayingEvent.NPW_USER_STOP_SONG, this._Str_4671);
+                this._container.soundManager.events.addEventListener(SongDiskInventoryReceivedEvent.SDIR_SONG_DISK_INVENTORY_RECEIVENT_EVENT, this._Str_4671);
+                this._container.soundManager.events.addEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_UPDATED, this._Str_4671);
+                this._container.soundManager.events.addEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_FULL, this._Str_4671);
+                this._container.soundManager.events.addEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_4671);
+                this._container.soundManager.events.addEventListener(NowPlayingEvent.NPE_USER_PLAY_SONG, this._Str_4671);
+                this._container.soundManager.events.addEventListener(NowPlayingEvent.NPW_USER_STOP_SONG, this._Str_4671);
             }
         }
 
@@ -87,16 +87,16 @@
                 this._furniListUpdateListener = null;
                 if (this._container)
                 {
-                    if (this._container._Str_2476)
+                    if (this._container.soundManager)
                     {
-                        if (this._container._Str_2476.events)
+                        if (this._container.soundManager.events)
                         {
-                            this._container._Str_2476.events.removeEventListener(SongDiskInventoryReceivedEvent.SDIR_SONG_DISK_INVENTORY_RECEIVENT_EVENT, this._Str_4671);
-                            this._container._Str_2476.events.removeEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_UPDATED, this._Str_4671);
-                            this._container._Str_2476.events.removeEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_FULL, this._Str_4671);
-                            this._container._Str_2476.events.removeEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_4671);
-                            this._container._Str_2476.events.removeEventListener(NowPlayingEvent.NPE_USER_PLAY_SONG, this._Str_4671);
-                            this._container._Str_2476.events.removeEventListener(NowPlayingEvent.NPW_USER_STOP_SONG, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(SongDiskInventoryReceivedEvent.SDIR_SONG_DISK_INVENTORY_RECEIVENT_EVENT, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_UPDATED, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(PlayListStatusEvent.PLUE_PLAY_LIST_FULL, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(NowPlayingEvent.NPE_SONG_CHANGED, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(NowPlayingEvent.NPE_USER_PLAY_SONG, this._Str_4671);
+                            this._container.soundManager.events.removeEventListener(NowPlayingEvent.NPW_USER_STOP_SONG, this._Str_4671);
                         }
                     }
                     this._container = null;

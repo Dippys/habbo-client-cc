@@ -151,7 +151,7 @@
 
         public function triggerCameraShutterSound():void
         {
-            this.container._Str_2476.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
+            this.container.soundManager.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
         }
 
         private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void

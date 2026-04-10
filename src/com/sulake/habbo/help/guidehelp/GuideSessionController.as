@@ -659,7 +659,7 @@
             this._sessionData._Str_8937 = _arg_2;
             this._sessionData.requestType = k;
             this.openWindow(this.onGuideAcceptEvent, false);
-            this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
+            this._habboHelp.soundManager.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             if (((k == _Str_2849._Str_4749) || (k == _Str_2849._Str_4268)))
             {
                 this._window.findChildByName("frank_greeting").visible = true;
@@ -1055,7 +1055,7 @@
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_ACCEPT;
             this.openWindow(this.onGuardianChatReviewAcceptEvent, false);
-            this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
+            this._habboHelp.soundManager.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             var _local_2:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
             _local_2.seconds = k;
             _local_2.running = true;

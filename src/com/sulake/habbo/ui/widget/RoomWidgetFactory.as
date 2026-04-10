@@ -131,7 +131,7 @@
                 case RoomWidgetEnum.WELCOME_GIFT:
                     return new WelcomeGiftWidget(_arg_2, windowManager, assets, this._roomUI.localization);
                 case RoomWidgetEnum.PLAYLIST_EDITOR_WIDGET:
-                    return new PlaylistEditorWidget(_arg_2, windowManager, this._roomUI._Str_2476, assets, this._roomUI.localization, this._roomUI, this._roomUI.catalog);
+                    return new PlaylistEditorWidget(_arg_2, windowManager, this._roomUI.soundManager, assets, this._roomUI.localization, this._roomUI, this._roomUI.catalog);
                 case RoomWidgetEnum.SPAMWALL_POSTIT_WIDGET:
                     return new SpamwallPostitWIdget(_arg_2, windowManager, assets);
                 case RoomWidgetEnum.EFFECTS:

@@ -1104,7 +1104,7 @@
             _local_3.habboHelp = this._habboHelp;
             _local_3.moderation = this._moderation;
             _local_3.config = this;
-            _local_3._Str_2476 = this._soundManager;
+            _local_3.soundManager = this._soundManager;
             _local_3.habboTracking = this._habboTracking;
             _local_3.userDefinedRoomEvents = this._userDefinedRoomEvents;
             _local_3.gameManager = this._gameManager;
@@ -1243,7 +1243,7 @@
             return this._roomEngine;
         }
 
-        public function get _Str_2476():IHabboSoundManager
+        public function get soundManager():IHabboSoundManager
         {
             return this._soundManager;
         }

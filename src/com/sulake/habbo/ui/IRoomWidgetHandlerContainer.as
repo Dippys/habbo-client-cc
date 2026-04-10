@@ -55,7 +55,7 @@
         function get localization():IHabboLocalizationManager;
         function get habboHelp():IHabboHelp;
         function get config():IHabboConfigurationManager;
-        function get _Str_2476():IHabboSoundManager;
+        function get soundManager():IHabboSoundManager;
         function get messenger():IHabboMessenger;
         function get moderation():IHabboModeration;
         function get windowManager():IHabboWindowManager;

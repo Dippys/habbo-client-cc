@@ -87,7 +87,7 @@
                     this._description = this._model.controller.localization.getLocalization("inventory.furni.item.landscape.desc");
                     break;
             }
-            this._model._Str_2476.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
+            this._model.soundManager.events.addEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
         }
 
         public function get _Str_23694():Boolean
@@ -255,11 +255,11 @@
 
         public function dispose():void
         {
-            if (this._model._Str_2476)
+            if (this._model.soundManager)
             {
-                if (this._model._Str_2476.events != null)
+                if (this._model.soundManager.events != null)
                 {
-                    this._model._Str_2476.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
+                    this._model.soundManager.events.removeEventListener(SongInfoReceivedEvent.SIR_TRAX_SONG_INFO_RECEIVED, this.onSongInfoReceivedEvent);
                 }
             }
             this._model = null;
@@ -947,7 +947,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k.extra);
+                    _local_3 = this._model.soundManager.musicController.getSongInfo(k.extra);
                     if (_local_3 != null)
                     {
                         return _local_3.name;
@@ -983,7 +983,7 @@
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
                     break;
                 case FurniCategory.TRAX_SONG:
-                    _local_3 = this._model._Str_2476.musicController.getSongInfo(k.extra);
+                    _local_3 = this._model.soundManager.musicController.getSongInfo(k.extra);
                     if (_local_3 != null)
                     {
                         return _local_3.creator;
@@ -1017,10 +1017,10 @@
                 if (k.category == FurniCategory.TRAX_SONG)
                 {
                     _local_2 = k.extra;
-                    _local_3 = this._model._Str_2476.musicController.getSongInfo(_local_2);
+                    _local_3 = this._model.soundManager.musicController.getSongInfo(_local_2);
                     if (_local_3 == null)
                     {
-                        this._model._Str_2476.musicController.requestSongInfoWithoutSamples(_local_2);
+                        this._model.soundManager.musicController.requestSongInfoWithoutSamples(_local_2);
                         this._Str_14420 = _local_2;
                     }
                 }

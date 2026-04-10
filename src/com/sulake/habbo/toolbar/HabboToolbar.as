@@ -694,7 +694,7 @@
             return this._extensionView;
         }
 
-        public function get _Str_2476():IHabboSoundManager
+        public function get soundManager():IHabboSoundManager
         {
             return this._soundManager;
         }
