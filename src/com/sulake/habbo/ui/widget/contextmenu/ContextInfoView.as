@@ -296,7 +296,7 @@ package com.sulake.habbo.ui.widget.contextmenu
             {
                 k = (XmlAsset(this._widget.assets.getAssetByName("minimized_menu")).content as XML);
                 this._Str_5032 = (this._widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
-                this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, this._Str_23220);
+                this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, this.onMinimizeClick);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, this.onMinimizeButtonEvent);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, this.onMinimizeButtonEvent);
                 this._Str_5032.addEventListener(WindowMouseEvent.OVER, this.onMouseOverOut);
@@ -305,7 +305,7 @@ package com.sulake.habbo.ui.widget.contextmenu
             return this._Str_5032;
         }
 
-        private function _Str_23220(k:WindowMouseEvent):void
+        private function onMinimizeClick(k:WindowMouseEvent):void
         {
             this._Str_5129(false);
         }
