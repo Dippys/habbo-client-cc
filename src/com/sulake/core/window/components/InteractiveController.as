@@ -87,9 +87,9 @@
                         }
                         break;
                     case PropertyKeys.TOOL_TIP_DELAY:
-                        if (_local_3.value != k._Str_3099)
+                        if (_local_3.value != k.toolTipDelay)
                         {
-                            k._Str_3099 = (_local_3.value as uint);
+                            k.toolTipDelay = (_local_3.value as uint);
                         }
                         break;
                     case PropertyKeys.TOOL_TIP_IS_DYNAMIC:
@@ -105,7 +105,7 @@
         public static function _Str_8987(k:IInteractiveWindow, _arg_2:Array):Array
         {
             _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_CAPTION, k.toolTipCaption));
-            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_DELAY, k._Str_3099));
+            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_DELAY, k.toolTipDelay));
             _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_IS_DYNAMIC, k._Str_4074));
             return _arg_2;
         }
@@ -121,12 +121,12 @@
             return this._Str_3422;
         }
 
-        public function set _Str_3099(k:uint):void
+        public function set toolTipDelay(k:uint):void
         {
             this._Str_3681 = k;
         }
 
-        public function get _Str_3099():uint
+        public function get toolTipDelay():uint
         {
             return this._Str_3681;
         }

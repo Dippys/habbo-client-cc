@@ -73,7 +73,7 @@ package com.sulake.habbo.ui.widget.furniture.guildfurnicontextmenu
                 {
                     _local_1.procedure = this.buttonEventProc;
                     _local_1.toolTipCaption = this.widget.localizations.getLocalization("infostand.profile.link.tooltip", "Click to view profile");
-                    _local_1._Str_3099 = 100;
+                    _local_1.toolTipDelay = 100;
                 }
                 _window.findChildByName("name").caption = _title;
                 _window.visible = false;

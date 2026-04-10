@@ -331,7 +331,7 @@
                 {
                     _local_4.text = _arg_2;
                     _local_3.toolTipCaption = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
-                    _local_3._Str_3099 = 100;
+                    _local_3.toolTipDelay = 100;
                     _local_5.visible = true;
                     if (_local_6 != null)
                     {

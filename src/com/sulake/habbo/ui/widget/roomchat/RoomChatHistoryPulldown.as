@@ -71,7 +71,7 @@
                 this._region.addEventListener(WindowMouseEvent.DOWN, this.onPulldownMouseDown);
                 this._containerWindow.addChild(this._region);
                 this._region.toolTipCaption = "${chat.history.drag.tooltip}";
-                this._region._Str_3099 = 250;
+                this._region.toolTipDelay = 250;
             }
             var _local_5:XmlAsset = (_arg_4.getAssetByName("chat_history_pulldown") as XmlAsset);
             this._window.buildFromXML((_local_5.content as XML));

@@ -159,12 +159,12 @@
             return this._Str_3422;
         }
 
-        public function set _Str_3099(k:uint):void
+        public function set toolTipDelay(k:uint):void
         {
             this._Str_3681 = k;
         }
 
-        public function get _Str_3099():uint
+        public function get toolTipDelay():uint
         {
             return this._Str_3681;
         }

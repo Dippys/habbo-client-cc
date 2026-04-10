@@ -214,7 +214,7 @@
             this._inputField.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_14673);
             this._inputField.addEventListener(WindowMouseEvent.OVER, this._Str_6563);
             this._inputField.addEventListener(WindowMouseEvent.OUT, this._Str_6563);
-            this._inputField._Str_3099 = 0;
+            this._inputField.toolTipDelay = 0;
             this._inputField._Str_4074 = true;
             this._isHelpTextShowing = true;
             this._inputField.setTextFormat(this._helpTextFormat);

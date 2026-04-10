@@ -535,7 +535,7 @@
             {
                 this._window.toolTipCaption = _Str_17786;
             }
-            this._window._Str_3099 = 500;
+            this._window.toolTipDelay = 500;
         }
 
         private function _Str_23110(k:IWindowContainer):void

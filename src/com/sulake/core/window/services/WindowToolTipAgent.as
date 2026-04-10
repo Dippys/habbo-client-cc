@@ -34,7 +34,7 @@
                 if ((k is IInteractiveWindow))
                 {
                     this._Str_3422 = IInteractiveWindow(k).toolTipCaption;
-                    this._Str_3681 = IInteractiveWindow(k)._Str_3099;
+                    this._Str_3681 = IInteractiveWindow(k).toolTipDelay;
                 }
                 else
                 {
