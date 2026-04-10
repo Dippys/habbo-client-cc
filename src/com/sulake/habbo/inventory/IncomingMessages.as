@@ -421,7 +421,7 @@
             {
                 return;
             }
-            var _local_3:BadgesModel = this._inventory._Str_7962;
+            var _local_3:BadgesModel = this._inventory.badgesModel;
             if (_local_3 == null)
             {
                 return;
@@ -457,7 +457,7 @@
             {
                 return;
             }
-            var _local_3:BadgesModel = this._inventory._Str_7962;
+            var _local_3:BadgesModel = this._inventory.badgesModel;
             if (_local_3 == null)
             {
                 return;
@@ -473,7 +473,7 @@
         {
             var _local_2:HabboAchievementNotificationMessageEvent = (k as HabboAchievementNotificationMessageEvent);
             var _local_3:HabboAchievementNotificationMessageParser = _local_2.getParser();
-            var _local_4:BadgesModel = this._inventory._Str_7962;
+            var _local_4:BadgesModel = this._inventory.badgesModel;
             if (_local_4 != null)
             {
                 _local_4.updateBadge(_local_3.data.badgeCode, false, _local_3.data.badgeId);
@@ -485,7 +485,7 @@
         public function _Str_23620(k:IMessageEvent):void
         {
             var _local_2:BadgeReceivedParser = BadgeReceivedEvent(k).getParser();
-            var _local_3:BadgesModel = this._inventory._Str_7962;
+            var _local_3:BadgesModel = this._inventory.badgesModel;
             if (_local_3 != null)
             {
                 _local_3.updateBadge(_local_2.badgeCode, false, _local_2.badgeId);

@@ -265,7 +265,7 @@
             return (disposed) ? null : EffectsModel(this.getModel(InventoryCategory.EFFECTS));
         }
 
-        public function get _Str_7962():BadgesModel
+        public function get badgesModel():BadgesModel
         {
             return (disposed) ? null : BadgesModel(this.getModel(InventoryCategory.BADGES));
         }
@@ -964,7 +964,7 @@
             var _local_3:Array = [];
             if (((_local_2._Str_5453().length == 0) && (!(this._externalBadgesInitializationRequested))))
             {
-                this._Str_7962.onInventoryOpen();
+            this.badgesModel.onInventoryOpen();
                 this._externalBadgesInitializationRequested = true;
             }
             for each (_local_4 in _local_2._Str_5453())

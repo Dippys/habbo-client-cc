@@ -398,7 +398,7 @@ package com.sulake.habbo.inventory
                 this._unseenBadgeCounter = this._Str_11957(InventoryCategory.BADGES);
             }
             this._Str_6423(this._unseenBadgeCounter, k);
-            this._controller._Str_7962.updateView();
+            this._controller.badgesModel.updateView();
         }
 
         public function _Str_24185(k:int):void
@@ -443,7 +443,7 @@ package com.sulake.habbo.inventory
                     this._controller._Str_4524._Str_4409();
                     return;
                 case InventoryCategory.BADGES:
-                    this._controller._Str_7962._Str_4409();
+                    this._controller.badgesModel._Str_4409();
                     return;
                 case InventoryCategory.BOTS:
                     this._controller._Str_8302._Str_4409();
