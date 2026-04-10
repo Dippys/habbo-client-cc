@@ -275,14 +275,14 @@
 
         public function _Str_4409():void
         {
-            this._controller._Str_3455._Str_8813(UnseenItemCategoryEnum.PET);
+            this._controller.unseenItemTracker._Str_8813(UnseenItemCategoryEnum.PET);
             this._controller._Str_6956();
             this._view.update();
         }
 
         public function isUnseen(k:int):Boolean
         {
-            return this._controller._Str_3455.isUnseen(UnseenItemCategoryEnum.PET, k);
+            return this._controller.unseenItemTracker.isUnseen(UnseenItemCategoryEnum.PET, k);
         }
 
         public function _Str_7938(k:int):Boolean
@@ -290,10 +290,10 @@
             var _local_2:Boolean;
             if (this.isUnseen(k))
             {
-                _local_2 = this._controller._Str_3455._Str_16745(UnseenItemCategoryEnum.PET, k);
+            _local_2 = this._controller.unseenItemTracker._Str_16745(UnseenItemCategoryEnum.PET, k);
                 if (_local_2)
                 {
-                    this._controller._Str_3455._Str_17159(UnseenItemCategoryEnum.PET);
+            this._controller.unseenItemTracker._Str_17159(UnseenItemCategoryEnum.PET);
                 }
             }
             return _local_2;

@@ -664,7 +664,7 @@
             this._Str_4091 = k;
             this._Str_17758 = EMBEDDED;
             this._Str_3777(GameConfigurations.getNameId(k), "loadGameClient");
-            this.inventory._Str_3455._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
+                    this.inventory.unseenItemTracker._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
             if (this._Str_2368)
             {
                 this._Str_2368._Str_18594(k);
@@ -683,7 +683,7 @@
             this._Str_17758 = IFRAME;
             this._Str_3852 = _arg_2;
             this._Str_3777(GameConfigurations.getNameId(k), "loadGameClient");
-            this.inventory._Str_3455._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
+                    this.inventory.unseenItemTracker._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
             if (this._Str_2368)
             {
                 this._Str_2368._Str_18594(k);

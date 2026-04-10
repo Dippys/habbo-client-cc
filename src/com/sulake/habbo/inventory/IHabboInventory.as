@@ -17,7 +17,7 @@
         function get clubMinutesUntilExpiration():int;
         function get tradingActive():Boolean;
         function get hasRoomSession():Boolean;
-        function get _Str_3455():IUnseenItemTracker;
+        function get unseenItemTracker():IUnseenItemTracker;
         function getAllMyBadgeIds(_arg_1:Array):Array;
         function getActivatedAvatarEffects():Array;
         function getAvatarEffects():Array;

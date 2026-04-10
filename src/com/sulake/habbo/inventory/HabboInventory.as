@@ -110,7 +110,7 @@
             return this._isInitialized;
         }
 
-        public function get _Str_3455():IUnseenItemTracker
+        public function get unseenItemTracker():IUnseenItemTracker
         {
             return this._unseenItemTracker;
         }

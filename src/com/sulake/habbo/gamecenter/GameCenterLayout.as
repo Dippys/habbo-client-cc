@@ -222,7 +222,7 @@
                 k.addChild(this._gamesLeftContainer);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new GameStatusMessageEvent(this.onGameStatus));
-                this._Str_22075(this._gameCenterView.gameManager.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES));
+                    this._Str_22075(this._gameCenterView.gameManager.inventory.unseenItemTracker._Str_11239(UnseenItemCategoryEnum.GAMES));
                 this._achievementsContainer = (this._gameCenterViewWindow.findChildByName("achievements_container") as IWindowContainer);
                 this._leaderboardContainer = (this._gameCenterViewWindow.findChildByName("leaderboard_container") as IWindowContainer);
                 this._gameGeneralInfoContainer = (this._gameCenterViewWindow.findChildByName("game_general_info_container") as IWindowContainer);
@@ -782,7 +782,7 @@
 
         private function _Str_14461(k:HabboUnseenItemsUpdatedEvent):void
         {
-            var _local_2:Array = this._gameCenterView.gameManager.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES);
+                var _local_2:Array = this._gameCenterView.gameManager.inventory.unseenItemTracker._Str_11239(UnseenItemCategoryEnum.GAMES);
             this._Str_22075(_local_2);
         }
 

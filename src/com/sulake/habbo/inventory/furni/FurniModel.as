@@ -473,7 +473,7 @@
         {
             var _local_2:Boolean;
             var _local_3:int;
-            var _local_4:IUnseenItemTracker = this._controller._Str_3455;
+            var _local_4:IUnseenItemTracker = this._controller.unseenItemTracker;
             if (_local_4 == null)
             {
                 return false;
@@ -491,7 +491,7 @@
             {
                 _local_3 = UnseenItemCategoryEnum.FURNI;
             }
-            var _local_6:Boolean = this._controller._Str_3455.isUnseen(_local_3, k);
+            var _local_6:Boolean = this._controller.unseenItemTracker.isUnseen(_local_3, k);
             if (_local_6)
             {
                 _local_2 = _local_4._Str_16745(_local_3, k);
@@ -945,12 +945,12 @@
             var k:Boolean;
             if (this._category == InventoryCategory.RENTABLES)
             {
-                this._controller._Str_3455._Str_8813(UnseenItemCategoryEnum.RENTABLE);
+            this._controller.unseenItemTracker._Str_8813(UnseenItemCategoryEnum.RENTABLE);
                 k = true;
             }
             else
             {
-                this._controller._Str_3455._Str_8813(UnseenItemCategoryEnum.FURNI);
+            this._controller.unseenItemTracker._Str_8813(UnseenItemCategoryEnum.FURNI);
             }
             for each (_local_2 in this._furniData)
             {
@@ -972,8 +972,8 @@
                 return;
             }
             var k:Array = [];
-            var _local_2:Array = this._controller._Str_3455._Str_11239(UnseenItemCategoryEnum.FURNI);
-            var _local_3:Array = this._controller._Str_3455._Str_11239(UnseenItemCategoryEnum.RENTABLE);
+            var _local_2:Array = this._controller.unseenItemTracker._Str_11239(UnseenItemCategoryEnum.FURNI);
+            var _local_3:Array = this._controller.unseenItemTracker._Str_11239(UnseenItemCategoryEnum.RENTABLE);
             k = k.concat(_local_2);
             k = k.concat(_local_3);
             if (((!(k)) || (k.length == 0)))
@@ -1120,7 +1120,7 @@
             {
                 _local_2 = UnseenItemCategoryEnum.FURNI;
             }
-            return this._controller._Str_3455.isUnseen(_local_2, k.id);
+            return this._controller.unseenItemTracker.isUnseen(_local_2, k.id);
         }
 
         private function _Str_22387(k:FurnitureItem, _arg_2:Boolean):GroupItem

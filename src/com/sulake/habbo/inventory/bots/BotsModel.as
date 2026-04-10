@@ -256,14 +256,14 @@
 
         public function _Str_4409():void
         {
-            this._controller._Str_3455._Str_8813(UnseenItemCategoryEnum.BOT);
+            this._controller.unseenItemTracker._Str_8813(UnseenItemCategoryEnum.BOT);
             this._controller._Str_6956();
             this._view.update();
         }
 
         public function isUnseen(k:int):Boolean
         {
-            return this._controller._Str_3455.isUnseen(UnseenItemCategoryEnum.BOT, k);
+            return this._controller.unseenItemTracker.isUnseen(UnseenItemCategoryEnum.BOT, k);
         }
 
         public function _Str_5725(k:String):void

@@ -154,7 +154,7 @@
                 _local_5 = this._assets.getAssetByName("inventory_thumb_xml");
                 _local_6 = XmlAsset(_local_5);
                 _local_7 = (this._windowManager.buildFromXML(XML(_local_6.content)) as IWindowContainer);
-                _local_8 = this._controller._Str_3455.isUnseen(UnseenItemCategoryEnum.BADGE, _arg_3);
+            _local_8 = this._controller.unseenItemTracker.isUnseen(UnseenItemCategoryEnum.BADGE, _arg_3);
                 _local_9 = new Badge(k, _local_7, _local_8);
                 if (_local_8)
                 {
@@ -376,7 +376,7 @@
             {
                 return;
             }
-            this._controller._Str_3455._Str_8813(UnseenItemCategoryEnum.BADGE);
+            this._controller.unseenItemTracker._Str_8813(UnseenItemCategoryEnum.BADGE);
             for each (k in this._badges)
             {
                 k.isUnseen = false;
