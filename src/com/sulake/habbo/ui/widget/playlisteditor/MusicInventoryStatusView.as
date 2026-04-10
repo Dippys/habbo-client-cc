@@ -60,7 +60,7 @@
             this._currentView = k;
         }
 
-        public function set _Str_10782(k:String):void
+        public function set songName(k:String):void
         {
             if (this._songNameElement == null)
             {

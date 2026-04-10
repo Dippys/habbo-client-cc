@@ -150,7 +150,7 @@
             }
             if (k.songId == this._songId)
             {
-                this._songName = k._Str_10782;
+                this._songName = k.songName;
                 this._songAuthor = k._Str_20860;
                 this._Str_23399((this._songId >= 0));
             }

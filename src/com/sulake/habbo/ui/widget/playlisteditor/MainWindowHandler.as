@@ -350,8 +350,8 @@
                 case _Str_3301.RWPLENPE_USER_PLAY_SONG:
                     this._musicInventoryView._Str_24959();
                     _local_2 = this._musicController.getSongInfo(k.id);
-                    this._musicStatusView._Str_10782 = ((_local_2 != null) ? _local_2.name : "");
-                    this._musicStatusView._Str_10782 = ((_local_2 != null) ? _local_2.name : "");
+                    this._musicStatusView.songName = ((_local_2 != null) ? _local_2.name : "");
+                    this._musicStatusView.songName = ((_local_2 != null) ? _local_2.name : "");
                     this._musicStatusView._Str_6415 = ((_local_2 != null) ? _local_2.creator : "");
                     this._Str_18647();
                     return;

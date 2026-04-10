@@ -22,7 +22,7 @@
             return this._songId;
         }
 
-        public function get _Str_10782():String
+        public function get songName():String
         {
             return this._songName;
         }
