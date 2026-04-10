@@ -187,7 +187,7 @@
             {
                 this._inventory._Str_22707();
             }
-            var _local_3:FurniModel = this._inventory._Str_2834;
+            var _local_3:FurniModel = this._inventory.furniModel;
             if (_local_3 == null)
             {
                 return;
@@ -218,7 +218,7 @@
             {
                 return;
             }
-            var _local_3:FurniModel = this._inventory._Str_2834;
+            var _local_3:FurniModel = this._inventory.furniModel;
             if (((_local_3 == null) || (!(_local_3._Str_21873()))))
             {
                 return;
@@ -253,7 +253,7 @@
             {
                 return;
             }
-            var _local_3:FurniModel = this._inventory._Str_2834;
+            var _local_3:FurniModel = this._inventory.furniModel;
             if (_local_3 == null)
             {
                 return;
@@ -279,7 +279,7 @@
             {
                 return;
             }
-            var _local_3:FurniModel = this._inventory._Str_2834;
+            var _local_3:FurniModel = this._inventory.furniModel;
             if (_local_3 == null)
             {
                 return;
@@ -622,14 +622,14 @@
             var _local_3:Map = new Map();
             var _local_4:Map = new Map();
             var _local_5:int = this._inventory.sessionData.userId;
-            var _local_6:FurniModel = this._inventory._Str_2834;
+            var _local_6:FurniModel = this._inventory.furniModel;
             if (_local_6 == null)
             {
                 return;
             }
             if (((this._inventory.getBoolean("trading.warning.enabled")) && (_local_2.secondUserNumCredits > 0)))
             {
-                _local_8 = this._inventory._Str_2834.createCreditGroupItem(_local_2.secondUserNumCredits);
+            _local_8 = this._inventory.furniModel.createCreditGroupItem(_local_2.secondUserNumCredits);
                 _local_4.add(CREDIT_GROUPITEM_TYPE_ID, _local_8);
             }
             this._Str_21714(_local_2.firstUserItemArray, _local_3, (_local_2.firstUserID == _local_5));
@@ -675,7 +675,7 @@
                 _local_5 = (((_local_9.isGroupable) && (!(this._Str_20661(_local_9.spriteId)))) ? (_arg_2.getValue(_local_8) as GroupItem) : null);
                 if (_local_5 == null)
                 {
-                    _local_5 = this._inventory._Str_2834.createGroupItem(_local_6, _local_7, _local_9.stuffData);
+            _local_5 = this._inventory.furniModel.createGroupItem(_local_6, _local_7, _local_9.stuffData);
                     _arg_2.add(_local_8, _local_5);
                 }
                 _local_5.push(new FurnitureItem(_local_9));
@@ -719,7 +719,7 @@
         private function _Str_15910(k:IMessageEvent):void
         {
             this._inventory._Str_13252();
-            this._inventory._Str_2834.roomLeft();
+            this._inventory.furniModel.roomLeft();
         }
 
         private function _Str_24135(k:PetInventoryEvent):void
@@ -882,7 +882,7 @@
             _local_2.expirationHours = _local_3.offerTime;
             _local_2.averagePricePeriod = _local_3.displayTime;
             this._inventory._Str_5943(InventoryCategory.MARKETPLACE);
-            var _local_4:FurniModel = this._inventory._Str_2834;
+            var _local_4:FurniModel = this._inventory.furniModel;
             if (_local_4 != null)
             {
                 _local_4.updateView();
@@ -973,7 +973,7 @@
             {
                 this._inventory._Str_3994._Str_24964();
             }
-            this._inventory._Str_2834.roomEntered();
+            this._inventory.furniModel.roomEntered();
         }
 
         private function _Str_19767(k:Map, _arg_2:int, _arg_3:int, _arg_4:Vector.<Map>):Map

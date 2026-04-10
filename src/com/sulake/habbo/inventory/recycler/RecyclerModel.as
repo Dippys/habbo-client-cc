@@ -72,29 +72,29 @@
 
         public function _Str_22646():void
         {
-            if (((this._habboInventory == null) || (this._habboInventory._Str_2834 == null)))
+            if (((this._habboInventory == null) || (this._habboInventory.furniModel == null)))
             {
                 return;
             }
             this._state = STATE_ACTIVE;
             this._itemList = new Map();
-            this._habboInventory._Str_2834._Str_14978(true);
+            this._habboInventory.furniModel._Str_14978(true);
         }
 
         public function _Str_20195():void
         {
             var _local_2:int;
-            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
+            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory.furniModel == null)))
             {
                 return;
             }
             this._state = _Str_599;
-            this._habboInventory._Str_2834._Str_14978(false);
+            this._habboInventory.furniModel._Str_14978(false);
             var k:int;
             while (k < this._itemList.length)
             {
                 _local_2 = this._itemList.getKey(k);
-                this._habboInventory._Str_2834._Str_10184(_local_2);
+                this._habboInventory.furniModel._Str_10184(_local_2);
                 k++;
             }
             this._itemList = null;
@@ -102,11 +102,11 @@
 
         public function _Str_22697():int
         {
-            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory._Str_2834 == null)))
+            if ((((this._itemList == null) || (this._habboInventory == null)) || (this._habboInventory.furniModel == null)))
             {
                 return 0;
             }
-            var k:IFurnitureItem = this._habboInventory._Str_2834._Str_15313();
+            var k:IFurnitureItem = this._habboInventory.furniModel._Str_15313();
             if (k == null)
             {
                 return 0;
@@ -129,7 +129,7 @@
             {
                 return false;
             }
-            var _local_3:FurniModel = this._habboInventory._Str_2834;
+            var _local_3:FurniModel = this._habboInventory.furniModel;
             if (_local_3 == null)
             {
                 return false;

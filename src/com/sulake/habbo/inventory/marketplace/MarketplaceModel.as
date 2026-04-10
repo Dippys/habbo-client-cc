@@ -152,9 +152,9 @@
 
         public function releaseItem():void
         {
-            if ((((!(this._controller == null)) && (!(this._controller._Str_2834 == null))) && (!(this._item == null))))
+            if ((((!(this._controller == null)) && (!(this._controller.furniModel == null))) && (!(this._item == null))))
             {
-                this._controller._Str_2834._Str_10184(this._item.id);
+                this._controller.furniModel._Str_10184(this._item.id);
                 this._item = null;
             }
         }
@@ -169,7 +169,7 @@
             {
                 return;
             }
-            var _local_2:FurniModel = this._controller._Str_2834;
+            var _local_2:FurniModel = this._controller.furniModel;
             if (_local_2 == null)
             {
                 return;

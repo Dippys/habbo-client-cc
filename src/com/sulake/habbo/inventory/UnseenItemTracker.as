@@ -138,7 +138,7 @@
             if (this._inventory.isInitialized)
             {
                 this._inventory._Str_6956();
-                this._inventory._Str_2834._Str_22285();
+                this._inventory.furniModel._Str_22285();
                 this._inventory._Str_4524.updateView();
                 this._inventory._Str_8302.updateView();
             }

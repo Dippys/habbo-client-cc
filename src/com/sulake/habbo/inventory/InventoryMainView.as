@@ -356,7 +356,7 @@ package com.sulake.habbo.inventory
                 this._unseenFurniCounter = this._Str_11957(InventoryCategory.FURNI);
             }
             this._Str_6423(this._unseenFurniCounter, k);
-            this._controller._Str_2834.updateView();
+            this._controller.furniModel.updateView();
         }
 
         public function _Str_25138(k:int):void
@@ -370,7 +370,7 @@ package com.sulake.habbo.inventory
                 this._unseenRentedFurniCounter = this._Str_11957(InventoryCategory.RENTABLES);
             }
             this._Str_6423(this._unseenRentedFurniCounter, k);
-            this._controller._Str_2834.updateView();
+            this._controller.furniModel.updateView();
         }
 
         public function _Str_22445(k:int):void
@@ -434,10 +434,10 @@ package com.sulake.habbo.inventory
             switch (k)
             {
                 case InventoryCategory.FURNI:
-                    this._controller._Str_2834._Str_4409();
+                    this._controller.furniModel._Str_4409();
                     return;
                 case InventoryCategory.RENTABLES:
-                    this._controller._Str_2834._Str_4409();
+                    this._controller.furniModel._Str_4409();
                     return;
                 case InventoryCategory.PETS:
                     this._controller._Str_4524._Str_4409();

@@ -250,7 +250,7 @@
             return this._inventories.getValue(k);
         }
 
-        public function get _Str_2834():FurniModel
+        public function get furniModel():FurniModel
         {
             return (disposed) ? null : FurniModel(this.getModel(InventoryCategory.FURNI));
         }
@@ -413,9 +413,9 @@
                         {
                             this._Str_4524._Str_19310();
                         }
-                        if (this._Str_2834 != null)
+                        if (this.furniModel != null)
                         {
-                            this._Str_2834.updateView();
+                            this.furniModel.updateView();
                         }
                     }
                     return;
@@ -786,7 +786,7 @@
         {
             var _local_2:GroupItem;
             var _local_3:IFurnitureItem;
-            for each (_local_2 in this._Str_2834.furniData)
+            for each (_local_2 in this.furniModel.furniData)
             {
                 _local_3 = _local_2.getItem(k);
                 if (((!(_local_3 == null)) && (!(_local_3.isWallItem))))
@@ -801,7 +801,7 @@
         {
             var _local_2:GroupItem;
             var _local_3:IFurnitureItem;
-            for each (_local_2 in this._Str_2834.furniData)
+            for each (_local_2 in this.furniModel.furniData)
             {
                 _local_3 = _local_2.getItem(k);
                 if (((!(_local_3 == null)) && (_local_3.isWallItem)))
@@ -819,7 +819,7 @@
             {
                 return null;
             }
-            var _local_4:GroupItem = this._Str_2834._Str_24542(_arg_2);
+            var _local_4:GroupItem = this.furniModel._Str_24542(_arg_2);
             if (!_local_4)
             {
                 return null;
@@ -849,7 +849,7 @@
 
         public function getItemWithStripId(k:int):Boolean
         {
-            var _local_2:Boolean = this._Str_2834.getItemWithStripId(k);
+            var _local_2:Boolean = this.furniModel.getItemWithStripId(k);
             if (_local_2)
             {
                 this._Str_6956();

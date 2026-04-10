@@ -385,7 +385,7 @@
 
         public function _Str_19254():FurniModel
         {
-            return this._inventory._Str_2834;
+            return this._inventory.furniModel;
         }
 
         public function getInventory():HabboInventory
@@ -430,7 +430,7 @@
             this._tradingView._Str_9059(this._ownUserIndex);
             this._tradingView._Str_9059(this._otherUserIndex);
             this._tradingView._Str_11244();
-            var _local_4:FurniModel = this._inventory._Str_2834;
+            var _local_4:FurniModel = this._inventory.furniModel;
             if (_local_4 != null)
             {
                 _local_4._Str_17963();
