@@ -139,18 +139,18 @@
                         this.seconds = int(_local_2.value);
                         break;
                     case _Str_5847:
-                        this._Str_4157 = int(_local_2.value);
+                        this.colorStyle = int(_local_2.value);
                         break;
                 }
             }
         }
 
-        public function get _Str_4157():int
+        public function get colorStyle():int
         {
             return this._colorStyle;
         }
 
-        public function set _Str_4157(k:int):void
+        public function set colorStyle(k:int):void
         {
             var _local_4:IWindowContainer;
             var _local_5:ITextWindow;
@@ -169,10 +169,10 @@
                     {
                         _local_6 = _local_5.textColor;
                         _local_7 = _local_5.etchingColor;
-                        if (((this._Str_4157 >= 0) && (this._Str_4157 < _Str_14826.length)))
+                        if (((this._colorStyle >= 0) && (this._colorStyle < _Str_14826.length)))
                         {
-                            _local_6 = _Str_14826[this._Str_4157];
-                            _local_7 = _Str_17827[this._Str_4157];
+                            _local_6 = _Str_14826[this._colorStyle];
+                            _local_7 = _Str_17827[this._colorStyle];
                         }
                         _local_5.textColor = _local_6;
                         _local_5.etchingColor = _local_7;

@@ -4,8 +4,8 @@
 
     public interface ICountdownWidget extends IWidget 
     {
-        function get _Str_4157():int;
-        function set _Str_4157(_arg_1:int):void;
+        function get colorStyle():int;
+        function set colorStyle(_arg_1:int):void;
         function get running():Boolean;
         function set running(_arg_1:Boolean):void;
         function get _Str_4056():uint;
