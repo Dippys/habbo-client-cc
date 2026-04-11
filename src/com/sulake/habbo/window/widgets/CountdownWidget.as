@@ -17,11 +17,11 @@
         public static const COUNTDOWN:String = "countdown";
         private static const runningPropertyKey:String = (COUNTDOWN + ":running");
         private static const digitsPropertyKey:String = (COUNTDOWN + ":digits");
-        private static const _Str_12753:String = (COUNTDOWN + ":seconds");
+        private static const secondsPropertyKey:String = (COUNTDOWN + ":seconds");
         private static const colorStylePropertyKey:String = (COUNTDOWN + ":color_style");
         private static const _Str_13513:PropertyStruct = new PropertyStruct(runningPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
-        private static const _Str_13149:PropertyStruct = new PropertyStruct(_Str_12753, 0, PropertyStruct.INT);
+        private static const _Str_13149:PropertyStruct = new PropertyStruct(secondsPropertyKey, 0, PropertyStruct.INT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const COUNTDOWN_CLOCK_UNIT_:String = "countdown_clock_unit_";
         private static const _Str_16025:Array = ["weeks", "days", "hours", "minutes", "seconds"];
@@ -135,7 +135,7 @@
                     case digitsPropertyKey:
                         this.digits = uint(_local_2.value);
                         break;
-                    case _Str_12753:
+                    case secondsPropertyKey:
                         this.seconds = int(_local_2.value);
                         break;
                     case colorStylePropertyKey:
