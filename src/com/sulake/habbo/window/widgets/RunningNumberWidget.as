@@ -14,11 +14,11 @@
     {
         public static const RUNNING_NUMBER:String = "running_number";
         private static const _Str_15087:String = (RUNNING_NUMBER + ":number");
-        private static const _Str_5874:String = (RUNNING_NUMBER + ":digits");
+        private static const digitsPropertyKey:String = (RUNNING_NUMBER + ":digits");
         private static const _Str_5847:String = (RUNNING_NUMBER + ":color_style");
         private static const _Str_15674:String = (RUNNING_NUMBER + ":update_frequency");
         private static const _Str_14856:PropertyStruct = new PropertyStruct(_Str_15087, 0, PropertyStruct.INT);
-        private static const _Str_5707:PropertyStruct = new PropertyStruct(_Str_5874, 8, PropertyStruct.UINT);
+        private static const _Str_5707:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
         private static const _Str_6446:PropertyStruct = new PropertyStruct(_Str_5847, 0, PropertyStruct.INT);
         private static const _Str_14116:PropertyStruct = new PropertyStruct(_Str_15674, 50, PropertyStruct.INT);
 
@@ -101,7 +101,7 @@
                     case _Str_15087:
                         this.number = int(_local_2.value);
                         break;
-                    case _Str_5874:
+                    case digitsPropertyKey:
                         this.digits = uint(_local_2.value);
                         break;
                     case _Str_5847:
