@@ -20,7 +20,7 @@
         private static const _Str_12753:String = (COUNTDOWN + ":seconds");
         private static const colorStylePropertyKey:String = (COUNTDOWN + ":color_style");
         private static const _Str_13513:PropertyStruct = new PropertyStruct(_Str_12828, false, PropertyStruct.BOOLEAN);
-        private static const _Str_5707:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
+        private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
         private static const _Str_13149:PropertyStruct = new PropertyStruct(_Str_12753, 0, PropertyStruct.INT);
         private static const _Str_6446:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const COUNTDOWN_CLOCK_UNIT_:String = "countdown_clock_unit_";
@@ -54,7 +54,7 @@
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("clock_base_xml").content as XML)) as IItemListWindow);
             this._digitWindow = (this._root.getListItemByName("counter") as IWindowContainer);
             this._separatorWindow = (this._root.getListItemByName("separator") as ITextWindow);
-            this.digits = uint(_Str_5707.value);
+            this.digits = uint(digitsProperty.value);
             this._windowManager.registerUpdateReceiver(this, 10);
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
             this._widgetWindow.rootWindow = this._root;
@@ -113,7 +113,7 @@
                 return k;
             }
             k.push(_Str_13513.withValue(this._running));
-            k.push(_Str_5707.withValue(this.digits));
+            k.push(digitsProperty.withValue(this.digits));
             k.push(_Str_13149.withValue(this.seconds));
             return k;
         }
