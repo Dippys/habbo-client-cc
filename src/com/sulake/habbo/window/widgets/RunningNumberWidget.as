@@ -16,11 +16,11 @@
         private static const numberPropertyKey:String = (RUNNING_NUMBER + ":number");
         private static const digitsPropertyKey:String = (RUNNING_NUMBER + ":digits");
         private static const colorStylePropertyKey:String = (RUNNING_NUMBER + ":color_style");
-        private static const _Str_15674:String = (RUNNING_NUMBER + ":update_frequency");
+        private static const updateFrequencyPropertyKey:String = (RUNNING_NUMBER + ":update_frequency");
         private static const _Str_14856:PropertyStruct = new PropertyStruct(numberPropertyKey, 0, PropertyStruct.INT);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
-        private static const _Str_14116:PropertyStruct = new PropertyStruct(_Str_15674, 50, PropertyStruct.INT);
+        private static const _Str_14116:PropertyStruct = new PropertyStruct(updateFrequencyPropertyKey, 50, PropertyStruct.INT);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -107,7 +107,7 @@
                     case colorStylePropertyKey:
                         this.colorStyle = int(_local_2.value);
                         break;
-                    case _Str_15674:
+                    case updateFrequencyPropertyKey:
                         this.updateFrequency = int(_local_2.value);
                         break;
                 }
