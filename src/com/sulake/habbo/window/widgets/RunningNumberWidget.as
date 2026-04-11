@@ -129,11 +129,11 @@
                     this._displayedNumber = Math.min(this._newNumber, (this._displayedNumber + (this._millisSinceLastUpdate / this._updateFrequency)));
                     this._millisSinceLastUpdate = (this._millisSinceLastUpdate - this._updateFrequency);
                 }
-                this._Str_20057 = this._displayedNumber;
+                this.displayedNumber = this._displayedNumber;
             }
         }
 
-        private function set _Str_20057(k:uint):void
+        private function set displayedNumber(k:uint):void
         {
             var _local_2:String = k.toString();
             while (_local_2.length < this._digits)
@@ -189,7 +189,7 @@
         {
             this._displayedNumber = k;
             this._newNumber = k;
-            this._Str_20057 = this._displayedNumber;
+            this.displayedNumber = this._displayedNumber;
         }
     }
 }
