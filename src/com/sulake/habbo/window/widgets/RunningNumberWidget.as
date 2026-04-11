@@ -83,7 +83,7 @@
             k.push(_Str_14856.withValue(this.colorStyle));
             k.push(_Str_6446.withValue(this.colorStyle));
             k.push(_Str_5707.withValue(this._Str_4056));
-            k.push(_Str_14116.withValue(this._Str_9087));
+            k.push(_Str_14116.withValue(this.updateFrequency));
             return k;
         }
 
@@ -108,7 +108,7 @@
                         this.colorStyle = int(_local_2.value);
                         break;
                     case _Str_15674:
-                        this._Str_9087 = int(_local_2.value);
+                        this.updateFrequency = int(_local_2.value);
                         break;
                 }
             }
@@ -165,12 +165,12 @@
             this._colorStyle = k;
         }
 
-        public function get _Str_9087():int
+        public function get updateFrequency():int
         {
             return this._updateFrequency;
         }
 
-        public function set _Str_9087(k:int):void
+        public function set updateFrequency(k:int):void
         {
             this._updateFrequency = k;
         }

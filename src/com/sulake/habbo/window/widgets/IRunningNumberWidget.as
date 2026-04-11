@@ -11,7 +11,7 @@
         function set _Str_4056(_arg_1:uint):void;
         function get colorStyle():int;
         function set colorStyle(_arg_1:int):void;
-        function get _Str_9087():int;
-        function set _Str_9087(_arg_1:int):void;
+        function get updateFrequency():int;
+        function set updateFrequency(_arg_1:int):void;
     }
 }
