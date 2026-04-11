@@ -11,8 +11,8 @@
     public class RarityItemOverlayPreviewWidget implements _Str_4520 
     {
         public static const RARITY_ITEM_OVERLAY_PREVIEW:String = "rarity_item_overlay_preview";
-        private static const _Str_13342:String = (RARITY_ITEM_OVERLAY_PREVIEW + ":level");
-        private static const _Str_18738:PropertyStruct = new PropertyStruct(_Str_13342, 0, PropertyStruct.INT);
+        private static const levelPropertyKey:String = (RARITY_ITEM_OVERLAY_PREVIEW + ":level");
+        private static const _Str_18738:PropertyStruct = new PropertyStruct(levelPropertyKey, 0, PropertyStruct.INT);
 
         private var _Str_2326:IWidgetWindow;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
@@ -59,7 +59,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_13342:
+                    case levelPropertyKey:
                         this.rarityLevel = int(_local_2.value);
                         break;
                 }
