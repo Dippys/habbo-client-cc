@@ -15,11 +15,11 @@
     public class CountdownWidget implements ICountdownWidget, IUpdateReceiver 
     {
         public static const COUNTDOWN:String = "countdown";
-        private static const _Str_12828:String = (COUNTDOWN + ":running");
+        private static const runningPropertyKey:String = (COUNTDOWN + ":running");
         private static const digitsPropertyKey:String = (COUNTDOWN + ":digits");
         private static const _Str_12753:String = (COUNTDOWN + ":seconds");
         private static const colorStylePropertyKey:String = (COUNTDOWN + ":color_style");
-        private static const _Str_13513:PropertyStruct = new PropertyStruct(_Str_12828, false, PropertyStruct.BOOLEAN);
+        private static const _Str_13513:PropertyStruct = new PropertyStruct(runningPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
         private static const _Str_13149:PropertyStruct = new PropertyStruct(_Str_12753, 0, PropertyStruct.INT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
@@ -129,7 +129,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_12828:
+                    case runningPropertyKey:
                         this.running = Boolean(_local_2.value);
                         break;
                     case digitsPropertyKey:
