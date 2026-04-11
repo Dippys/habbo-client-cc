@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_5046;
+    import com.sulake.habbo.window.widgets.IRunningNumberWidget;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
     import com.sulake.habbo.communication.messages.outgoing.quest.GetCommunityGoalProgressMessageComposer;
@@ -56,7 +56,7 @@
             var _local_7:int = _arg_3[3];
             this._floating = (_arg_3[4] == "true");
             var _local_8:IWidgetWindow = IWidgetWindow(this._window.findChildByName("running_number_widget"));
-            var _local_9:_Str_5046 = _Str_5046(_local_8.widget);
+            var _local_9:IRunningNumberWidget = IRunningNumberWidget(_local_8.widget);
             _local_9._Str_4056 = _local_5;
             _local_9._Str_9087 = _local_6;
             if (this._floating)
@@ -95,12 +95,12 @@
         {
             var _local_2:CommunityGoalData;
             var _local_3:IWidgetWindow;
-            var _local_4:_Str_5046;
+            var _local_4:IRunningNumberWidget;
             if (this._landingView)
             {
                 _local_2 = k.getParser().data;
                 _local_3 = IWidgetWindow(this._window.findChildByName("running_number_widget"));
-                _local_4 = _Str_5046(_local_3.widget);
+                _local_4 = IRunningNumberWidget(_local_3.widget);
                 if (this._counter_initialized)
                 {
                     _local_4.number = _local_2._Str_12030;

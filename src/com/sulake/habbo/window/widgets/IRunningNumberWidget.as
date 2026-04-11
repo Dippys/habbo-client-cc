@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWidget;
 
-    public interface _Str_5046 extends IWidget 
+    public interface IRunningNumberWidget extends IWidget 
     {
         function get number():int;
         function set number(_arg_1:int):void;

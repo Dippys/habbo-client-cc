@@ -10,7 +10,7 @@
     import com.sulake.core.window.utils.IIterator;
     import com.sulake.core.window.components.ITextWindow;
 
-    public class RunningNumberWidget implements _Str_5046, IUpdateReceiver 
+    public class RunningNumberWidget implements IRunningNumberWidget, IUpdateReceiver 
     {
         public static const RUNNING_NUMBER:String = "running_number";
         private static const _Str_15087:String = (RUNNING_NUMBER + ":number");
