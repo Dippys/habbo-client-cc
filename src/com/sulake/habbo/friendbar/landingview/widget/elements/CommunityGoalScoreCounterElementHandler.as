@@ -36,7 +36,7 @@
             if (this._pollTimer)
             {
                 this._pollTimer.stop();
-                this._pollTimer.removeEventListener(TimerEvent.TIMER, this._Str_10015);
+                this._pollTimer.removeEventListener(TimerEvent.TIMER, this.onPollTimer);
                 this._pollTimer = null;
             }
             this._window = null;
@@ -66,7 +66,7 @@
             }
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this.onCommunityGoalProgress));
             this._pollTimer = new Timer(_local_7);
-            this._pollTimer.addEventListener(TimerEvent.TIMER, this._Str_10015);
+            this._pollTimer.addEventListener(TimerEvent.TIMER, this.onPollTimer);
         }
 
         public function disable():void
@@ -113,7 +113,7 @@
             }
         }
 
-        private function _Str_10015(k:TimerEvent):void
+        private function onPollTimer(k:TimerEvent):void
         {
             this._landingView.send(new GetCommunityGoalProgressMessageComposer());
         }

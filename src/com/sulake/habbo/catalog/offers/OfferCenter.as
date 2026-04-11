@@ -47,12 +47,12 @@
             this._providers.push(new SponsorPayProvider(this));
             this._rewards = new Vector.<OfferReward>(0);
             this._pollTimer = new Timer(_Str_16629);
-            this._pollTimer.addEventListener(TimerEvent.TIMER, this._Str_10015);
+            this._pollTimer.addEventListener(TimerEvent.TIMER, this.onPollTimer);
             this._pollTimer.start();
-            this._Str_10015(null);
+            this.onPollTimer(null);
         }
 
-        private function _Str_10015(k:TimerEvent):void
+        private function onPollTimer(k:TimerEvent):void
         {
             var _local_2:IOfferProvider;
             if (this._providers == null)
