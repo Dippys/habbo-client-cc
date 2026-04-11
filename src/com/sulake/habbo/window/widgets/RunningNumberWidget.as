@@ -19,7 +19,7 @@
         private static const _Str_15674:String = (RUNNING_NUMBER + ":update_frequency");
         private static const _Str_14856:PropertyStruct = new PropertyStruct(_Str_15087, 0, PropertyStruct.INT);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
-        private static const _Str_6446:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
+        private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const _Str_14116:PropertyStruct = new PropertyStruct(_Str_15674, 50, PropertyStruct.INT);
 
         private var _disposed:Boolean;
@@ -35,7 +35,7 @@
 
         public function RunningNumberWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
-            this._colorStyle = int(_Str_6446.value);
+            this._colorStyle = int(colorStyleProperty.value);
             this._digits = uint(digitsProperty.value);
             this._updateFrequency = int(_Str_14116.value);
             this._newNumber = int(_Str_14856.value);
@@ -81,7 +81,7 @@
                 return k;
             }
             k.push(_Str_14856.withValue(this.colorStyle));
-            k.push(_Str_6446.withValue(this.colorStyle));
+            k.push(colorStyleProperty.withValue(this.colorStyle));
             k.push(digitsProperty.withValue(this.digits));
             k.push(_Str_14116.withValue(this.updateFrequency));
             return k;

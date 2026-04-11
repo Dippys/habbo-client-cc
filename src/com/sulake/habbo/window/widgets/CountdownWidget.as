@@ -22,7 +22,7 @@
         private static const _Str_13513:PropertyStruct = new PropertyStruct(_Str_12828, false, PropertyStruct.BOOLEAN);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
         private static const _Str_13149:PropertyStruct = new PropertyStruct(_Str_12753, 0, PropertyStruct.INT);
-        private static const _Str_6446:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
+        private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const COUNTDOWN_CLOCK_UNIT_:String = "countdown_clock_unit_";
         private static const _Str_16025:Array = ["weeks", "days", "hours", "minutes", "seconds"];
         private static const _Str_9932:Array = [604800, 86400, 3600, 60, 1];
@@ -47,7 +47,7 @@
             this._running = Boolean(_Str_13513.value);
             this._startSeconds = int(_Str_13149.value);
             this._startTime = getTimer();
-            this._colorStyle = int(_Str_6446.value);
+            this._colorStyle = int(colorStyleProperty.value);
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
