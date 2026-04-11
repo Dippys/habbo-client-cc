@@ -26,7 +26,7 @@
         private static const MESSAGE_KEY:String = (ILLUMINA_CHAT_BUBBLE + ":message");
         private static const _Str_13641:PropertyStruct = new PropertyStruct(FLIPPED_KEY, false, PropertyStruct.BOOLEAN);
         private static const _Str_13288:PropertyStruct = new PropertyStruct(USER_NAME_KEY, "", PropertyStruct.STRING);
-        private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "", PropertyStruct.STRING);
+        private static const figureProperty:PropertyStruct = new PropertyStruct(FIGURE_KEY, "", PropertyStruct.STRING);
         private static const _Str_13034:PropertyStruct = new PropertyStruct(MESSAGE_KEY, "", PropertyStruct.STRING);
 
         private var _disposed:Boolean;
@@ -64,7 +64,7 @@
             this._root.findChildByName("message_region").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, false);
             this._root.procedure = this._Str_24924;
             this.userName = String(_Str_13288.value);
-            this.figure = String(_Str_3804.value);
+            this.figure = String(figureProperty.value);
             this.message = String(_Str_13034.value);
             this._widgetWindow.rootWindow = this._root;
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
@@ -109,7 +109,7 @@
             }
             k.push(_Str_13641.withValue(this.flipped));
             k.push(_Str_13288.withValue(this.userName));
-            k.push(_Str_3804.withValue(this.figure));
+            k.push(figureProperty.withValue(this.figure));
             k.push(_Str_13034.withValue(this.message));
             return k;
         }

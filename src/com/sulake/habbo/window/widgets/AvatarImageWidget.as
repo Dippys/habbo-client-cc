@@ -28,7 +28,7 @@
         private static const croppedPropertyKey:String = (AVATAR_IMAGE + ":cropped");
         private static const directionPropertyKey:String = (AVATAR_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
-        private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
+        private static const figureProperty:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
         private static const onlyHeadProperty:PropertyStruct = new PropertyStruct(onlyHeadPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(croppedPropertyKey, false, PropertyStruct.BOOLEAN);
@@ -53,7 +53,7 @@
 
         public function AvatarImageWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
-            this._figure = String(_Str_3804.value);
+            this._figure = String(figureProperty.value);
             this._scale = String(scaleProperty.value);
             this._onlyHead = Boolean(onlyHeadProperty.value);
             this._cropped = Boolean(_Str_13004.value);
@@ -114,7 +114,7 @@
             {
                 return k;
             }
-            k.push(_Str_3804.withValue(this._figure));
+            k.push(figureProperty.withValue(this._figure));
             k.push(scaleProperty.withValue(this._scale));
             k.push(onlyHeadProperty.withValue(this._onlyHead));
             k.push(_Str_13004.withValue(this._cropped));
@@ -233,7 +233,7 @@
             if (((_local_2 == null) || (_local_2.length == 0)))
             {
                 k = true;
-                _local_2 = String(_Str_3804.value);
+                _local_2 = String(figureProperty.value);
             }
             if (this._windowManager._Str_1458 != null)
             {
@@ -277,7 +277,7 @@ this._bitmap.bitmap = _local_4.getCroppedImage(((this._onlyHead) ? AvatarSetType
 
         private function _Str_12216(k:String):String
         {
-            return (k == null) ? String(_Str_3804.value) : k.replace(/NaN/g, "");
+            return (k == null) ? String(figureProperty.value) : k.replace(/NaN/g, "");
         }
 
         private function onClick(k:WindowMouseEvent):void

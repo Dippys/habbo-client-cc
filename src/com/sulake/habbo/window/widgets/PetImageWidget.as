@@ -25,7 +25,7 @@
         private static const directionPropertyKey:String = (PET_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_7546:Array = [32, 64];
-        private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "1 0 ffffff", PropertyStruct.STRING);
+        private static const figureProperty:PropertyStruct = new PropertyStruct(FIGURE_KEY, "1 0 ffffff", PropertyStruct.STRING);
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, 64, PropertyStruct.INT, false, _Str_7546);
         private static const directionProperty:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
@@ -42,7 +42,7 @@
 
         public function PetImageWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
-            this._figure = String(_Str_3804.value);
+            this._figure = String(figureProperty.value);
             this._scale = int(scaleProperty.value);
             this._direction = _Str_3257.indexOf(String(directionProperty.value));
             super();
@@ -102,7 +102,7 @@
             {
                 return k;
             }
-            k.push(_Str_3804.withValue(this._figure));
+            k.push(figureProperty.withValue(this._figure));
             k.push(scaleProperty.withValue(this._scale));
             k.push(directionProperty.withValue(_Str_3257[this._direction]));
             return k;
@@ -215,7 +215,7 @@
 
         private function _Str_12216(k:String):String
         {
-            return (k == null) ? String(_Str_3804.value) : k.replace(/NaN/g, "");
+            return (k == null) ? String(figureProperty.value) : k.replace(/NaN/g, "");
         }
 
         private function onClick(k:WindowMouseEvent):void
