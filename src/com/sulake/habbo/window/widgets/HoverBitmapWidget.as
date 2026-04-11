@@ -13,9 +13,9 @@
     {
         public static const HOVER_BITMAP:String = "hover_bitmap";
         private static const hoverAssetPropertyKey:String = (HOVER_BITMAP + ":hover_asset");
-        private static const _Str_15315:String = (HOVER_BITMAP + ":normal_asset");
+        private static const normalAssetPropertyKey:String = (HOVER_BITMAP + ":normal_asset");
         private static const _Str_16062:PropertyStruct = new PropertyStruct(hoverAssetPropertyKey, null, PropertyStruct.STRING);
-        private static const _Str_16371:PropertyStruct = new PropertyStruct(_Str_15315, null, PropertyStruct.STRING);
+        private static const _Str_16371:PropertyStruct = new PropertyStruct(normalAssetPropertyKey, null, PropertyStruct.STRING);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -109,7 +109,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_15315:
+                    case normalAssetPropertyKey:
                         this._Str_13459 = String(_local_2.value);
                         break;
                     case hoverAssetPropertyKey:
