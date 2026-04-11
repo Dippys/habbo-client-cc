@@ -16,11 +16,11 @@
     public class ProgressIndicatorWidget implements _Str_4466 
     {
         public static const PROGRESS_INDICATOR:String = "progress_indicator";
-        private static const _Str_15237:String = (PROGRESS_INDICATOR + ":style");
+        private static const stylePropertyKey:String = (PROGRESS_INDICATOR + ":style");
         private static const _Str_13117:String = (PROGRESS_INDICATOR + ":size");
         private static const _Str_15724:String = (PROGRESS_INDICATOR + ":position");
         private static const _Str_14899:String = (PROGRESS_INDICATOR + ":mode");
-        private static const _Str_13010:PropertyStruct = new PropertyStruct(_Str_15237, _Str_10992.FLAT, PropertyStruct.STRING, false, _Str_10992.ALL);
+        private static const _Str_13010:PropertyStruct = new PropertyStruct(stylePropertyKey, _Str_10992.FLAT, PropertyStruct.STRING, false, _Str_10992.ALL);
         private static const _Str_19001:PropertyStruct = new PropertyStruct(_Str_13117, 1, PropertyStruct.UINT);
         private static const _Str_13575:PropertyStruct = new PropertyStruct(_Str_15724, 0, PropertyStruct.UINT);
         private static const _Str_12527:PropertyStruct = new PropertyStruct(_Str_14899, _Str_7639.POSITION, PropertyStruct.STRING, false, _Str_7639.ALL);
@@ -101,7 +101,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_15237:
+                    case stylePropertyKey:
                         this.style = String(_local_2.value);
                         break;
                     case _Str_13117:
