@@ -25,7 +25,7 @@
         private static const directionPropertyKey:String = (FURNITURE_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_7546:Array = [32, 64];
-        private static const _Str_17639:PropertyStruct = new PropertyStruct(_Str_14664, "table_plasto_square", PropertyStruct.STRING, false);
+        private static const furnitureTypeProperty:PropertyStruct = new PropertyStruct(_Str_14664, "table_plasto_square", PropertyStruct.STRING, false);
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, 64, PropertyStruct.INT, false, _Str_7546);
         private static const directionProperty:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
         private static const _Str_16516:int = 0;
@@ -106,7 +106,7 @@
             {
                 return k;
             }
-            k.push(_Str_17639.withValue(this._furnitureType));
+            k.push(furnitureTypeProperty.withValue(this._furnitureType));
             k.push(scaleProperty.withValue(this._scale));
             k.push(directionProperty.withValue(_Str_3257[this._direction]));
             return k;
