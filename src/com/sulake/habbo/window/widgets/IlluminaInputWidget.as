@@ -18,11 +18,11 @@
     public class IlluminaInputWidget implements IIlluminaInputWidget
     {
         public static const ILLUMINA_INPUT:String = "illumina_input";
-        private static const _Str_14384:String = (ILLUMINA_INPUT + ":button_caption");
+        private static const buttonCaptionPropertyKey:String = (ILLUMINA_INPUT + ":button_caption");
         private static const _Str_15741:String = (ILLUMINA_INPUT + ":empty_message");
         private static const _Str_15046:String = (ILLUMINA_INPUT + ":multiline");
         private static const _Str_15861:String = (ILLUMINA_INPUT + ":max_chars");
-        private static const _Str_15732:PropertyStruct = new PropertyStruct(_Str_14384, "${widgets.chatinput.say}", PropertyStruct.STRING);
+        private static const _Str_15732:PropertyStruct = new PropertyStruct(buttonCaptionPropertyKey, "${widgets.chatinput.say}", PropertyStruct.STRING);
         private static const _Str_15686:PropertyStruct = new PropertyStruct(_Str_15741, "", PropertyStruct.STRING);
         private static const _Str_13245:PropertyStruct = new PropertyStruct(_Str_15046, false, PropertyStruct.BOOLEAN);
         private static const _Str_14030:PropertyStruct = new PropertyStruct(_Str_15861, 0, PropertyStruct.INT);
@@ -115,7 +115,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_14384:
+                    case buttonCaptionPropertyKey:
                         this.buttonCaption = String(_local_2.value);
                         break;
                     case _Str_15741:
