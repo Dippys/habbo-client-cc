@@ -180,7 +180,7 @@
         {
         }
 
-        public function _Str_5725(k:String):void
+        public function onSubcategorySwitch(k:String):void
         {
             Logger.log("NOT SUPPORTED: MARKETPLACE SELECT BY ID");
         }

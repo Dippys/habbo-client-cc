@@ -1359,7 +1359,7 @@
             this._isInRoom = false;
         }
 
-        public function _Str_5725(k:String):void
+        public function onSubcategorySwitch(k:String):void
         {
             var _local_2:GroupItem = this._Str_14402(-(int(k)));
             if (_local_2 != null)

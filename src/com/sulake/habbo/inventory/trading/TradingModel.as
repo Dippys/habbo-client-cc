@@ -804,7 +804,7 @@
         {
         }
 
-        public function _Str_5725(k:String):void
+        public function onSubcategorySwitch(k:String):void
         {
             Logger.log("NOT SUPPORTED: TRADING VIEW SELECT BY ID");
         }

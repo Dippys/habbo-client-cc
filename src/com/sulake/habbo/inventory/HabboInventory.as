@@ -578,7 +578,7 @@
                 this._Str_18877(k);
                 if (_arg_2 != null)
                 {
-                    IInventoryModel(this._inventories.getValue(this._currentCategoryId))._Str_5725(_arg_2);
+                    IInventoryModel(this._inventories.getValue(this._currentCategoryId)).onSubcategorySwitch(_arg_2);
                 }
             }
             if (!_local_4)

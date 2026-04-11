@@ -11,6 +11,6 @@
         function onCategorySwitch(_arg_1:String):void;
         function onInventoryClose():void;
         function updateView():void;
-        function _Str_5725(_arg_1:String):void;
+        function onSubcategorySwitch(_arg_1:String):void;
     }
 }

@@ -266,7 +266,7 @@
             return this._controller.unseenItemTracker.isUnseen(UnseenItemCategoryEnum.BOT, k);
         }
 
-        public function _Str_5725(k:String):void
+        public function onSubcategorySwitch(k:String):void
         {
             this._view._Str_16613(int(k));
         }

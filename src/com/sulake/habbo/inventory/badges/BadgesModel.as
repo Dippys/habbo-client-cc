@@ -385,7 +385,7 @@
             this._controller._Str_6956();
         }
 
-        public function _Str_5725(k:String):void
+        public function onSubcategorySwitch(k:String):void
         {
             this._Str_17509(k);
         }
