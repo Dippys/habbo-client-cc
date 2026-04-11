@@ -13,11 +13,11 @@
     public class RunningNumberWidget implements IRunningNumberWidget, IUpdateReceiver 
     {
         public static const RUNNING_NUMBER:String = "running_number";
-        private static const _Str_15087:String = (RUNNING_NUMBER + ":number");
+        private static const numberPropertyKey:String = (RUNNING_NUMBER + ":number");
         private static const digitsPropertyKey:String = (RUNNING_NUMBER + ":digits");
         private static const colorStylePropertyKey:String = (RUNNING_NUMBER + ":color_style");
         private static const _Str_15674:String = (RUNNING_NUMBER + ":update_frequency");
-        private static const _Str_14856:PropertyStruct = new PropertyStruct(_Str_15087, 0, PropertyStruct.INT);
+        private static const _Str_14856:PropertyStruct = new PropertyStruct(numberPropertyKey, 0, PropertyStruct.INT);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const _Str_14116:PropertyStruct = new PropertyStruct(_Str_15674, 50, PropertyStruct.INT);
@@ -98,7 +98,7 @@
             {
                 switch (_local_2.key)
                 {
-                    case _Str_15087:
+                    case numberPropertyKey:
                         this.number = int(_local_2.value);
                         break;
                     case digitsPropertyKey:
