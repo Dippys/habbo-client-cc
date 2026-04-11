@@ -20,7 +20,7 @@
         private static const numberProperty:PropertyStruct = new PropertyStruct(numberPropertyKey, 0, PropertyStruct.INT);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
-        private static const _Str_14116:PropertyStruct = new PropertyStruct(updateFrequencyPropertyKey, 50, PropertyStruct.INT);
+        private static const updateFrequencyProperty:PropertyStruct = new PropertyStruct(updateFrequencyPropertyKey, 50, PropertyStruct.INT);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -37,7 +37,7 @@
         {
             this._colorStyle = int(colorStyleProperty.value);
             this._digits = uint(digitsProperty.value);
-            this._updateFrequency = int(_Str_14116.value);
+            this._updateFrequency = int(updateFrequencyProperty.value);
             this._newNumber = int(numberProperty.value);
             super();
             this._widgetWindow = k;
@@ -83,7 +83,7 @@
             k.push(numberProperty.withValue(this.colorStyle));
             k.push(colorStyleProperty.withValue(this.colorStyle));
             k.push(digitsProperty.withValue(this.digits));
-            k.push(_Str_14116.withValue(this.updateFrequency));
+            k.push(updateFrequencyProperty.withValue(this.updateFrequency));
             return k;
         }
 
