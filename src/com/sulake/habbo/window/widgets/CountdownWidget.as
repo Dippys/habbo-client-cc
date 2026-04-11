@@ -19,7 +19,7 @@
         private static const digitsPropertyKey:String = (COUNTDOWN + ":digits");
         private static const secondsPropertyKey:String = (COUNTDOWN + ":seconds");
         private static const colorStylePropertyKey:String = (COUNTDOWN + ":color_style");
-        private static const _Str_13513:PropertyStruct = new PropertyStruct(runningPropertyKey, false, PropertyStruct.BOOLEAN);
+        private static const runningProperty:PropertyStruct = new PropertyStruct(runningPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 3, PropertyStruct.UINT);
         private static const _Str_13149:PropertyStruct = new PropertyStruct(secondsPropertyKey, 0, PropertyStruct.INT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
@@ -44,7 +44,7 @@
 
         public function CountdownWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
-            this._running = Boolean(_Str_13513.value);
+            this._running = Boolean(runningProperty.value);
             this._startSeconds = int(_Str_13149.value);
             this._startTime = getTimer();
             this._colorStyle = int(colorStyleProperty.value);
@@ -112,7 +112,7 @@
             {
                 return k;
             }
-            k.push(_Str_13513.withValue(this._running));
+            k.push(runningProperty.withValue(this._running));
             k.push(digitsProperty.withValue(this.digits));
             k.push(_Str_13149.withValue(this.seconds));
             return k;
