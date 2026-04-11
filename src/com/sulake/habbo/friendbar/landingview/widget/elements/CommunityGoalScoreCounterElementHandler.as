@@ -57,7 +57,7 @@
             this._floating = (_arg_3[4] == "true");
             var _local_8:IWidgetWindow = IWidgetWindow(this._window.findChildByName("running_number_widget"));
             var _local_9:IRunningNumberWidget = IRunningNumberWidget(_local_8.widget);
-            _local_9._Str_4056 = _local_5;
+            _local_9.digits = _local_5;
             _local_9.updateFrequency = _local_6;
             if (this._floating)
             {

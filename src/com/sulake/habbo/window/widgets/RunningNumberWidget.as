@@ -82,7 +82,7 @@
             }
             k.push(_Str_14856.withValue(this.colorStyle));
             k.push(_Str_6446.withValue(this.colorStyle));
-            k.push(_Str_5707.withValue(this._Str_4056));
+            k.push(_Str_5707.withValue(this.digits));
             k.push(_Str_14116.withValue(this.updateFrequency));
             return k;
         }
@@ -102,7 +102,7 @@
                         this.number = int(_local_2.value);
                         break;
                     case _Str_5874:
-                        this._Str_4056 = uint(_local_2.value);
+                        this.digits = uint(_local_2.value);
                         break;
                     case _Str_5847:
                         this.colorStyle = int(_local_2.value);
@@ -145,12 +145,12 @@
             _local_3.invalidate();
         }
 
-        public function get _Str_4056():uint
+        public function get digits():uint
         {
             return this._digits;
         }
 
-        public function set _Str_4056(k:uint):void
+        public function set digits(k:uint):void
         {
             this._digits = k;
         }

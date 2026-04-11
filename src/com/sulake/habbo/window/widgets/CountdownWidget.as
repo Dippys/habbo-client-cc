@@ -54,7 +54,7 @@
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("clock_base_xml").content as XML)) as IItemListWindow);
             this._digitWindow = (this._root.getListItemByName("counter") as IWindowContainer);
             this._separatorWindow = (this._root.getListItemByName("separator") as ITextWindow);
-            this._Str_4056 = uint(_Str_5707.value);
+            this.digits = uint(_Str_5707.value);
             this._windowManager.registerUpdateReceiver(this, 10);
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
             this._widgetWindow.rootWindow = this._root;
@@ -113,7 +113,7 @@
                 return k;
             }
             k.push(_Str_13513.withValue(this._running));
-            k.push(_Str_5707.withValue(this._Str_4056));
+            k.push(_Str_5707.withValue(this.digits));
             k.push(_Str_13149.withValue(this.seconds));
             return k;
         }
@@ -133,7 +133,7 @@
                         this.running = Boolean(_local_2.value);
                         break;
                     case _Str_5874:
-                        this._Str_4056 = uint(_local_2.value);
+                        this.digits = uint(_local_2.value);
                         break;
                     case _Str_12753:
                         this.seconds = int(_local_2.value);
@@ -200,16 +200,16 @@
             this._running = k;
         }
 
-        public function get _Str_4056():uint
+        public function get digits():uint
         {
             return (this._root.numListItems + 1) / 2;
         }
 
-        public function set _Str_4056(k:uint):void
+        public function set digits(k:uint):void
         {
             var _local_2:int;
             k = Math.max(2, Math.min(4, k));
-            if (k != this._Str_4056)
+            if (k != this.digits)
             {
                 this._root.removeListItems();
                 _local_2 = 0;
@@ -249,7 +249,7 @@
             {
                 return;
             }
-            var _local_3:int = this._Str_4056;
+            var _local_3:int = this.digits;
             _local_4 = 0;
             while (_local_4 < (_Str_9932.length - _local_3))
             {
