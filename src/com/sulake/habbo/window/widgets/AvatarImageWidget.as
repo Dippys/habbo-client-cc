@@ -30,7 +30,7 @@
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
-        private static const _Str_15271:PropertyStruct = new PropertyStruct(onlyHeadPropertyKey, false, PropertyStruct.BOOLEAN);
+        private static const onlyHeadProperty:PropertyStruct = new PropertyStruct(onlyHeadPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(croppedPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const directionProperty:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
@@ -55,7 +55,7 @@
         {
             this._figure = String(_Str_3804.value);
             this._scale = String(scaleProperty.value);
-            this._onlyHead = Boolean(_Str_15271.value);
+            this._onlyHead = Boolean(onlyHeadProperty.value);
             this._cropped = Boolean(_Str_13004.value);
             this._direction = _Str_3257.indexOf(String(directionProperty.value));
             super();
@@ -116,7 +116,7 @@
             }
             k.push(_Str_3804.withValue(this._figure));
             k.push(scaleProperty.withValue(this._scale));
-            k.push(_Str_15271.withValue(this._onlyHead));
+            k.push(onlyHeadProperty.withValue(this._onlyHead));
             k.push(_Str_13004.withValue(this._cropped));
             k.push(directionProperty.withValue(_Str_3257[this._direction]));
             return k;
