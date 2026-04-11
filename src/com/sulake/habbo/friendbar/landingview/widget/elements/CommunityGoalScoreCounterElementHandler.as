@@ -107,7 +107,7 @@
                 }
                 else
                 {
-                    _local_4._Str_19520 = _local_2._Str_12030;
+                    _local_4.setNumberImmediately = _local_2._Str_12030;
                     this._counter_initialized = true;
                 }
             }

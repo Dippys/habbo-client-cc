@@ -185,7 +185,7 @@
             this._newNumber = k;
         }
 
-        public function set _Str_19520(k:int):void
+        public function set setNumberImmediately(k:int):void
         {
             this._displayedNumber = k;
             this._newNumber = k;
