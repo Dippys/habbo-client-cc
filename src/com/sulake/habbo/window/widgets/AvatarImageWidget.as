@@ -24,13 +24,13 @@
         public static const AVATAR_IMAGE:String = "avatar_image";
         private static const FIGURE_KEY:String = (AVATAR_IMAGE + ":figure");
         private static const scalePropertyKey:String = (AVATAR_IMAGE + ":scale");
-        private static const _Str_15149:String = (AVATAR_IMAGE + ":only_head");
+        private static const onlyHeadPropertyKey:String = (AVATAR_IMAGE + ":only_head");
         private static const _Str_13883:String = (AVATAR_IMAGE + ":cropped");
         private static const directionPropertyKey:String = (AVATAR_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
         private static const _Str_3527:PropertyStruct = new PropertyStruct(scalePropertyKey, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
-        private static const _Str_15271:PropertyStruct = new PropertyStruct(_Str_15149, false, PropertyStruct.BOOLEAN);
+        private static const _Str_15271:PropertyStruct = new PropertyStruct(onlyHeadPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(_Str_13883, false, PropertyStruct.BOOLEAN);
         private static const _Str_4346:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
@@ -135,7 +135,7 @@
                     case scalePropertyKey:
                         this.scale = String(_local_2.value);
                         break;
-                    case _Str_15149:
+                    case onlyHeadPropertyKey:
                         this.onlyHead = Boolean(_local_2.value);
                         break;
                     case _Str_13883:
