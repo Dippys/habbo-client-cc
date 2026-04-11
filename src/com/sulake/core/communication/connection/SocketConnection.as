@@ -219,18 +219,20 @@
             {
                 this._stateListener.messageSent(String(_local_2));
             }
-
-            if (this._clientToServerEncryption == null)
-            {
-                return (false);
-            }
-
             if (this._socket.connected)
             {
-                var _local_5:ByteArray = this._clientToServerEncryption.encipher(_local_4);
-                if (_local_5 != _local_4)
+                if (this._clientToServerEncryption != null)
                 {
-                    this._socket.writeBytes(_local_5);
+                    var _local_5:ByteArray = this._clientToServerEncryption.encipher(_local_4);
+                    if (_local_5 != _local_4)
+                    {
+                        this._socket.writeBytes(_local_5);
+                        this._socket.flush();
+                    }
+                }
+                else
+                {
+                    this._socket.writeBytes(_local_4);
                     this._socket.flush();
                 }
             }

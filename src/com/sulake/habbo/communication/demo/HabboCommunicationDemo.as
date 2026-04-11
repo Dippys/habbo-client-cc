@@ -291,7 +291,7 @@
                 this._handshakeInProgress = true;
                 this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING);
                 _local_2.sendUnencrypted(new ClientHelloMessageComposer());
-                // this.sendConnectionParameters(_local_2);
+                this.sendConnectionParameters(_local_2);
             }
         }
 

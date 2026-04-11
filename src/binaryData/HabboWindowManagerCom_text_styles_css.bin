@@ -148,7 +148,7 @@ u_tag {
 
 
 ubuntu_condensed_regular {
-    font-family: UbuntuCondensed;
+    font-family: Ubuntu condensed;
     font-size: 11;
     color: #ffffff;
     kerning: true;
@@ -158,7 +158,7 @@ ubuntu_condensed_regular {
 }
 
 ubuntu_condensed_title {
-    font-family: UbuntuCondensed;
+    font-family: Ubuntu condensed;
     font-size: 18;
     color: #ffffff;
     kerning: true;
@@ -422,7 +422,7 @@ id_border {
 }
 
 id_frame_title {
-    font-family: UbuntuCondensed;
+    font-family: Ubuntu condensed;
     font-size: 12;
     font-weight: bold;
     color: #ffffff;
