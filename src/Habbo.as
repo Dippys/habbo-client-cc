@@ -224,6 +224,7 @@
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.quality = StageQuality.LOW;
             stage.align = StageAlign.TOP_LEFT;
+            stage.color = 0x000000;
             root.loaderInfo.addEventListener(ProgressEvent.PROGRESS, this.onPreLoadingProgress);
             root.loaderInfo.addEventListener(HTTPStatusEvent.HTTP_STATUS, this.onPreLoadingStatus);
             root.loaderInfo.addEventListener(Event.COMPLETE, this.onPreLoadingCompleted);

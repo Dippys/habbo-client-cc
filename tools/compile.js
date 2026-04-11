@@ -16,7 +16,7 @@ const args = [
   sourceFile,
   '-static-link-runtime-shared-libraries=true',
   '-swf-version=25',
-  '-default-background-color=#FFFFFF',
+  '-default-background-color=#000000',
   '-use-network=true',
   '-use-resource-bundle-metadata=true',
   '-default-frame-rate', '30',

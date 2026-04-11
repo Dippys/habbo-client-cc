@@ -5,7 +5,7 @@
 		],
 		"output": "bin/CoompileHabbo.swf",
 		"default-frame-rate": 30,
-		"default-background-color": "#FFFFFF",
+		"default-background-color": "#000000",
 		"default-size": {
 			"width": 800,
 			"height": 600
