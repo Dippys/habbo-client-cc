@@ -23,9 +23,9 @@
     {
         public static const BADGE_IMAGE:String = "badge_image";
         private static const typePropertyKey:String = (BADGE_IMAGE + ":type");
-        private static const _Str_13026:String = (BADGE_IMAGE + ":badge_id");
+        private static const badgeIdPropertyKey:String = (BADGE_IMAGE + ":badge_id");
         private static const _Str_12929:PropertyStruct = new PropertyStruct(typePropertyKey, _Str_4387.NORMAL, PropertyStruct.STRING, false, _Str_4387.ALL);
-        private static const _Str_15899:PropertyStruct = new PropertyStruct(_Str_13026, "", PropertyStruct.STRING);
+        private static const _Str_15899:PropertyStruct = new PropertyStruct(badgeIdPropertyKey, "", PropertyStruct.STRING);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -125,7 +125,7 @@
                     case typePropertyKey:
                         this.type = String(_local_3.value);
                         break;
-                    case _Str_13026:
+                    case badgeIdPropertyKey:
                         this.badgeId = String(_local_3.value);
                         break;
                 }
