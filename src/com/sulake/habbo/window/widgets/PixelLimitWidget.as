@@ -17,8 +17,8 @@
     public class PixelLimitWidget implements _Str_17266 
     {
         public static const PIXEL_LIMIT:String = "pixel_limit";
-        private static const _Str_15462:String = (PIXEL_LIMIT + ":limit");
-        private static const _Str_12653:PropertyStruct = new PropertyStruct(_Str_15462, 0, PropertyStruct.STRING, false, null);
+        private static const limitPropertyKey:String = (PIXEL_LIMIT + ":limit");
+        private static const _Str_12653:PropertyStruct = new PropertyStruct(limitPropertyKey, 0, PropertyStruct.STRING, false, null);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -117,7 +117,7 @@
             {
                 switch (_local_3.key)
                 {
-                    case _Str_15462:
+                    case limitPropertyKey:
                         this.limit = int(_local_3.value);
                         break;
                 }
