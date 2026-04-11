@@ -23,13 +23,13 @@
     {
         public static const AVATAR_IMAGE:String = "avatar_image";
         private static const FIGURE_KEY:String = (AVATAR_IMAGE + ":figure");
-        private static const _Str_3540:String = (AVATAR_IMAGE + ":scale");
+        private static const scalePropertyKey:String = (AVATAR_IMAGE + ":scale");
         private static const _Str_15149:String = (AVATAR_IMAGE + ":only_head");
         private static const _Str_13883:String = (AVATAR_IMAGE + ":cropped");
         private static const _Str_4259:String = (AVATAR_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "hd-180-1.ch-210-66.lg-270-82.sh-290-81", PropertyStruct.STRING);
-        private static const _Str_3527:PropertyStruct = new PropertyStruct(_Str_3540, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
+        private static const _Str_3527:PropertyStruct = new PropertyStruct(scalePropertyKey, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
         private static const _Str_15271:PropertyStruct = new PropertyStruct(_Str_15149, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(_Str_13883, false, PropertyStruct.BOOLEAN);
         private static const _Str_4346:PropertyStruct = new PropertyStruct(_Str_4259, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
@@ -132,7 +132,7 @@
                     case FIGURE_KEY:
                         this.figure = String(_local_2.value);
                         break;
-                    case _Str_3540:
+                    case scalePropertyKey:
                         this.scale = String(_local_2.value);
                         break;
                     case _Str_15149:
@@ -252,7 +252,7 @@ this._bitmap.bitmap = _local_4.getCroppedImage(((this._onlyHead) ? AvatarSetType
                     }
                     if (k)
                     {
-                        this._Str_20832(this._bitmap);
+                        this.convertToGrayscale(this._bitmap);
                     }
                     this._bitmap.disposesBitmap = true;
                     _local_4.dispose();
@@ -263,14 +263,14 @@ this._bitmap.bitmap = _local_4.getCroppedImage(((this._onlyHead) ? AvatarSetType
                 _local_5 = (((("placeholder_avatar" + ((this._scale == AvatarScaleType.SMALL) ? "_small" : "")) + ((this._onlyHead) ? "_head" : "")) + ((this._cropped) ? "_cropped" : "")) + "_png");
                 this._bitmap.bitmap = (this._windowManager.assets.getAssetByName(_local_5).content as BitmapData);
                 this._bitmap.disposesBitmap = false;
-                this._Str_20832(this._bitmap);
+                this.convertToGrayscale(this._bitmap);
             }
             this._bitmap.invalidate();
             this._widgetWindow.width = this._bitmap.bitmap.width;
             this._widgetWindow.height = this._bitmap.bitmap.height;
         }
 
-        private function _Str_20832(k:IBitmapWrapperWindow):*
+        private function convertToGrayscale(k:IBitmapWrapperWindow):*
         {
             this._bitmap.bitmap.applyFilter(this._bitmap.bitmap, this._bitmap.bitmap.rect, new Point(), new ColorMatrixFilter([this.rc, this._Str_761, this.bc, 0, 0, this.rc, this._Str_761, this.bc, 0, 0, this.rc, this._Str_761, this.bc, 0, 0, 0, 0, 0, 1, 0]));
         }

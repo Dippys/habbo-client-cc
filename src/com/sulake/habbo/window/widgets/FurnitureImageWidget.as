@@ -21,12 +21,12 @@
     {
         public static const FURNITURE_IMAGE:String = "furniture_image";
         private static const _Str_14664:String = (FURNITURE_IMAGE + ":furnitureType");
-        private static const _Str_3540:String = (FURNITURE_IMAGE + ":scale");
+        private static const scalePropertyKey:String = (FURNITURE_IMAGE + ":scale");
         private static const _Str_4259:String = (FURNITURE_IMAGE + ":direction");
         private static const _Str_3257:Array = ["northeast", "east", "southeast", "south", "southwest", "west", "northwest", "north"];
         private static const _Str_7546:Array = [32, 64];
         private static const _Str_17639:PropertyStruct = new PropertyStruct(_Str_14664, "table_plasto_square", PropertyStruct.STRING, false);
-        private static const _Str_3527:PropertyStruct = new PropertyStruct(_Str_3540, 64, PropertyStruct.INT, false, _Str_7546);
+        private static const _Str_3527:PropertyStruct = new PropertyStruct(scalePropertyKey, 64, PropertyStruct.INT, false, _Str_7546);
         private static const _Str_4346:PropertyStruct = new PropertyStruct(_Str_4259, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
         private static const _Str_16516:int = 0;
         private static const _Str_20628:int = 1;
@@ -122,7 +122,7 @@
                     case _Str_14664:
                         this._Str_12916 = String(_local_2.value);
                         break;
-                    case _Str_3540:
+                    case scalePropertyKey:
                         this.scale = int(_local_2.value);
                         break;
                     case _Str_4259:
