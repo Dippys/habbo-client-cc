@@ -17,9 +17,9 @@
     {
         public static const BALLOON:String = "balloon";
         private static const arrowPivotPropertyKey:String = (BALLOON + ":arrow_pivot");
-        private static const _Str_13966:String = (BALLOON + ":arrow_displacement");
+        private static const arrowDisplacementPropertyKey:String = (BALLOON + ":arrow_displacement");
         private static const _Str_15799:PropertyStruct = new PropertyStruct(arrowPivotPropertyKey, _Str_3142._Str_14331, PropertyStruct.STRING, false, _Str_3142.ALL);
-        private static const _Str_13694:PropertyStruct = new PropertyStruct(_Str_13966, 0, PropertyStruct.INT);
+        private static const _Str_13694:PropertyStruct = new PropertyStruct(arrowDisplacementPropertyKey, 0, PropertyStruct.INT);
         private static const ILLUMINA_LIGHT_BALLOON_ARROW_:String = "illumina_light_balloon_arrow_";
         private static const _Str_5411:int = 6;
         private static const _Str_5290:int = 6;
@@ -117,7 +117,7 @@
                     case arrowPivotPropertyKey:
                         this._Str_12978 = String(_local_2.value);
                         break;
-                    case _Str_13966:
+                    case arrowDisplacementPropertyKey:
                         this._Str_12751 = int(_local_2.value);
                         break;
                 }

@@ -19,11 +19,11 @@
     {
         public static const ILLUMINA_INPUT:String = "illumina_input";
         private static const buttonCaptionPropertyKey:String = (ILLUMINA_INPUT + ":button_caption");
-        private static const _Str_15741:String = (ILLUMINA_INPUT + ":empty_message");
+        private static const emptyMessagePropertyKey:String = (ILLUMINA_INPUT + ":empty_message");
         private static const _Str_15046:String = (ILLUMINA_INPUT + ":multiline");
         private static const _Str_15861:String = (ILLUMINA_INPUT + ":max_chars");
         private static const _Str_15732:PropertyStruct = new PropertyStruct(buttonCaptionPropertyKey, "${widgets.chatinput.say}", PropertyStruct.STRING);
-        private static const _Str_15686:PropertyStruct = new PropertyStruct(_Str_15741, "", PropertyStruct.STRING);
+        private static const _Str_15686:PropertyStruct = new PropertyStruct(emptyMessagePropertyKey, "", PropertyStruct.STRING);
         private static const _Str_13245:PropertyStruct = new PropertyStruct(_Str_15046, false, PropertyStruct.BOOLEAN);
         private static const _Str_14030:PropertyStruct = new PropertyStruct(_Str_15861, 0, PropertyStruct.INT);
         private static const _Str_15913:int = 28;
@@ -118,7 +118,7 @@
                     case buttonCaptionPropertyKey:
                         this.buttonCaption = String(_local_2.value);
                         break;
-                    case _Str_15741:
+                    case emptyMessagePropertyKey:
                         this.emptyMessage = String(_local_2.value);
                         break;
                     case _Str_15046:
