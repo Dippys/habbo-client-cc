@@ -18,11 +18,11 @@
         public static const PROGRESS_INDICATOR:String = "progress_indicator";
         private static const stylePropertyKey:String = (PROGRESS_INDICATOR + ":style");
         private static const sizePropertyKey:String = (PROGRESS_INDICATOR + ":size");
-        private static const _Str_15724:String = (PROGRESS_INDICATOR + ":position");
+        private static const positionPropertyKey:String = (PROGRESS_INDICATOR + ":position");
         private static const _Str_14899:String = (PROGRESS_INDICATOR + ":mode");
         private static const _Str_13010:PropertyStruct = new PropertyStruct(stylePropertyKey, _Str_10992.FLAT, PropertyStruct.STRING, false, _Str_10992.ALL);
         private static const _Str_19001:PropertyStruct = new PropertyStruct(sizePropertyKey, 1, PropertyStruct.UINT);
-        private static const _Str_13575:PropertyStruct = new PropertyStruct(_Str_15724, 0, PropertyStruct.UINT);
+        private static const _Str_13575:PropertyStruct = new PropertyStruct(positionPropertyKey, 0, PropertyStruct.UINT);
         private static const _Str_12527:PropertyStruct = new PropertyStruct(_Str_14899, _Str_7639.POSITION, PropertyStruct.STRING, false, _Str_7639.ALL);
         private static const _Str_18224:uint = 1000;
 
@@ -107,7 +107,7 @@
                     case sizePropertyKey:
                         this.size = uint(_local_2.value);
                         break;
-                    case _Str_15724:
+                    case positionPropertyKey:
                         this.position = uint(_local_2.value);
                         break;
                     case _Str_14899:
