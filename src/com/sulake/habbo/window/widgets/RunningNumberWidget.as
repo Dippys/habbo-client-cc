@@ -17,7 +17,7 @@
         private static const digitsPropertyKey:String = (RUNNING_NUMBER + ":digits");
         private static const colorStylePropertyKey:String = (RUNNING_NUMBER + ":color_style");
         private static const updateFrequencyPropertyKey:String = (RUNNING_NUMBER + ":update_frequency");
-        private static const _Str_14856:PropertyStruct = new PropertyStruct(numberPropertyKey, 0, PropertyStruct.INT);
+        private static const numberProperty:PropertyStruct = new PropertyStruct(numberPropertyKey, 0, PropertyStruct.INT);
         private static const digitsProperty:PropertyStruct = new PropertyStruct(digitsPropertyKey, 8, PropertyStruct.UINT);
         private static const colorStyleProperty:PropertyStruct = new PropertyStruct(colorStylePropertyKey, 0, PropertyStruct.INT);
         private static const _Str_14116:PropertyStruct = new PropertyStruct(updateFrequencyPropertyKey, 50, PropertyStruct.INT);
@@ -38,7 +38,7 @@
             this._colorStyle = int(colorStyleProperty.value);
             this._digits = uint(digitsProperty.value);
             this._updateFrequency = int(_Str_14116.value);
-            this._newNumber = int(_Str_14856.value);
+            this._newNumber = int(numberProperty.value);
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
@@ -80,7 +80,7 @@
             {
                 return k;
             }
-            k.push(_Str_14856.withValue(this.colorStyle));
+            k.push(numberProperty.withValue(this.colorStyle));
             k.push(colorStyleProperty.withValue(this.colorStyle));
             k.push(digitsProperty.withValue(this.digits));
             k.push(_Str_14116.withValue(this.updateFrequency));
