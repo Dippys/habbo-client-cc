@@ -25,7 +25,7 @@
         private static const typePropertyKey:String = (BADGE_IMAGE + ":type");
         private static const badgeIdPropertyKey:String = (BADGE_IMAGE + ":badge_id");
         private static const typeProperty:PropertyStruct = new PropertyStruct(typePropertyKey, _Str_4387.NORMAL, PropertyStruct.STRING, false, _Str_4387.ALL);
-        private static const _Str_15899:PropertyStruct = new PropertyStruct(badgeIdPropertyKey, "", PropertyStruct.STRING);
+        private static const badgeIdProperty:PropertyStruct = new PropertyStruct(badgeIdPropertyKey, "", PropertyStruct.STRING);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -43,7 +43,7 @@
         public function BadgeImageWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
             this._type = String(typeProperty.value);
-            this._badgeId = String(_Str_15899.value);
+            this._badgeId = String(badgeIdProperty.value);
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
@@ -102,7 +102,7 @@
                 return k;
             }
             k.push(typeProperty.withValue(this._type));
-            k.push(_Str_15899.withValue(this._badgeId));
+            k.push(badgeIdProperty.withValue(this._badgeId));
             for each (_local_2 in this._bitmap.properties)
             {
                 if (_local_2.key != PropertyKeys.ASSET_URI)
