@@ -32,7 +32,7 @@
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, AvatarScaleType.LARGE, PropertyStruct.STRING, false, [AvatarScaleType.SMALL, AvatarScaleType.LARGE]);
         private static const _Str_15271:PropertyStruct = new PropertyStruct(onlyHeadPropertyKey, false, PropertyStruct.BOOLEAN);
         private static const _Str_13004:PropertyStruct = new PropertyStruct(croppedPropertyKey, false, PropertyStruct.BOOLEAN);
-        private static const _Str_4346:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
+        private static const directionProperty:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
         private const rc:Number = 0.333333333333333;
         private const _Str_761:Number = 0.333333333333333;
@@ -57,7 +57,7 @@
             this._scale = String(scaleProperty.value);
             this._onlyHead = Boolean(_Str_15271.value);
             this._cropped = Boolean(_Str_13004.value);
-            this._direction = _Str_3257.indexOf(String(_Str_4346.value));
+            this._direction = _Str_3257.indexOf(String(directionProperty.value));
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
@@ -118,7 +118,7 @@
             k.push(scaleProperty.withValue(this._scale));
             k.push(_Str_15271.withValue(this._onlyHead));
             k.push(_Str_13004.withValue(this._cropped));
-            k.push(_Str_4346.withValue(_Str_3257[this._direction]));
+            k.push(directionProperty.withValue(_Str_3257[this._direction]));
             return k;
         }
 

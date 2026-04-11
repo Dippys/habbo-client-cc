@@ -27,7 +27,7 @@
         private static const _Str_7546:Array = [32, 64];
         private static const _Str_3804:PropertyStruct = new PropertyStruct(FIGURE_KEY, "1 0 ffffff", PropertyStruct.STRING);
         private static const scaleProperty:PropertyStruct = new PropertyStruct(scalePropertyKey, 64, PropertyStruct.INT, false, _Str_7546);
-        private static const _Str_4346:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
+        private static const directionProperty:PropertyStruct = new PropertyStruct(directionPropertyKey, _Str_3257[_Str_3724._Str_4519], PropertyStruct.STRING, false, _Str_3257);
 
         private var _disposed:Boolean;
         private var _widgetWindow:IWidgetWindow;
@@ -44,7 +44,7 @@
         {
             this._figure = String(_Str_3804.value);
             this._scale = int(scaleProperty.value);
-            this._direction = _Str_3257.indexOf(String(_Str_4346.value));
+            this._direction = _Str_3257.indexOf(String(directionProperty.value));
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
@@ -104,7 +104,7 @@
             }
             k.push(_Str_3804.withValue(this._figure));
             k.push(scaleProperty.withValue(this._scale));
-            k.push(_Str_4346.withValue(_Str_3257[this._direction]));
+            k.push(directionProperty.withValue(_Str_3257[this._direction]));
             return k;
         }
 
