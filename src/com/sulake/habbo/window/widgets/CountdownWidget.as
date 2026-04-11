@@ -102,7 +102,7 @@
 
         public function update(k:uint):void
         {
-            this._Str_16808();
+            this.refreshDisplay();
         }
 
         public function get properties():Array
@@ -222,7 +222,7 @@
                     this._root.addListItem(this._digitWindow.clone());
                     _local_2++;
                 }
-                this._Str_16808(true);
+                this.refreshDisplay(true);
             }
         }
 
@@ -235,10 +235,10 @@
         {
             this._startSeconds = k;
             this._startTime = getTimer();
-            this._Str_16808();
+            this.refreshDisplay();
         }
 
-        private function _Str_16808(k:Boolean=false):void
+        private function refreshDisplay(k:Boolean=false):void
         {
             var _local_4:int;
             var _local_6:int;
