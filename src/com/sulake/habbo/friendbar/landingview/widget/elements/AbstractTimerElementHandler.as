@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
 
     public class AbstractTimerElementHandler implements IElementHandler, IDisposable, IFloatingElement, ILayoutNameProvider 
     {
@@ -64,7 +64,7 @@
         {
             var _local_2:IWidgetWindow = IWidgetWindow(this._window.findChildByName("countdown_widget"));
             _local_2.visible = (k > 0);
-            var _local_3:_Str_2961 = _Str_2961(_local_2.widget);
+            var _local_3:ICountdownWidget = ICountdownWidget(_local_2.widget);
             _local_3.seconds = k;
             this._Str_4180(((k > 0) ? this._timeRemainingKey : this._expiredKey));
         }

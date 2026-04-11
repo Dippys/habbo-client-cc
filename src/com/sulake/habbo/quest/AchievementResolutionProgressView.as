@@ -6,7 +6,7 @@
     import com.sulake.habbo.window.widgets.IBadgeImageWidget;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -115,7 +115,7 @@
         private function _Str_23834(k:int):void
         {
             var _local_2:IWidgetWindow = IWidgetWindow(this._window.findChildByName("time_left_widget"));
-            var _local_3:_Str_2961 = _Str_2961(_local_2.widget);
+            var _local_3:ICountdownWidget = ICountdownWidget(_local_2.widget);
             _local_3.seconds = k;
             _local_3.running = true;
         }

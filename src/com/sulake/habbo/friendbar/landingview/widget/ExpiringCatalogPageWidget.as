@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.outgoing.catalog.GetCatalogPageWithEarliestExpiryComposer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.CatalogPageWithEarliestExpiryMessageParser;
@@ -80,7 +80,7 @@
         private function _Str_11106():void
         {
             var k:IWidgetWindow = IWidgetWindow(this._container.findChildByName("countdown_widget"));
-            var _local_2:_Str_2961 = _Str_2961(k.widget);
+            var _local_2:ICountdownWidget = ICountdownWidget(k.widget);
             _local_2.seconds = this._secondsToExpiry;
         }
 

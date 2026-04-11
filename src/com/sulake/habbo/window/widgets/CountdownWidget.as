@@ -12,7 +12,7 @@
     import com.sulake.core.window.iterators.EmptyIterator;
     import com.sulake.core.window.utils.IIterator;
 
-    public class CountdownWidget implements _Str_2961, IUpdateReceiver 
+    public class CountdownWidget implements ICountdownWidget, IUpdateReceiver 
     {
         public static const COUNTDOWN:String = "countdown";
         private static const _Str_12828:String = (COUNTDOWN + ":running");

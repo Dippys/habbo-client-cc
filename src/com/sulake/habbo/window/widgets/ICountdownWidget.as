@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWidget;
 
-    public interface _Str_2961 extends IWidget 
+    public interface ICountdownWidget extends IWidget 
     {
         function get _Str_4157():int;
         function set _Str_4157(_arg_1:int):void;

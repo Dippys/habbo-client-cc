@@ -20,7 +20,7 @@
     import flash.geom.Point;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.IWidget;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFurniActionMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetUserActionMessage;
@@ -596,7 +596,7 @@
             switch (k)
             {
                 case GROWTH:
-                    (_local_5 as _Str_2961).seconds = _arg_2;
+                    (_local_5 as ICountdownWidget).seconds = _arg_2;
                     _local_6 = (_arg_2 > 0);
                     _local_7 = (!(_local_4.visible == _local_6));
                     _local_4.visible = _local_6;

@@ -58,7 +58,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGuideDecidesMessageComposer;
     import com.sulake.habbo.window.widgets.IIlluminaInputWidget;
     import com.sulake.habbo.communication.messages.outgoing.help.GuideSessionGetRequesterRoomMessageComposer;
@@ -684,7 +684,7 @@
                 this._window.findChildByName("request_type").caption = this._Str_20710(k);
                 this._window.findChildByName("request_description").caption = _arg_2;
             }
-            var _local_4:_Str_2961 = _Str_2961(IWidgetWindow(this._window.findChildByName("countdown")).widget);
+            var _local_4:ICountdownWidget = ICountdownWidget(IWidgetWindow(this._window.findChildByName("countdown")).widget);
             _local_4.seconds = _arg_3;
             _local_4.running = true;
         }
@@ -1056,7 +1056,7 @@
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_ACCEPT;
             this.openWindow(this.onGuardianChatReviewAcceptEvent, false);
             this._habboHelp.soundManager.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
-            var _local_2:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
+            var _local_2:ICountdownWidget = (IWidgetWindow(this._window.findChildByName("countdown")).widget as ICountdownWidget);
             _local_2.seconds = k;
             _local_2.running = true;
         }
@@ -1113,7 +1113,7 @@
             var _local_18:String;
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_VOTE;
             this.openWindow(this._Str_23629, false);
-            var _local_3:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
+            var _local_3:ICountdownWidget = (IWidgetWindow(this._window.findChildByName("countdown")).widget as ICountdownWidget);
             _local_3.seconds = k;
             _local_3.running = true;
             var _local_4:Array = _arg_2.substr(0, _arg_2.indexOf(";")).match(/\d+/g);

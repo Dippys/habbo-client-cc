@@ -11,7 +11,7 @@
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.core.window.events.WindowEvent;
@@ -127,7 +127,7 @@
         private function _Str_11106():void
         {
             var k:IWidgetWindow = IWidgetWindow(this._container.findChildByName("countdown"));
-            var _local_2:_Str_2961 = _Str_2961(k.widget);
+            var _local_2:ICountdownWidget = ICountdownWidget(k.widget);
             _local_2.seconds = this._appearsInSeconds;
             _local_2.running = true;
         }

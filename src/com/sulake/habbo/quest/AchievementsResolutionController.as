@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.outgoing.game.lobby.ResetResolutionAchievementMessageComposer;
     import com.sulake.habbo.window.utils.IConfirmDialog;
     import com.sulake.core.window.components.IWidgetWindow;
-    import com.sulake.habbo.window.widgets._Str_2961;
+    import com.sulake.habbo.window.widgets.ICountdownWidget;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.IWindowContainer;
@@ -149,7 +149,7 @@
                 this.prepareWindow();
             }
             var k:IWidgetWindow = IWidgetWindow(this._window.findChildByName("countdown_widget"));
-            var _local_2:_Str_2961 = _Str_2961(k.widget);
+            var _local_2:ICountdownWidget = ICountdownWidget(k.widget);
             _local_2.seconds = this._endTime;
             _local_2.running = true;
         }
