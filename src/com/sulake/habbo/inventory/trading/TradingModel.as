@@ -238,7 +238,7 @@
             this._tradingView._Str_5129(false);
         }
 
-        public function _Str_5913(k:String):void
+        public function initCategory(k:String):void
         {
             this._tradingView._Str_5129((!(k == InventoryCategory.FURNI)));
             this._inventory._Str_24527();

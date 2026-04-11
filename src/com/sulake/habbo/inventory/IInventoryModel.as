@@ -7,7 +7,7 @@
     {
         function getWindowContainer():IWindowContainer;
         function onInventoryOpen():void;
-        function _Str_5913(_arg_1:String):void;
+        function initCategory(_arg_1:String):void;
         function _Str_5813(_arg_1:String):void;
         function onInventoryClose():void;
         function updateView():void;

@@ -165,7 +165,7 @@
             this._Str_22384();
         }
 
-        public function _Str_5913(k:String):void
+        public function initCategory(k:String):void
         {
             if (((k == InventoryCategory.PETS) && (this._controller.isVisible)))
             {

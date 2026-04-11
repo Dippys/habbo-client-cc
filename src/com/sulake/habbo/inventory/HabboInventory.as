@@ -643,7 +643,7 @@
             while (_local_2 < this._inventories.length)
             {
                 _local_3 = (this._inventories.getWithIndex(_local_2) as IInventoryModel);
-                _local_3._Str_5913(k);
+                _local_3.initCategory(k);
                 _local_2++;
             }
         }

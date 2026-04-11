@@ -163,7 +163,7 @@
         {
         }
 
-        public function _Str_5913(k:String):void
+        public function initCategory(k:String):void
         {
         }
 
