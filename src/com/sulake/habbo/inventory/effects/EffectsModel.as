@@ -356,7 +356,7 @@
         {
         }
 
-        public function _Str_5813(k:String):void
+        public function onCategorySwitch(k:String):void
         {
         }
 
