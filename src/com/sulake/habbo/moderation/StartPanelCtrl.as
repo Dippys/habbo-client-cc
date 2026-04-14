@@ -90,6 +90,18 @@ var _local_4:BitmapData = _local_3.getCroppedImage(AvatarSetType.HEAD, 0.5);
 				this._main.moderationIcon.show(!this._frame.visible);
 			}
 		}
+		
+		public function toggleVisible():void
+		{
+			if (this._frame == null || !this._frame.visible)
+			{
+				this.show();
+			}
+			else
+			{
+				this.setVisible(false);
+			}
+		}
 
         public function _Str_25175(k:RoomEntryInfoMessageParser):void
         {

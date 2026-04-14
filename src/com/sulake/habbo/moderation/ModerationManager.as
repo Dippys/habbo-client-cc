@@ -105,7 +105,7 @@
 
 		private function onModToolIconClicked(k:HabboToolbarEvent):void
         {
-			this.setVisible(true);
+			this._startPanelCtrl.toggleVisible();
         }
 		
         override protected function initComponent():void
