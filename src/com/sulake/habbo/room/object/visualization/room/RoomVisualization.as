@@ -65,7 +65,7 @@
         private var _colorizeBgOnly:Boolean = true;
         private var _assetUpdateCounter:int = 0;
         private var _geometryUpdateId:int = -1000;
-        private var FLOOR_COLOR:int = -1;
+        private var _roomGeometryUpdateId:int = -1;
         private var _geometryDirX:Number = 0;
         private var _geometryDirY:Number = 0;
         private var _geometryDirZ:Number = 0;
@@ -179,7 +179,7 @@
             this._floorType = null;
             this._landscapeType = null;
             this._planeMaskData = null;
-            this.FLOOR_COLOR = -1;
+            this._roomGeometryUpdateId = -1;
             this._geometryScale = 0;
         }
 
@@ -579,9 +579,9 @@
         {
             var _local_3:IVector3d;
             var _local_2:Boolean;
-            if (k.updateId != this.FLOOR_COLOR)
+            if (k.updateId != this._roomGeometryUpdateId)
             {
-                this.FLOOR_COLOR = k.updateId;
+                this._roomGeometryUpdateId = k.updateId;
                 this._boundingRectangle = null;
                 _local_3 = k.direction;
                 if (((!(_local_3 == null)) && ((((!(_local_3.x == this._geometryDirX)) || (!(_local_3.y == this._geometryDirY))) || (!(_local_3.z == this._geometryDirZ))) || (!(k.scale == this._geometryScale)))))
