@@ -189,6 +189,7 @@
 	<!-- Illumina light -->
     <window type="frame" intent="default" 	style="100" renderer="skin" asset="illumina_light_skin_frame_xml" window_layout="illumina_light_frame_xml" layout="illumina_light_frame" />
     <window type="frame" intent="modal" 	style="101" renderer="null" window_layout="illumina_light_frame_modal_xml" />
+    <window type="frame" intent="purple"    style="103" renderer="skin" asset="illumina_purple_skin_frame_xml" window_layout="illumina_purple_frame_xml" layout="illumina_purple_frame" />
     <window type="scaler" intent="default" style="100" renderer="null" />
 
 	<window type="border" intent="default"      style="100" renderer="skin" asset="illumina_light_skin_border_xml"              layout="illumina_light_border"/>
@@ -205,11 +206,16 @@
     <window type="button" intent="window"       style="101" renderer="skin" asset="illumina_light_skin_button_xml" window_layout="illumina_light_button_xml" layout="illumina_light_button" color="0xbbbbbb"/>
     <window type="button" intent="plain"        style="102" renderer="skin" asset="illumina_light_skin_button_plain_xml" window_layout="illumina_light_button_plain_xml" layout="illumina_light_button_plain"/>
     <window type="button" intent="unetched"     style="103" renderer="skin" asset="illumina_light_skin_button_unetched_xml" window_layout="illumina_light_button_plain_xml" layout="illumina_light_button_unetched"/>
+    <window type="button" intent="purple window" style="104" renderer="skin" asset="illumina_purple_skin_button_xml" window_layout="illumina_purple_button_xml" layout="illumina_purple_button" />
+    <window type="button" intent="purple plain"  style="105" renderer="skin" asset="illumina_purple_skin_button_plain_xml" window_layout="illumina_purple_button_plain_xml" layout="illumina_purple_button_plain" />
+    <window type="closebutton" intent="close"    style="103" renderer="skin" asset="illumina_purple_skin_button_frame_close_xml" layout="illumina_purple_button_frame_close" treshold="0" background="true" />
 
     <window type="container_button" intent="landing view" style="100" renderer="skin" asset="illumina_light_skin_button_xml" layout="illumina_light_button"/>
     <window type="container_button" intent="window"       style="101" renderer="skin" asset="illumina_light_skin_button_xml" layout="illumina_light_button" color="0xbbbbbb"/>
     <window type="container_button" intent="plain"        style="102" renderer="skin" asset="illumina_light_skin_button_plain_xml" layout="illumina_light_button_plain"/>
     <window type="container_button" intent="unetched"     style="103" renderer="skin" asset="illumina_light_skin_button_unetched_xml" layout="illumina_light_button_unetched"/>
+    <window type="container_button" intent="purple window" style="107" renderer="skin" asset="illumina_purple_skin_button_xml" layout="illumina_purple_button" />
+    <window type="container_button" intent="purple plain"  style="108" renderer="skin" asset="illumina_purple_skin_button_plain_xml" layout="illumina_purple_button_plain" />
 
     <window type="button_group_left"	intent="default" style="100"	renderer="skin" asset="habbo_skin_button_group_left_xml"	        window_layout="illumina_light_button_plain_xml" layout="button_group_left" />
     <window type="button_group_center"	intent="default" style="100"	renderer="skin" asset="habbo_skin_button_group_center_xml"	        window_layout="illumina_light_button_plain_xml" layout="button_group_center" />

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="discord_settings" width="377" height="551" version="0.1" uid="4BC67A77-A4E6-E5F5-2C45-213D7BFF9667">
+  <window>
+    <frame x="36" y="28" width="377" height="551" params="32801" style="103" name="discord_settings" caption="%24%7Bdiscord_activity.title%7D" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="1" y="0" width="375" height="116" params="16" style="3" name="header">
+          <children>
+            <text x="110" y="14" width="171" height="18" params="16" style="100" name="title" caption="%24%7Bdiscord_activity.header.title%7D" blend="0.9">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="110" y="35" width="245" height="71" params="16" style="100" name="desc_txt" caption="%24%7Bdiscord_activity.header.desc%7D" blend="0.8">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="16" y="11" width="77" height="96" params="0" style="3" name="discord_box" blend="0.95">
+              <variables>
+                <var key="asset_uri" value="discord_discord_box" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <container x="1" y="114" width="375" height="158" params="16" style="3" name="settings">
+          <children>
+            <text x="15" y="14" width="61" height="18" params="16" style="100" name="title" caption="%24%7Bdiscord_activity.settings.title%7D" blend="0.9">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist_horizontal x="19" y="39" width="214" height="21" params="16" style="3" name="setting_container">
+              <children>
+                <checkbox x="0" y="0" width="21" height="21" params="17" style="101" name="show_habbo_cbx" treshold="0" height_min="21" height_max="21"/>
+                <text x="24" y="2" width="190" height="17" params="16" style="3" caption="%24%7Bdiscord_activity.settings.discord_status%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xd5d4db" type="hex"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="25" type="Number"/>
+                <var key="scroll_step_v" value="25" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+            <itemlist_horizontal x="19" y="65" width="168" height="21" params="16" style="3" name="setting_container">
+              <children>
+                <checkbox x="0" y="0" width="21" height="21" params="17" style="101" name="share_activity_cbx" treshold="0" height_min="21" height_max="21"/>
+                <text x="24" y="2" width="144" height="17" params="16" style="3" caption="%24%7Bdiscord_activity.settings.share_activity%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xd5d4db" type="hex"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="25" type="Number"/>
+                <var key="scroll_step_v" value="25" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+            <itemlist_horizontal x="45" y="91" width="189" height="21" params="16" style="3" name="setting_container">
+              <children>
+                <checkbox x="0" y="0" width="21" height="21" params="17" style="101" name="hide_in_hidden_cbx" treshold="0" height_min="21" height_max="21"/>
+                <text x="24" y="2" width="165" height="17" params="16" style="3" caption="%24%7Bdiscord_activity.settings.hide_hidden_rooms%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xd5d4db" type="hex"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="25" type="Number"/>
+                <var key="scroll_step_v" value="25" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+            <itemlist_horizontal x="45" y="117" width="152" height="21" params="16" style="3" name="setting_container">
+              <children>
+                <checkbox x="0" y="0" width="21" height="21" params="17" style="101" name="allow_joining_cbx" treshold="0" height_min="21" height_max="21"/>
+                <text x="24" y="2" width="128" height="17" params="16" style="3" caption="%24%7Bdiscord_activity.settings.allow_joining%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xd5d4db" type="hex"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="25" type="Number"/>
+                <var key="scroll_step_v" value="25" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+        </container>
+        <container x="1" y="254" width="375" height="222" params="16" style="3" name="our_servers">
+          <children>
+            <text x="15" y="14" width="81" height="18" params="16" style="100" name="title" caption="Our%20servers%3A" blend="0.9">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container_button x="5" y="30" width="186" height="98" params="1" style="107" dynamic_style="button" name="collectibles_server">
+              <children>
+                <text x="77" y="40" width="79" height="18" params="16" style="3" caption="Collectibles" tags="%23icon">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <static_bitmap x="22" y="26" width="48" height="48" params="0" style="3" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="collectables_icon_curator_stamp_large" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container_button>
+            <container_button x="185" y="30" width="186" height="98" params="1" style="107" dynamic_style="button" name="wired_server">
+              <children>
+                <static_bitmap x="19" y="18" width="155" height="67" params="0" style="3" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="discord_wired_logo" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="77" y="32" width="66" height="33" params="0" style="3" caption="The%20Wired%0DFaculty" tags="%23icon">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <container_button x="5" y="116" width="186" height="98" params="1" style="107" dynamic_style="button" name="origins_server">
+              <children>
+                <text x="77" y="31" width="86" height="33" params="16" style="3" caption="Habbo%20Hotel%3A%0DOrigins" tags="%23icon">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <static_bitmap x="27" y="26" width="38" height="47" params="0" style="3" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="discord_origins_logo" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container_button>
+          </children>
+        </container>
+        <button x="14" y="479" width="348" height="28" params="132113" style="105" name="funny_button" caption="%24%7Bdiscord_activity.funny_button%7D" color="0x0bbbbbb" width_min="348" width_max="348"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

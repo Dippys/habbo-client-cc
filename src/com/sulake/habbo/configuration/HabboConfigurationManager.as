@@ -223,6 +223,135 @@
 
         private function parseConfiguration(k:String):void
         {
+            if (k == null || k.length == 0)
+            {
+                return;
+            }
+            var _local_first:String = this.stripLeading(k);
+            if (_local_first.length > 0 && _local_first.charAt(0) == "{")
+            {
+                this.parseConfigurationJSON(_local_first);
+            }
+            else
+            {
+                this.parseConfigurationFlat(k);
+            }
+        }
+
+        private function stripLeading(k:String):String
+        {
+            var _local_2:int = 0;
+            if (k.length > 0 && k.charCodeAt(0) == 0xFEFF)
+            {
+                _local_2 = 1;
+            }
+            while (_local_2 < k.length)
+            {
+                var _local_3:String = k.charAt(_local_2);
+                if (_local_3 == " " || _local_3 == "\t" || _local_3 == "\n" || _local_3 == "\r")
+                {
+                    _local_2++;
+                    continue;
+                }
+                break;
+            }
+            return k.substr(_local_2);
+        }
+
+        private function stripJSONComments(k:String):String
+        {
+            var _local_2:String = k.replace(/\/\*[\s\S]*?\*\//g, "");
+            _local_2 = _local_2.replace(/^\s*\/\/.*$/gm, "");
+            return _local_2;
+        }
+
+        private function parseConfigurationJSON(k:String):void
+        {
+            var _local_2:Object;
+            try
+            {
+                _local_2 = JSON.parse(this.stripJSONComments(k));
+            }
+            catch (e:Error)
+            {
+                Logger.log("ERROR: failed to parse external variables JSON: " + e.message);
+                return;
+            }
+            var _local_3:Boolean = false;
+            if (_local_2 != null && _local_2.hasOwnProperty("_readonly"))
+            {
+                _local_3 = (_local_2["_readonly"] === true);
+                delete _local_2["_readonly"];
+            }
+            this.flattenAndApply(_local_2, "", _local_3);
+        }
+
+        private function flattenAndApply(k:Object, _arg_2:String, _arg_3:Boolean):void
+        {
+            var _local_4:String;
+            var _local_5:*;
+            var _local_6:String;
+            var _local_7:int;
+            var _local_8:Boolean;
+            if (k == null)
+            {
+                return;
+            }
+            if (k is Array)
+            {
+                _local_7 = 0;
+                while (_local_7 < (k as Array).length)
+                {
+                    _local_6 = (_arg_2.length > 0) ? (_arg_2 + "." + _local_7) : ("" + _local_7);
+                    this.flattenAndApply((k as Array)[_local_7], _local_6, _arg_3);
+                    _local_7++;
+                }
+                return;
+            }
+            _local_8 = false;
+            for (_local_4 in k)
+            {
+                if (_local_4 == "$")
+                {
+                    _local_8 = true;
+                    continue;
+                }
+                _local_5 = k[_local_4];
+                _local_6 = (_arg_2.length > 0) ? (_arg_2 + "." + _local_4) : _local_4;
+                this.applyJSONValue(_local_5, _local_6, _arg_3);
+            }
+            if (_local_8 && _arg_2.length > 0)
+            {
+                this.applyJSONValue(k["$"], _arg_2, _arg_3);
+            }
+        }
+
+        private function applyJSONValue(k:*, _arg_2:String, _arg_3:Boolean):void
+        {
+            if (k == null)
+            {
+                this.setProperty(_arg_2, "", _arg_3);
+            }
+            else if (k is String)
+            {
+                this.setProperty(_arg_2, (k as String), _arg_3);
+            }
+            else if (k is Number || k is int || k is uint)
+            {
+                this.setProperty(_arg_2, String(k), _arg_3);
+            }
+            else if (k is Boolean)
+            {
+                this.setProperty(_arg_2, ((k as Boolean) ? "true" : "false"), _arg_3);
+            }
+            else
+            {
+                this.flattenAndApply(k, _arg_2, _arg_3);
+            }
+        }
+
+        private function parseConfigurationFlat(k:String):void
+        {
             var _local_6:String;
             var _local_7:Array;
             var _local_8:String;

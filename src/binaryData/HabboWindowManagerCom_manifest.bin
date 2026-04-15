@@ -207,6 +207,7 @@
             <asset mimeType="image/png" name="illumina_light_balloon_png"/>
             <asset mimeType="image/png" name="illumina_light_border_etched_png"/>
             <asset mimeType="image/png" name="illumina_light_border_frame_png"/>
+            <asset mimeType="image/png" name="illumina_purple_border_frame_png"/>
             <asset mimeType="image/png" name="illumina_light_border_infobox_png"/>
             <asset mimeType="image/png" name="illumina_light_border_light_png"/>
             <asset mimeType="image/png" name="illumina_light_border_raised_png"/>
@@ -214,6 +215,8 @@
             <asset mimeType="image/png" name="illumina_light_button_default_png"/>
             <asset mimeType="image/png" name="illumina_light_button_frame_close_png"/>
             <asset mimeType="image/png" name="illumina_light_button_unetched_png"/>
+            <asset mimeType="image/png" name="illumina_purple_button_default_png"/>
+            <asset mimeType="image/png" name="illumina_purple_button_frame_close_png"/>
             <asset mimeType="image/png" name="illumina_light_bubble_chat_arrow_png"/>
             <asset mimeType="image/png" name="illumina_light_bubble_chat_bg_png"/>
             <asset mimeType="image/png" name="illumina_light_checkbox_basic_png"/>
@@ -234,6 +237,8 @@
             <asset mimeType="text/xml" name="illumina_light_frame_xml"/>
             <asset mimeType="text/xml" name="illumina_light_frame_modal_xml"/>
             <asset mimeType="text/xml" name="illumina_light_skin_frame_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_frame_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_skin_frame_xml"/>
 
             <asset mimeType="text/xml" name="illumina_light_skin_border_xml"/>
             <asset mimeType="text/xml" name="illumina_light_skin_border_sunk_xml"/>
@@ -249,6 +254,11 @@
             <asset mimeType="text/xml" name="illumina_light_skin_button_xml"/>
             <asset mimeType="text/xml" name="illumina_light_skin_button_plain_xml"/>
             <asset mimeType="text/xml" name="illumina_light_skin_button_unetched_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_button_plain_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_skin_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_skin_button_plain_xml"/>
+            <asset mimeType="text/xml" name="illumina_purple_skin_button_frame_close_xml"/>
 
             <asset mimeType="text/xml" name="illumina_light_checkbox_basic_xml"/>
             <asset mimeType="text/xml" name="illumina_light_skin_checkbox_basic_xml"/>

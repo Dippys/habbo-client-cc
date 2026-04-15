@@ -25,6 +25,9 @@
         public static var club_gift_notification_xml:Class = HabboNotificationsCom_club_gift_notification_xml;
         public static var safety_locked_notification_xml:Class = HabboNotificationsCom_safety_locked_notification_xml;
         public static var layout_notification_popup_xml:Class = HabboNotificationsCom_layout_notification_popup_xml;
+        public static var discord_box_png:Class = HabboNotificationsCom_discord_box_png;
+        public static var icon_curator_stamp_large_png:Class = HabboNotificationsCom_icon_curator_stamp_large_png;
+        public static var discord_activity_dialog_xml:Class = HabboNotificationsCom_discord_activity_dialog_xml;
         public static var requiredClasses:Array = new Array(HabboNotificationsBootstrap, IIDHabboNotifications);
     }
 }

@@ -399,6 +399,11 @@
         private function onNotificationDialogMessageEvent(k:NotificationDialogMessageEvent):void
         {
             var _local_2:NotificationDialogMessageParser = k.getParser();
+            if (_local_2.type == "discord_activity")
+            {
+                this._notifications.showDiscordActivityDialog();
+                return;
+            }
             this._notifications.showNotification(_local_2.type, _local_2.parameters);
         }
 
@@ -455,6 +460,7 @@
             {
                 this._notifications.singularController.showSafetyLockedNotification(_local_2.id);
             }
+            this._notifications.showDiscordActivityDialog();
         }
 
         private function onAccountSafetyLockStatusChanged(k:AccountSafetyLockStatusChangeMessageEvent):void

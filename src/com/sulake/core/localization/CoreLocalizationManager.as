@@ -243,14 +243,133 @@
 
         protected function parseLocalizationData(k:String):void
         {
-            var _local_6:String;
-            var _local_7:Array;
-            var _local_8:String;
-            var _local_9:String;
             if (k == null)
             {
                 return;
             }
+            var _local_first:String = this.stripLeading(k);
+            if (_local_first.length > 0 && _local_first.charAt(0) == "{")
+            {
+                this.parseLocalizationJSON(_local_first);
+            }
+            else
+            {
+                this.parseLocalizationFlat(k);
+            }
+            this.updateAllListeners();
+        }
+
+        private function stripLeading(k:String):String
+        {
+            var _local_2:int = 0;
+            if (k.length > 0 && k.charCodeAt(0) == 0xFEFF)
+            {
+                _local_2 = 1;
+            }
+            while (_local_2 < k.length)
+            {
+                var _local_3:String = k.charAt(_local_2);
+                if (_local_3 == " " || _local_3 == "\t" || _local_3 == "\n" || _local_3 == "\r")
+                {
+                    _local_2++;
+                    continue;
+                }
+                break;
+            }
+            return k.substr(_local_2);
+        }
+
+        private function stripJSONComments(k:String):String
+        {
+            var _local_2:String = k.replace(/\/\*[\s\S]*?\*\//g, "");
+            _local_2 = _local_2.replace(/^\s*\/\/.*$/gm, "");
+            return _local_2;
+        }
+
+        private function parseLocalizationJSON(k:String):void
+        {
+            var _local_2:Object;
+            try
+            {
+                _local_2 = JSON.parse(this.stripJSONComments(k));
+            }
+            catch (e:Error)
+            {
+                ErrorReportStorage.addDebugData("Localization parse error", e.message);
+                return;
+            }
+            this.flattenAndApplyLocalization(_local_2, "");
+        }
+
+        private function flattenAndApplyLocalization(k:Object, _arg_2:String):void
+        {
+            var _local_3:String;
+            var _local_4:*;
+            var _local_5:String;
+            var _local_6:int;
+            var _local_7:Boolean;
+            if (k == null)
+            {
+                return;
+            }
+            if (k is Array)
+            {
+                _local_6 = 0;
+                while (_local_6 < (k as Array).length)
+                {
+                    _local_5 = (_arg_2.length > 0) ? (_arg_2 + "." + _local_6) : ("" + _local_6);
+                    this.flattenAndApplyLocalization((k as Array)[_local_6], _local_5);
+                    _local_6++;
+                }
+                return;
+            }
+            _local_7 = false;
+            for (_local_3 in k)
+            {
+                if (_local_3 == "$")
+                {
+                    _local_7 = true;
+                    continue;
+                }
+                _local_4 = k[_local_3];
+                _local_5 = (_arg_2.length > 0) ? (_arg_2 + "." + _local_3) : _local_3;
+                this.applyLocalizationValue(_local_4, _local_5);
+            }
+            if (_local_7 && _arg_2.length > 0)
+            {
+                this.applyLocalizationValue(k["$"], _arg_2);
+            }
+        }
+
+        private function applyLocalizationValue(k:*, _arg_2:String):void
+        {
+            if (k == null)
+            {
+                return;
+            }
+            if (k is String)
+            {
+                if ((k as String).length > 0)
+                {
+                    this.updateLocalization(_arg_2, (k as String));
+                }
+            }
+            else if (k is Number || k is int || k is uint || k is Boolean)
+            {
+                this.updateLocalization(_arg_2, String(k));
+            }
+            else
+            {
+                this.flattenAndApplyLocalization(k, _arg_2);
+            }
+        }
+
+        private function parseLocalizationFlat(k:String):void
+        {
+            var _local_6:String;
+            var _local_7:Array;
+            var _local_8:String;
+            var _local_9:String;
             var _local_2:RegExp = /\n\r{1,}|\n{1,}|\r{1,}/mg;
             var _local_3:RegExp = /^\s+|\s+$/g;
             var _local_4:Array = k.split(_local_2);
@@ -280,7 +399,6 @@
                     }
                 }
             }
-            this.updateAllListeners();
         }
     }
 }

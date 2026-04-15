@@ -172,7 +172,7 @@
             var k:int = 1;
             while (propertyExists(("localization." + k)))
             {
-                _local_2 = getProperty(("localization." + k));
+                _local_2 = getProperty((("localization." + k) + ".id"));
                 _local_3 = getProperty((("localization." + k) + ".code"));
                 _local_4 = getProperty((("localization." + k) + ".name"));
                 _local_5 = getProperty((("localization." + k) + ".url"));

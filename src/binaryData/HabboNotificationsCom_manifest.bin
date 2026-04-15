@@ -18,6 +18,9 @@
             <asset mimeType="text/xml" name="feed_display_xml" />
             <asset mimeType="text/xml" name="feed_entity_xml" />
             <asset mimeType="text/xml" name="layout_notification_popup_xml" />
+            <asset mimeType="text/xml" name="discord_activity_dialog_xml" />
+			<asset mimeType="image/png" name="discord_box_png" />
+			<asset mimeType="image/png" name="icon_curator_stamp_large_png" />
 			<asset mimeType="image/png" name="if_icon_temp_png" />
 			<asset mimeType="image/png" name="if_icon_hc_png" />
             <asset mimeType="image/png" name="if_icon_vip_png" />

@@ -3,6 +3,7 @@
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
 	import com.sulake.habbo.notifications.singular.MOTDNotification;
+	import com.sulake.habbo.notifications.singular.DiscordActivityDialog;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
@@ -56,6 +57,7 @@
         private var _singularController:SingularNotificationController;
         private var _incoming:IncomingMessages;
         private var _disabled:Boolean;
+        private var _discordActivityDialog:DiscordActivityDialog;
 
         public function HabboNotifications(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
@@ -315,6 +317,19 @@
         public function createLinkEvent(k:String):void
         {
             context.createLinkEvent(k);
+        }
+
+        public function showDiscordActivityDialog():void
+        {
+            if (!getBoolean("discord.enabled"))
+            {
+                return;
+            }
+            if (this._discordActivityDialog != null && !this._discordActivityDialog.disposed)
+            {
+                return;
+            }
+            this._discordActivityDialog = new DiscordActivityDialog(this);
         }
     }
 }

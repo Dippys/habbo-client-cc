@@ -275,6 +275,19 @@ il_button {
     etching-position: bottom;
 }
 
+il_button_white {
+	font-family: Ubuntu;
+	font-size: 10;
+    font-weight: bold;
+    color: #eeeeee;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
 il_border {
     font-family: Ubuntu;
    	font-size: 10;
@@ -600,4 +613,15 @@ tag {
     font-family: Volter;
     font-size: 9;
     anti-alias-type: normal;
+}
+
+il_frame_title_white {
+    font-family: Ubuntu;
+    font-size: 10;
+    font-weight: bold;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    color: #eeeeee;
 }

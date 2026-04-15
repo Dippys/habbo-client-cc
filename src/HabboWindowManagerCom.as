@@ -229,6 +229,16 @@
         public static var illumina_light_scrollable_itemlist_vertical_xml:Class = HabboWindowManagerCom_illumina_light_scrollable_itemlist_vertical_xml;
         public static var illumina_light_dropmenu_item_xml:Class = HabboWindowManagerCom_illumina_light_dropmenu_item_xml;
         public static var illumina_light_dropmenu_xml:Class = HabboWindowManagerCom_illumina_light_dropmenu_xml;
+        public static var illumina_purple_frame_xml:Class = HabboWindowManagerCom_illumina_purple_frame_xml;
+        public static var illumina_purple_skin_frame_xml:Class = HabboWindowManagerCom_illumina_purple_skin_frame_xml;
+        public static var illumina_purple_button_xml:Class = HabboWindowManagerCom_illumina_purple_button_xml;
+        public static var illumina_purple_skin_button_xml:Class = HabboWindowManagerCom_illumina_purple_skin_button_xml;
+        public static var illumina_purple_button_plain_xml:Class = HabboWindowManagerCom_illumina_purple_button_plain_xml;
+        public static var illumina_purple_skin_button_plain_xml:Class = HabboWindowManagerCom_illumina_purple_skin_button_plain_xml;
+        public static var illumina_purple_skin_button_frame_close_xml:Class = HabboWindowManagerCom_illumina_purple_skin_button_frame_close_xml;
+        public static var illumina_purple_border_frame_png:Class = HabboWindowManagerCom_illumina_purple_border_frame_png;
+        public static var illumina_purple_button_default_png:Class = HabboWindowManagerCom_illumina_purple_button_default_png;
+        public static var illumina_purple_button_frame_close_png:Class = HabboWindowManagerCom_illumina_purple_button_frame_close_png;
         public static var habbo_skin_illumina_dark_png:Class = HabboWindowManagerCom_habbo_skin_illumina_dark_png;
         public static var illumina_dark_skin_border_xml:Class = HabboWindowManagerCom_illumina_dark_skin_border_xml;
         public static var illumina_dark_frame_xml:Class = HabboWindowManagerCom_illumina_dark_frame_xml;
