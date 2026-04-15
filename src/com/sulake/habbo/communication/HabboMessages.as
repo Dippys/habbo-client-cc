@@ -425,6 +425,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferNotFoundEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.BuildersClubFurniCountMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.catalog.BCPlacementWarningMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.ProductOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.landingview.votes.CommunityGoalVoteMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
@@ -1054,6 +1055,7 @@
             INCOMING_PACKETS[1446] = ChatMessageEvent;
             INCOMING_PACKETS[1450] = FigureSetIdsEvent;
             INCOMING_PACKETS[1452] = BuildersClubSubscriptionStatusMessageEvent;
+            INCOMING_PACKETS[2898] = BCPlacementWarningMessageEvent;
             INCOMING_PACKETS[1453] = ObjectsDataUpdateMessageEvent;
             INCOMING_PACKETS[1455] = CategoriesWithVisitorCountEvent;
             INCOMING_PACKETS[1456] = GuideSessionEndedMessageEvent;

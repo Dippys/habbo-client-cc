@@ -6,11 +6,11 @@
     {
         private var _array:Array;
 
-        public function BuildersClubPlaceWallItemMessageComposer(k:int, _arg_2:int, _arg_3:String, _arg_4:String)
+        public function BuildersClubPlaceWallItemMessageComposer(k:int, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:Boolean = false)
         {
             this._array = [];
             super();
-            this._array = [k, _arg_2, _arg_3, _arg_4];
+            this._array = [k, _arg_2, _arg_3, _arg_4, _arg_5];
         }
 
         public function getMessageArray():Array

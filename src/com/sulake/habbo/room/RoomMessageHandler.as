@@ -112,8 +112,15 @@
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
     import com.sulake.habbo.avatar.enum.AvatarGuideStatus;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
+    import com.sulake.habbo.communication.messages.incoming.catalog.BCPlacementWarningMessageEvent;
+    import com.sulake.habbo.communication.messages.parser.catalog.BCPlacementWarningMessageParser;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceWallItemMessageComposer;
+    import com.sulake.core.communication.messages.IMessageComposer;
+    import com.sulake.habbo.window.utils.IConfirmDialog;
+    import com.sulake.core.window.events.WindowEvent;
 
-    public class RoomMessageHandler 
+    public class RoomMessageHandler
     {
         private var _connection:IConnection = null;
         private var _roomCreator:IRoomCreator = null;
@@ -226,7 +233,50 @@
                 k.addMessageEvent(new GuideSessionStartedMessageEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedMessageEvent(this.onGuideSessionEnded));
                 k.addMessageEvent(new GuideSessionErrorMessageEvent(this.onGuideSessionError));
+                k.addMessageEvent(new BCPlacementWarningMessageEvent(this.onBCPlacementWarning));
             }
+        }
+
+        private function onBCPlacementWarning(k:IMessageEvent):void
+        {
+            var event:BCPlacementWarningMessageEvent = k as BCPlacementWarningMessageEvent;
+            if (event == null)
+            {
+                return;
+            }
+            var parser:BCPlacementWarningMessageParser = event.getParser();
+            if (parser == null)
+            {
+                return;
+            }
+
+            var composer:IMessageComposer;
+            if (parser.typeCode == BCPlacementWarningMessageParser.TYPE_FLOOR)
+            {
+                composer = new BuildersClubPlaceRoomItemMessageComposer(
+                    parser.pageId, parser.offerId, parser.extraParam,
+                    parser.x, parser.y, parser.direction, true);
+            }
+            else
+            {
+                composer = new BuildersClubPlaceWallItemMessageComposer(
+                    parser.pageId, parser.offerId, parser.extraParam,
+                    parser.wallLocation, true);
+            }
+
+            (this._roomCreator as IRoomEngineServices).windowManager.confirm(
+                "${generic.alert.title}",
+                "${room.confirm.hide_room}",
+                0,
+                function(dlg:IConfirmDialog, evt:WindowEvent):void
+                {
+                    dlg.dispose();
+                    if (evt.type == WindowEvent.WINDOW_EVENT_OK)
+                    {
+                        k.connection.send(composer);
+                    }
+                }
+            );
         }
 
         private function onOwnUserEvent(k:IMessageEvent):void
