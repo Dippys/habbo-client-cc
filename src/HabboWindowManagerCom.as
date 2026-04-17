@@ -318,6 +318,8 @@
         public static var bottom_bar_inventory:Class = HabboWindowManagerCom_bottom_bar_inventory;
         public static var bottom_bar_logo:Class = HabboWindowManagerCom_bottom_bar_logo;
         public static var bottom_bar_navigator:Class = HabboWindowManagerCom_bottom_bar_navigator;
+        public static var bottom_bar_memenu_bg:Class = HabboWindowManagerCom_bottom_bar_memenu_bg;
+        public static var bottom_bar_memenu_circle:Class = HabboWindowManagerCom_bottom_bar_memenu_circle;
         public static var bottom_bar_quests:Class = HabboWindowManagerCom_bottom_bar_quests;
         public static var bottom_bar_shop:Class = HabboWindowManagerCom_bottom_bar_shop;
         public static var bottom_bar_stories:Class = HabboWindowManagerCom_bottom_bar_stories;

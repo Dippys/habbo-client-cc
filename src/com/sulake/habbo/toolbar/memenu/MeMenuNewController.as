@@ -27,7 +27,7 @@
         private var _habboToolbar:HabboToolbar;
         private var _toolbarView:BottomBarLeft;
         private var _window:IWindowContainer;
-        private var _meMenuIconLoader:MeMenuIconLoader;
+        private var _meMenuIconLoader:MeMenuNewIconLoader;
         private var _meMenuSettings:MeMenuSettingsMenuView;
         private var _unseenItemCounters:Map;
 
@@ -39,7 +39,7 @@
             this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             var _local_3:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_new_view_xml") as XmlAsset);
             this._window = (this._habboToolbar.windowManager.buildFromXML((_local_3.content as XML), 2) as IWindowContainer);
-            this._meMenuIconLoader = new MeMenuIconLoader(this._habboToolbar);
+            this._meMenuIconLoader = new MeMenuNewIconLoader(this._habboToolbar);
             this._window.visible = false;
             this._window.procedure = this.windowProcedure;
         }

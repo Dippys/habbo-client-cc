@@ -364,6 +364,8 @@
 			<asset mimeType="image/png" name="bottom_bar_inventory" />
 			<asset mimeType="image/png" name="bottom_bar_logo" />
 			<asset mimeType="image/png" name="bottom_bar_navigator" />
+			<asset mimeType="image/png" name="bottom_bar_memenu_bg" />
+			<asset mimeType="image/png" name="bottom_bar_memenu_circle" />
 			<asset mimeType="image/png" name="bottom_bar_quests" />
 			<asset mimeType="image/png" name="bottom_bar_shop" />
 			<asset mimeType="image/png" name="bottom_bar_stories" />
