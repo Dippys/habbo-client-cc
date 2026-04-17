@@ -2295,7 +2295,7 @@
                     {
                         _local_5 = (_local_5 * -1);
                     }
-                    if ((((this._roomEngine.catalog == null) || (this._roomEngine.catalog.catalogType == CatalogType.NORMAL)) || (!(this._objectPlacementSource == RoomObjectPlacementSource.CATALOG))))
+                    if ((((this._roomEngine.catalog == null) || (this._roomEngine.catalog.catalogType == CatalogType.NORMAL)) || ((!((this._objectPlacementSource == RoomObjectPlacementSource.CATALOG) || (this._objectPlacementSource == RoomObjectPlacementSource.INFO_STAND))))))
                     {
                         if (((_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) && (_local_4.typeId == RoomObjectTypeEnum.PET)))
                         {
@@ -2328,7 +2328,7 @@
             if (((this._roomEngine) && (this._roomEngine.events)))
             {
                 _local_16 = ((_local_7) && (_local_7.getId() == _local_4.id));
-                this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlacedEvent(RoomEngineObjectEvent.PLACED, k, _local_5, _local_6, _local_8, _local_9, _local_10, _local_11, _local_12, _local_16, _arg_2, _arg_3, _local_4._Str_4766));
+                this._roomEngine.events.dispatchEvent(new RoomEngineObjectPlacedEvent(RoomEngineObjectEvent.PLACED, k, _local_5, _local_6, _local_8, _local_9, _local_10, _local_11, _local_12, _local_16, _arg_2, _arg_3, _local_4._Str_4766, this._objectPlacementSource));
             }
         }
 

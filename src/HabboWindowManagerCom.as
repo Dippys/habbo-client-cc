@@ -410,6 +410,8 @@
         public static var forum_forum_list2:Class = HabboWindowManagerCom_forum_forum_list2;
         public static var forum_forum_locked:Class = HabboWindowManagerCom_forum_forum_locked;
         public static var forum_forum_pinned:Class = HabboWindowManagerCom_forum_forum_pinned;
+        public static var infostand_furni_place:Class = HabboWindowManagerCom_infostand_furni_place;
+        public static var infostand_furni_shop:Class = HabboWindowManagerCom_infostand_furni_shop;
         public static var forum_forum_report:Class = HabboWindowManagerCom_forum_forum_report;
         public static var forum_forum_unhide:Class = HabboWindowManagerCom_forum_forum_unhide;
         public static var forum_forum_unlocked:Class = HabboWindowManagerCom_forum_forum_unlocked;

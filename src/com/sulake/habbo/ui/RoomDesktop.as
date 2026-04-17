@@ -117,7 +117,9 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.habbo.room.events.RoomEngineObjectEvent;
+    import com.sulake.habbo.room.events.RoomEngineObjectPlacedEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectPlaceEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFurniToWidgetMessage;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
@@ -1169,6 +1171,9 @@
                     {
                         _local_4 = new RoomWidgetRoomObjectUpdateEvent(_local_6, _local_2, _local_3, k.roomId);
                     }
+                    break;
+                case RoomEngineObjectEvent.PLACED:
+                    _local_4 = new RoomWidgetRoomObjectPlaceEvent(RoomWidgetRoomObjectPlaceEvent.OBJECT_PLACED, _local_2, _local_3, k.roomId, RoomEngineObjectPlacedEvent(k)._Str_7031, RoomEngineObjectPlacedEvent(k).x, RoomEngineObjectPlacedEvent(k).y, RoomEngineObjectPlacedEvent(k).z, RoomEngineObjectPlacedEvent(k).direction, RoomEngineObjectPlacedEvent(k).isPlacedInRoom, RoomEngineObjectPlacedEvent(k).placedOnFloor, RoomEngineObjectPlacedEvent(k).placedOnWall, RoomEngineObjectPlacedEvent(k)._Str_4766, RoomEngineObjectPlacedEvent(k).placementSource);
                     break;
                 case RoomEngineObjectEvent.DESELECTED:
                     _local_4 = new RoomWidgetRoomObjectUpdateEvent(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, _local_2, _local_3, k.roomId);

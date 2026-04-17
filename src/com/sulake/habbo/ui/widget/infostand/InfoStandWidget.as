@@ -28,12 +28,19 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetCommandsUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetSongUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetFigureUpdateEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectPlaceEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetUserActionMessage;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnumItemExtradataParameter;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceRoomItemMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.catalog.BuildersClubPlaceWallItemMessageComposer;
+    import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
+    import com.sulake.habbo.room.object.RoomObjectVariableEnum;
+    import com.sulake.room.object.IRoomObject;
+    import com.sulake.habbo.room.enum.RoomObjectPlacementSource;
 
     public class InfoStandWidget extends RoomWidgetBase
     {
@@ -63,6 +70,7 @@
         private var _mainContainer:IWindowContainer;
         private var _updateTimer:Timer;
         private var _config:IHabboConfigurationManager;
+        private var _placeMoreActive:Boolean;
 
         public function InfoStandWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary, _arg_4:IHabboLocalizationManager, _arg_5:IHabboConfigurationManager, _arg_6:IHabboCatalog)
         {
@@ -244,6 +252,7 @@
             eventDispatcher.addEventListener(RoomWidgetSongUpdateEvent.PLAYING_CHANGED, this.songUpdatedHandler);
             eventDispatcher.addEventListener(RoomWidgetSongUpdateEvent.DATA_RECEIVED, this.songUpdatedHandler);
             eventDispatcher.addEventListener(RoomWidgetPetFigureUpdateEvent.PET_FIGURE_UPDATE, this.petFigureUpdateHandler);
+            eventDispatcher.addEventListener(RoomWidgetRoomObjectPlaceEvent.OBJECT_PLACED, this.onRoomObjectPlaced);
             super.registerUpdateEvents(eventDispatcher);
         }
 
@@ -270,6 +279,7 @@
             eventDispatcher.removeEventListener(RoomWidgetSongUpdateEvent.PLAYING_CHANGED, this.songUpdatedHandler);
             eventDispatcher.removeEventListener(RoomWidgetSongUpdateEvent.DATA_RECEIVED, this.songUpdatedHandler);
             eventDispatcher.removeEventListener(RoomWidgetPetFigureUpdateEvent.PET_FIGURE_UPDATE, this.petFigureUpdateHandler);
+            eventDispatcher.removeEventListener(RoomWidgetRoomObjectPlaceEvent.OBJECT_PLACED, this.onRoomObjectPlaced);
         }
 
         public function get botData():InfoStandRentableBotData
@@ -336,6 +346,10 @@
 
         private function furniUpdateHandler(updateEvent:RoomWidgetFurniInfostandUpdateEvent):void
         {
+            if (((this._placeMoreActive) && (this._furniData.id > 0)) && (!(updateEvent.id == this._furniData.id)))
+            {
+                this.stopPlaceMore();
+            }
             this.furniData._Str_5479(updateEvent);
             if (updateEvent.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
             {
@@ -548,6 +562,7 @@
 
         public function close():void
         {
+            this.stopPlaceMore();
             this.hideChildren();
             if (this._updateTimer)
             {
@@ -557,11 +572,85 @@
 
         private function objectDeselectedHandler(k:RoomWidgetRoomObjectUpdateEvent):void
         {
+            this.stopPlaceMore();
             this.close();
             if (this._updateTimer)
             {
                 this._updateTimer.stop();
             }
+        }
+
+        public function requestItemToMover():void
+        {
+            var _local_1:IRoomObject;
+            var _local_2:int;
+            if (((this.furniData == null) || (this.furniData.bcOfferId < 0)))
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            if (!this.handler.container.catalog.canPlaceWithBC())
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            if (this.handler.container.roomSession == null)
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            _local_1 = this.handler.container.roomEngine.getRoomObject(this.handler.container.roomSession.roomId, this.furniData.id, this.furniData.category);
+            if (_local_1 == null)
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            _local_2 = _local_1.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
+            this._placeMoreActive = this.handler.container.roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INFO_STAND, -(this.furniData.bcOfferId), this.furniData.category, _local_2, this.furniData.extraParam, null, -1, -1, null);
+        }
+
+        private function onRoomObjectPlaced(k:RoomWidgetRoomObjectPlaceEvent):void
+        {
+            if (!(k.placementSource == RoomObjectPlacementSource.INFO_STAND))
+            {
+                return;
+            }
+            if (!k.placedInRoom)
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            if (((this.furniData == null) || (this.furniData.bcOfferId < 0)))
+            {
+                this.stopPlaceMore();
+                return;
+            }
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
+            {
+                this.handler.container.connection.send(new BuildersClubPlaceRoomItemMessageComposer(-1, this.furniData.bcOfferId, this.furniData.extraParam, k.x, k.y, k.direction));
+            }
+            else
+            {
+                if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
+                {
+                    this.handler.container.connection.send(new BuildersClubPlaceWallItemMessageComposer(-1, this.furniData.bcOfferId, this.furniData.extraParam, k.wallLocation));
+                }
+                else
+                {
+                    this.stopPlaceMore();
+                    return;
+                }
+            }
+            this.requestItemToMover();
+        }
+
+        private function stopPlaceMore():void
+        {
+            if (this._placeMoreActive)
+            {
+                this.handler.container.roomEngine.cancelRoomObjectInsert();
+            }
+            this._placeMoreActive = false;
         }
 
         private function hideChildren():void

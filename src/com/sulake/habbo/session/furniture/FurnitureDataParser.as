@@ -136,14 +136,14 @@
             _local_7 = _local_6[0];
             _local_8 = ((_local_6.length > 1) ? parseInt(_local_6[1]) : 0);
             var _local_9:* = (_local_6.length > 1);
-            var _local_10:FurnitureData = new FurnitureData(FurnitureData.S, _local_2, _local_5, _local_7, k.name, k.description, k.revision, k.xdim, k.ydim, 0, _local_3, _local_9, _local_8, k.adurl, k.offerid, (k.buyout == "1"), k.rentofferid, (k.rentbuyout == "1"), (k.bc == "1"), k.customparams, k.specialtype, (k.canstandon == "1"), (k.cansiton == "1"), (k.canlayon == "1"), (k.excludeddynamic == "1"), k.furniline);
+            var _local_10:FurnitureData = new FurnitureData(FurnitureData.S, _local_2, _local_5, _local_7, k.name, k.description, k.revision, k.xdim, k.ydim, 0, _local_3, _local_9, _local_8, k.adurl, k.offerid, (k.buyout == "1"), k.rentofferid, (k.rentbuyout == "1"), (k.bc == "1"), k.customparams, k.specialtype, (k.canstandon == "1"), (k.cansiton == "1"), (k.canlayon == "1"), (k.excludeddynamic == "1"), k.furniline, int(k.bcofferid), (k.tradeable == "1"));
             return _local_10;
         }
 
         private function parseWallItem(k:XML):FurnitureData
         {
             var _local_2:int = parseInt(k.@id);
-            var _local_3:FurnitureData = new FurnitureData(FurnitureData.I, _local_2, k.@classname, k.@classname, k.name, k.description, k.revision, 0, 0, 0, null, false, 0, k.adurl, k.offerid, (k.buyout == "1"), k.rentofferid, (k.rentbuyout == "1"), (k.bc == "1"), null, k.specialtype, false, false, false, (k.excludeddynamic == "1"), k.furniline);
+            var _local_3:FurnitureData = new FurnitureData(FurnitureData.I, _local_2, k.@classname, k.@classname, k.name, k.description, k.revision, 0, 0, 0, null, false, 0, k.adurl, k.offerid, (k.buyout == "1"), k.rentofferid, (k.rentbuyout == "1"), (k.bc == "1"), null, k.specialtype, false, false, false, (k.excludeddynamic == "1"), k.furniline, int(k.bcofferid), (k.tradeable == "1"));
             return _local_3;
         }
 
@@ -266,7 +266,7 @@
                             _local_38 = (_local_10[21] == "1");
                         }
                     }
-                    _local_40 = new FurnitureData(_local_11, _local_12, _local_13, _local_15, _local_25, _local_26, _local_18, _local_19, _local_20, _local_21, _local_22, _local_17, _local_16, _local_27, _local_28, _local_29, _local_30, _local_31, _local_34, _local_32, _local_33, _local_35, _local_36, _local_37, _local_38, "");
+                    _local_40 = new FurnitureData(_local_11, _local_12, _local_13, _local_15, _local_25, _local_26, _local_18, _local_19, _local_20, _local_21, _local_22, _local_17, _local_16, _local_27, _local_28, _local_29, _local_30, _local_31, _local_34, _local_32, _local_33, _local_35, _local_36, _local_37, _local_38, "", ((_local_34) ? _local_28 : -1), false);
                     this.storeItem(_local_40);
                     this.registerFurnitureLocalization(_local_40);
                 }

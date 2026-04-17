@@ -1,19 +1,21 @@
-﻿package com.sulake.habbo.room.events
+package com.sulake.habbo.ui.widget.events
 {
-    public class RoomEngineObjectPlacedEvent extends RoomEngineObjectEvent 
+    public class RoomWidgetRoomObjectPlaceEvent extends RoomWidgetRoomObjectUpdateEvent 
     {
-        private var _wallLocation:String = "";
-        private var _x:Number = 0;
-        private var _y:Number = 0;
-        private var _z:Number = 0;
-        private var _direction:int = 0;
-        private var _placedInRoom:Boolean = false;
-        private var _placedOnFloor:Boolean = false;
-        private var _placedOnWall:Boolean = false;
-        private var _instanceData:String = null;
-        private var _placementSource:String = "";
+        public static const OBJECT_PLACED:String = "RWROUE_OBJECT_PLACED";
 
-        public function RoomEngineObjectPlacedEvent(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:Number, _arg_7:Number, _arg_8:Number, _arg_9:int, _arg_10:Boolean, _arg_11:Boolean, _arg_12:Boolean, _arg_13:String, _arg_14:String="", _arg_15:Boolean=false, _arg_16:Boolean=false)
+        private var _wallLocation:String;
+        private var _x:Number;
+        private var _y:Number;
+        private var _z:Number;
+        private var _direction:int;
+        private var _placedInRoom:Boolean;
+        private var _placedOnFloor:Boolean;
+        private var _placedOnWall:Boolean;
+        private var _instanceData:String;
+        private var _placementSource:String;
+
+        public function RoomWidgetRoomObjectPlaceEvent(k:String, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:Number, _arg_7:Number, _arg_8:Number, _arg_9:int, _arg_10:Boolean, _arg_11:Boolean, _arg_12:Boolean, _arg_13:String, _arg_14:String, _arg_15:Boolean=false, _arg_16:Boolean=false)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_15, _arg_16);
             this._wallLocation = _arg_5;
@@ -28,7 +30,7 @@
             this._placementSource = _arg_14;
         }
 
-        public function get _Str_7031():String
+        public function get wallLocation():String
         {
             return this._wallLocation;
         }
@@ -53,7 +55,7 @@
             return this._direction;
         }
 
-        public function get isPlacedInRoom():Boolean
+        public function get placedInRoom():Boolean
         {
             return this._placedInRoom;
         }
@@ -68,7 +70,7 @@
             return this._placedOnWall;
         }
 
-        public function get _Str_4766():String
+        public function get instanceData():String
         {
             return this._instanceData;
         }

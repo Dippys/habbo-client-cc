@@ -2347,10 +2347,6 @@
 
         public function getBuilderFurniPlaceableStatus(k:IPurchasableOffer):int
         {
-            var _local_2:int;
-            var _local_3:int;
-            var _local_4:IRoomObject;
-            var _local_5:RoomUserData;
             if (k == null)
             {
                 return BuilderFurniPlaceableStatus.MISSING_OFFER;
@@ -2359,6 +2355,15 @@
             {
                 return BuilderFurniPlaceableStatus.FURNI_LIMIT_REACHED;
             }
+            return this.getBuilderPlacementStatus();
+        }
+
+        private function getBuilderPlacementStatus():int
+        {
+            var _local_1:int;
+            var _local_2:int;
+            var _local_3:IRoomObject;
+            var _local_4:RoomUserData;
             if (this.roomSession == null)
             {
                 return BuilderFurniPlaceableStatus.NOT_IN_ROOM;
@@ -2373,20 +2378,29 @@
             }
             if (this.builderSecondsLeft <= 0)
             {
-                _local_2 = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
-                _local_3 = 0;
-                while (_local_3 < _local_2)
+                _local_1 = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
+                _local_2 = 0;
+                while (_local_2 < _local_1)
                 {
-                    _local_4 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, _local_3, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
-                    _local_5 = this.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
-                    if (((((!(_local_5 == null)) && (_local_5.type == RoomObjectTypeEnum.HABBO)) && (!(_local_5.roomObjectId == this.roomSession.ownUserRoomId))) && (!(_local_5.isModerator))))
+                    _local_3 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, _local_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
+                    _local_4 = this.roomSession.userDataManager.getUserDataByIndex(_local_3.getId());
+                    if (((((!(_local_4 == null)) && (_local_4.type == RoomObjectTypeEnum.HABBO)) && (!(_local_4.roomObjectId == this.roomSession.ownUserRoomId))) && (!(_local_4.isModerator))))
                     {
                         return BuilderFurniPlaceableStatus.VISITORS_IN_ROOM;
                     }
-                    _local_3++;
+                    _local_2++;
                 }
             }
             return BuilderFurniPlaceableStatus.OKAY;
+        }
+
+        public function canPlaceWithBC():Boolean
+        {
+            if (((this.builderFurniCount < 0) || (this.builderFurniCount >= this.builderFurniLimit)))
+            {
+                return false;
+            }
+            return (this.getBuilderPlacementStatus() == BuilderFurniPlaceableStatus.OKAY);
         }
 
         private function updateRoom(k:String, _arg_2:String):void

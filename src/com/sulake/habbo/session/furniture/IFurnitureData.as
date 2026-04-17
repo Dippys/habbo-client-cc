@@ -17,6 +17,7 @@
         function get description():String;
         function get adUrl():String;
         function get purchaseOfferId():int;
+        function get bcOfferId():int;
         function get rentOfferId():int;
         function get customParams():String;
         function get category():int;
@@ -29,5 +30,6 @@
         function get isExternalImageType():Boolean;
         function get excludedFromDynamic():Boolean;
         function get furniLine():String;
+        function get tradeable():Boolean;
     }
 }

@@ -19,6 +19,7 @@
         private var _description:String;
         private var _adUrl:String;
         private var _purchaseOfferId:int;
+        private var _bcOfferId:int;
         private var _rentOfferId:int;
         private var _customParams:String;
         private var _category:int;
@@ -31,8 +32,9 @@
         private var _canLayOn:Boolean;
         private var _excludedFromDynamic:Boolean;
         private var _furniLine:String;
+        private var _tradeable:Boolean;
 
-        public function FurnitureData(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int, _arg_11:Array, _arg_12:Boolean, _arg_13:int, _arg_14:String, _arg_15:int, _arg_16:Boolean, _arg_17:int, _arg_18:Boolean, _arg_19:Boolean, _arg_20:String, _arg_21:int, _arg_22:Boolean, _arg_23:Boolean, _arg_24:Boolean, _arg_25:Boolean, _arg_26:String)
+        public function FurnitureData(k:String, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:int, _arg_8:int, _arg_9:int, _arg_10:int, _arg_11:Array, _arg_12:Boolean, _arg_13:int, _arg_14:String, _arg_15:int, _arg_16:Boolean, _arg_17:int, _arg_18:Boolean, _arg_19:Boolean, _arg_20:String, _arg_21:int, _arg_22:Boolean, _arg_23:Boolean, _arg_24:Boolean, _arg_25:Boolean, _arg_26:String, _arg_27:int, _arg_28:Boolean)
         {
             this._type = k;
             this._id = _arg_2;
@@ -52,14 +54,16 @@
             this._purchaseCouldBeUsedForBuyout = _arg_16;
             this._rentOfferId = _arg_17;
             this._rentCouldBeUsedForBuyout = _arg_18;
+            this._availableForBuildersClub = _arg_19;
             this._customParams = _arg_20;
             this._category = _arg_21;
-            this._availableForBuildersClub = _arg_19;
             this._canStandOn = _arg_22;
             this._canSitOn = _arg_23;
             this._canLayOn = _arg_24;
             this._excludedFromDynamic = _arg_25;
             this._furniLine = _arg_26;
+            this._bcOfferId = _arg_27;
+            this._tradeable = _arg_28;
         }
 
         public function get type():String
@@ -137,6 +141,11 @@
             return this._purchaseOfferId;
         }
 
+        public function get bcOfferId():int
+        {
+            return this._bcOfferId;
+        }
+
         public function get customParams():String
         {
             return this._customParams;
@@ -200,6 +209,11 @@
         public function get furniLine():String
         {
             return this._furniLine;
+        }
+
+        public function get tradeable():Boolean
+        {
+            return this._tradeable;
         }
     }
 }

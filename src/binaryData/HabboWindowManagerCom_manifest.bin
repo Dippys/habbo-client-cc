@@ -455,6 +455,8 @@
 			<asset mimeType="image/png" name="forum_forum_list1" />
 			<asset mimeType="image/png" name="forum_forum_list2" />
 			<asset mimeType="image/png" name="forum_forum_locked" />
+			<asset mimeType="image/png" name="infostand_furni_place" />
+			<asset mimeType="image/png" name="infostand_furni_shop" />
 			<asset mimeType="image/png" name="forum_forum_pinned" />
 			<asset mimeType="image/png" name="forum_forum_report" />
 			<asset mimeType="image/png" name="forum_forum_unhide" />

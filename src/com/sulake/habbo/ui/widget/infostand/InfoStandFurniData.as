@@ -12,6 +12,7 @@
         private var _description:String = "";
         private var _image:BitmapData;
         private var _purchaseOfferId:int = -1;
+        private var _bcOfferId:int = -1;
         private var _extraParam:String = "";
         private var _stuffData:IStuffData = null;
         private var _groupId:int;
@@ -49,6 +50,11 @@
         public function set purchaseOfferId(k:int):void
         {
             this._purchaseOfferId = k;
+        }
+
+        public function set bcOfferId(k:int):void
+        {
+            this._bcOfferId = k;
         }
 
         public function set extraParam(k:String):void
@@ -106,6 +112,11 @@
             return this._purchaseOfferId;
         }
 
+        public function get bcOfferId():int
+        {
+            return this._bcOfferId;
+        }
+
         public function get extraParam():String
         {
             return this._extraParam;
@@ -154,6 +165,7 @@
             this.description = k.description;
             this.image = k.image;
             this.purchaseOfferId = k.purchaseOfferId;
+            this.bcOfferId = k.bcOfferId;
             this.extraParam = k.extraParam;
             this.stuffData = k.stuffData;
             this.groupId = k.groupId;

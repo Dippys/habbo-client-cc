@@ -28,6 +28,7 @@
         private var _ownerName:String = "";
         private var _usagePolicy:int = 0;
         private var _Str_26155:int = -1;
+        private var _bcOfferId:int = -1;
         private var _Str_6586:int = -1;
         private var _Str_9981:Boolean;
         private var _Str_11465:Boolean;
@@ -156,6 +157,16 @@
         public function get purchaseOfferId():int
         {
             return this._Str_6693;
+        }
+
+        public function set bcOfferId(k:int):void
+        {
+            this._bcOfferId = k;
+        }
+
+        public function get bcOfferId():int
+        {
+            return this._bcOfferId;
         }
 
         public function set extraParam(k:String):void

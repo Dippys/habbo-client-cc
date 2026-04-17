@@ -71,6 +71,7 @@
         function openRentConfirmationWindow(_arg_1:IFurnitureData, _arg_2:Boolean, _arg_3:int=-1, _arg_4:int=-1, _arg_5:Boolean=false):void;
         function get buildersClubEnabled():Boolean;
         function toggleToBuildersClub():void;
+        function canPlaceWithBC():Boolean;
         function get catalogType():String;
         function getCatalogNavigator(_arg_1:String):ICatalogNavigator;
         function get isDoorModeOverriddenInCurrentRoom():Boolean;

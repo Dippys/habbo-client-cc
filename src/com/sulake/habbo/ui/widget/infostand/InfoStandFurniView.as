@@ -58,6 +58,7 @@
         protected var _Str_3823:IWindow;
         protected var _Str_3747:IWindow;
         protected var _Str_3810:IWindow;
+        protected var _bcPlaceButton:IWindow;
         private var _pickupMode:int;
         private var _ownerId:int = 0;
         protected var _widget:InfoStandWidget;
@@ -149,6 +150,11 @@
             if (this._Str_3810 != null)
             {
                 this._Str_3810.addEventListener(WindowMouseEvent.CLICK, this._Str_15887);
+            }
+            this._bcPlaceButton = this._border.findChildByName("bc_place_button");
+            if (this._bcPlaceButton != null)
+            {
+                this._bcPlaceButton.addEventListener(WindowMouseEvent.CLICK, this.onBcPlaceMoreButtonClicked);
             }
             var _local_5:IRegionWindow = (this._infoElements.getListItemByName("owner_region") as IRegionWindow);
             if (_local_5 != null)
@@ -426,6 +432,11 @@
             }
         }
 
+        protected function onBcPlaceMoreButtonClicked(k:WindowMouseEvent):void
+        {
+            this._widget.requestItemToMover();
+        }
+
         protected function _Str_4711(k:WindowMouseEvent):void
         {
             if (k.type == WindowMouseEvent.CLICK)
@@ -513,7 +524,7 @@
             this.showButton("use", _local_5);
             this.showAdFurnitureDetails(_local_4);
             this._Str_22883((k.groupId > 0));
-            this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
+            this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout, (((k.bcOfferId >= 0) && (k.availableForBuildersClub)) && (this._catalog.canPlaceWithBC())));
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
             this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._pickupMode == this.PICKUP_MODE_NONE))) || (_local_5));
@@ -784,39 +795,45 @@
             }
         }
 
-        private function _Str_22377(k:Boolean, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean):void
+        private function _Str_22377(k:Boolean, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean, _arg_7:Boolean):void
         {
-            var _local_7:Boolean;
-            var _local_8:Boolean = ((k) && (_arg_2));
-            var _local_9:Boolean = ((_local_8) && (_arg_6));
-            var _local_10:Boolean = ((_local_8) && (_arg_5));
-            var _local_11:Boolean = ((!(_local_8)) && (_arg_3));
-            var _local_12:Boolean = ((!(_local_8)) && (_arg_4));
+            var _local_8:Boolean = false;
+            var _local_9:Boolean = ((this._widget.config.getBoolean("infostand.place_more.enabled")) && (_arg_7));
+            var _local_10:Boolean = ((k) && (_arg_2));
+            var _local_11:Boolean = ((_local_10) && (_arg_6));
+            var _local_12:Boolean = ((_local_10) && (_arg_5));
+            var _local_13:Boolean = ((!(_local_10)) && (_arg_3));
+            var _local_14:Boolean = ((!(_local_10)) && (_arg_4));
+            if (this._bcPlaceButton != null)
+            {
+                this._bcPlaceButton.visible = _local_9;
+                _local_8 = ((_local_8) || (_local_9));
+            }
             if (this._Str_3793 != null)
             {
-                this._Str_3793.visible = _local_11;
-                _local_7 = ((_local_7) || (_local_11));
+                this._Str_3793.visible = _local_13;
+                _local_8 = ((_local_8) || (_local_13));
             }
             if (this._Str_3823 != null)
             {
-                this._Str_3823.visible = _local_12;
-                _local_7 = ((_local_7) || (_local_12));
+                this._Str_3823.visible = _local_14;
+                _local_8 = ((_local_8) || (_local_14));
             }
             if (this._Str_3747 != null)
             {
-                this._Str_3747.visible = _local_9;
-                _local_7 = ((_local_7) || (_local_9));
+                this._Str_3747.visible = _local_11;
+                _local_8 = ((_local_8) || (_local_11));
             }
             if (this._Str_3810 != null)
             {
-                this._Str_3810.visible = _local_10;
-                _local_7 = ((_local_7) || (_local_10));
+                this._Str_3810.visible = _local_12;
+                _local_8 = ((_local_8) || (_local_12));
             }
-            var _local_13:IItemListWindow = (this._infoElements.getListItemByName("purchase_buttons") as IItemListWindow);
-            if (_local_13 != null)
+            var _local_15:IItemListWindow = (this._infoElements.getListItemByName("purchase_buttons") as IItemListWindow);
+            if (_local_15 != null)
             {
-                _local_13.arrangeListItems();
-                _local_13.visible = _local_7;
+                _local_15.arrangeListItems();
+                _local_15.visible = _local_8;
             }
             this._infoElements.arrangeListItems();
         }

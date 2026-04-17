@@ -1051,6 +1051,7 @@
                     _local_3.name = _local_15.localizedName;
                     _local_3.description = _local_15.description;
                     _local_3.purchaseOfferId = _local_15.purchaseOfferId;
+                    _local_3.bcOfferId = _local_15.bcOfferId;
                     _local_3.purchaseCouldBeUsedForBuyout = _local_15.purchaseCouldBeUsedForBuyout;
                     _local_3.rentOfferId = _local_15.rentOfferId;
                     _local_3.rentCouldBeUsedForBuyout = _local_15.rentCouldBeUsedForBuyout;
