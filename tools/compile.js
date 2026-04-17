@@ -8,6 +8,7 @@ const javaPath = 'C:\\Program Files\\Java\\jdk-19\\bin\\java.exe';
 const mxmlcJar = 'C:\\flex\\lib\\mxmlc.jar';
 const sourceFile = path.join(srcDir, 'Habbo.as');
 const outputFile = path.join(srcDir, 'Habbo.swf');
+const stableOutputFile = path.join(binDir, 'Habbo.swf');
 
 const startTime = Date.now();
 
@@ -43,8 +44,16 @@ compiler.on('close', (code) => {
   if (code === 0 && fs.existsSync(outputFile)) {
     const timestamp = new Date().toISOString().replace(/[-:]/g, '').replace('T', '').slice(0, 12);
     const newName = `PRODUCTION-${timestamp}-${milliseconds.toString().padStart(3, '0')}.swf`;
-    fs.renameSync(outputFile, path.join(binDir, newName));
+    const archivedOutputFile = path.join(binDir, newName);
+
+    // Keep the latest build at a stable filename for loader.php.
+    fs.copyFileSync(outputFile, stableOutputFile);
+    // Keep historical timestamped builds for rollback/debugging.
+    fs.renameSync(outputFile, archivedOutputFile);
+
     console.log(`Completed! ${seconds}.${milliseconds.toString().padStart(3, '0')}s`);
+    console.log(`Updated: ${stableOutputFile}`);
+    console.log(`Archived: ${archivedOutputFile}`);
   } else {
     console.error('Compilation failed with code:', code);
     process.exit(1);
