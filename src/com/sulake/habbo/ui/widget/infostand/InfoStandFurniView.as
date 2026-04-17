@@ -524,7 +524,7 @@
             this.showButton("use", _local_5);
             this.showAdFurnitureDetails(_local_4);
             this._Str_22883((k.groupId > 0));
-            this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout, (((k.bcOfferId >= 0) && (k.availableForBuildersClub)) && (this._catalog.canPlaceWithBC())));
+            this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout, ((((_Str_6093._Str_7070(k.id)) && (k.bcOfferId >= 0)) && (k.availableForBuildersClub)) && (this._catalog.canPlaceWithBC())));
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
             this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._pickupMode == this.PICKUP_MODE_NONE))) || (_local_5));
