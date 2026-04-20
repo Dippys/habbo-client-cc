@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.ui.handler
+package com.sulake.habbo.ui.handler
 {
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
@@ -47,12 +47,6 @@
             k.push(RoomWidgetRequestWidgetMessage.RWRWM_USER_CHOOSER);
             k.push(RoomWidgetRoomObjectMessage.RWROM_SELECT_OBJECT);
             return k;
-        }
-
-        public function isChooserDisabled():Boolean
-        {
-            var roomEngine:Object = ((this._container != null) ? this._container.roomEngine : null);
-            return ((roomEngine != null) && Boolean(roomEngine["activeRoomHasChooserDisabled"]));
         }
 
         public function processWidgetMessage(k:RoomWidgetMessage):RoomWidgetUpdateEvent

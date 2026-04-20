@@ -3,7 +3,6 @@ package com.sulake.habbo.ui.widget.chooser
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
-    import com.sulake.habbo.ui.handler.UserChooserWidgetHandler;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_3405;
     import com.sulake.habbo.ui.widget.events._Str_4178;
@@ -43,11 +42,7 @@ package com.sulake.habbo.ui.widget.chooser
         override public function initialize(k:int = 0):void
         {
             super.initialize(k);
-            if (UserChooserWidgetHandler(this._handler).isChooserDisabled())
-            {
-                return;
-            }
-            if (k == this.STATE_USER_CHOOSER_OPEN)
+            if (k == this.STATE_USER_CHOOSER_OPEN && messageListener != null)
             {
                 messageListener.processWidgetMessage(new RoomWidgetRequestWidgetMessage(RoomWidgetRequestWidgetMessage.RWRWM_USER_CHOOSER));
             }
