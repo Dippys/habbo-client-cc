@@ -207,6 +207,9 @@ package com.sulake.habbo.window.utils.tableview
             this._cellViews = null;
             if (this._container != null)
             {
+                this._container.removeEventListener(WindowMouseEvent.DOWN, this.onDown);
+                this._container.removeEventListener(WindowMouseEvent.OVER, this.onHoverOver);
+                this._container.removeEventListener(WindowMouseEvent.OUT, this.onHoverOut);
                 this._container.dispose();
                 this._container = null;
             }

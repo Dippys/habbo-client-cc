@@ -50,6 +50,10 @@ package com.sulake.habbo.window.utils.tableview
             var xml:XML;
             this._windowManager = windowManager;
             this._parent = parent;
+            this._columns = new Vector.<TableColumn>();
+            this._rowModels = new Vector.<TableRowModel>();
+            this._rowViews = new Vector.<TableRowView>();
+            this._rowByIdentifier = new Dictionary();
             if (layoutAsset != null)
             {
                 xml = (layoutAsset.content as XML);
@@ -270,6 +274,10 @@ package com.sulake.habbo.window.utils.tableview
             var i:int;
             var header:ITextWindow;
             var model:TableRowModel;
+            if (((this._disposed) || (this._container == null)) || (this._tableTitleRow == null))
+            {
+                return;
+            }
             this._container.width = this._parent.width;
             this._tableTitleRow.width = this.rowWidth;
             this._splitter.width = this.rowWidth;
@@ -362,7 +370,7 @@ package com.sulake.habbo.window.utils.tableview
 
         public function get rowCount():int
         {
-            return this._rowModels.length;
+            return ((this._rowModels != null) ? this._rowModels.length : 0);
         }
 
         public function dispose():void
@@ -371,6 +379,14 @@ package com.sulake.habbo.window.utils.tableview
             if (this._disposed)
             {
                 return;
+            }
+            if (this.tableContents != null)
+            {
+                this.tableContents.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onResized);
+            }
+            if (this._tableItems != null)
+            {
+                this._tableItems.removeEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrolled);
             }
             this.clear();
             for each (model in this._rowModels)
@@ -443,12 +459,20 @@ package com.sulake.habbo.window.utils.tableview
 
         private function updateTableItemsHeight():void
         {
+            if (((this._tableItems == null) || (this.tableContents == null)) || (this._disposed))
+            {
+                return;
+            }
             this._tableItems.height = (this.tableContents.height - ((this._showHeader) ? (this._tableTitleRow.height + this._splitter.height) : 0));
             this.onScrollBarVisibilityMayHaveChanged();
         }
 
         private function updateEmptyText():void
         {
+            if (((this._disposed) || (this.emptyTextContainer == null)) || (this.tableContents == null))
+            {
+                return;
+            }
             if (this._showHeader)
             {
                 this.emptyTextContainer.y = (this._tableTitleRow.height + this._splitter.height);
@@ -464,12 +488,20 @@ package com.sulake.habbo.window.utils.tableview
 
         private function onResized(k:WindowEvent):void
         {
+            if (this._disposed)
+            {
+                return;
+            }
             this.updateTableItemsHeight();
             this.resizeHorizontally();
         }
 
         private function onScrolled(k:WindowEvent):void
         {
+            if (this._disposed)
+            {
+                return;
+            }
             this.onScrollBarVisibilityMayHaveChanged();
         }
 

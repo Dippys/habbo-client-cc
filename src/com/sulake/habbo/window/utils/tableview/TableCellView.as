@@ -65,12 +65,41 @@ package com.sulake.habbo.window.utils.tableview
 
         public function dispose():void
         {
+            var input:ITextFieldWindow;
+            var linkRegion:IRegionWindow;
+            var extraRegion:IRegionWindow;
             if (this._disposed)
             {
                 return;
             }
             if (this._container != null)
             {
+                this._container.removeEventListener(WindowMouseEvent.DOUBLE_CLICK, this.onDoubleClick);
+                this._container.removeEventListener(WindowMouseEvent.DOWN, this._row.onDown);
+                this._container.removeEventListener(WindowMouseEvent.OVER, this._row.onHoverOver);
+                this._container.removeEventListener(WindowMouseEvent.OUT, this._row.onHoverOut);
+                input = this.getInputElement(false);
+                if (input != null)
+                {
+                    input.removeEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this.onInputEdit);
+                    input.removeEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this.onInputEdit);
+                    input.removeEventListener(WindowEvent.WINDOW_EVENT_UNFOCUS, this.onInputFocusOut);
+                }
+                linkRegion = this.getLinkRegion(false);
+                if (linkRegion != null)
+                {
+                    linkRegion.removeEventListener(WindowMouseEvent.DOWN, this._row.onDown);
+                    linkRegion.removeEventListener(WindowMouseEvent.OVER, this._row.onHoverOver);
+                    linkRegion.removeEventListener(WindowMouseEvent.OUT, this._row.onHoverOut);
+                    linkRegion.removeEventListener(WindowMouseEvent.CLICK, this.onLinkClick);
+                }
+                extraRegion = this.getExtraButtonRegion(false);
+                if (extraRegion != null)
+                {
+                    extraRegion.removeEventListener(WindowMouseEvent.CLICK, this.onExtraButtonClick);
+                    extraRegion.removeEventListener(WindowMouseEvent.OVER, this._row.onHoverOver);
+                    extraRegion.removeEventListener(WindowMouseEvent.OUT, this._row.onHoverOut);
+                }
                 this._container.dispose();
                 this._container = null;
             }

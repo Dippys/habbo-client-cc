@@ -112,31 +112,7 @@
 
         public static function create9SliceSprite(k:Rectangle, _arg_2:BitmapData):Sprite
         {
-            var _local_8:Number;
-            var _local_9:int;
-            var _local_3:Sprite = new Sprite();
-            var _local_4:Array = [k.left, k.right, _arg_2.width];
-            var _local_5:Array = [k.top, k.bottom, _arg_2.height];
-            _local_3.graphics.clear();
-            var _local_6:Number = 0;
-            var _local_7:int;
-            while (_local_7 < 3)
-            {
-                _local_8 = 0;
-                _local_9 = 0;
-                while (_local_9 < 3)
-                {
-                    _local_3.graphics.beginBitmapFill(_arg_2);
-                    _local_3.graphics.drawRect(_local_6, _local_8, (_local_4[_local_7] - _local_6), (_local_5[_local_9] - _local_8));
-                    _local_3.graphics.endFill();
-                    _local_8 = _local_5[_local_9];
-                    _local_9++;
-                }
-                _local_6 = _local_4[_local_7];
-                _local_7++;
-            }
-            _local_3.scale9Grid = k;
-            return _local_3;
+            return new Scale9BitmapSprite(k, _arg_2);
         }
 
 
