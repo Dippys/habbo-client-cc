@@ -460,7 +460,6 @@
             {
                 this._notifications.singularController.showSafetyLockedNotification(_local_2.id);
             }
-            this._notifications.showDiscordActivityDialog();
         }
 
         private function onAccountSafetyLockStatusChanged(k:AccountSafetyLockStatusChangeMessageEvent):void

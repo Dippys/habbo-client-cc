@@ -49,6 +49,12 @@
             return k;
         }
 
+        public function isChooserDisabled():Boolean
+        {
+            var roomEngine:Object = ((this._container != null) ? this._container.roomEngine : null);
+            return ((roomEngine != null) && Boolean(roomEngine["activeRoomHasChooserDisabled"]));
+        }
+
         public function processWidgetMessage(k:RoomWidgetMessage):RoomWidgetUpdateEvent
         {
             var _local_2:RoomWidgetRoomObjectMessage;
@@ -112,7 +118,7 @@
                 _local_6 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_3.getId());
                 if (_local_6 != null)
                 {
-                    _local_2.push(new _Str_3405(_local_6.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_6.name));
+                    _local_2.push(new _Str_3405(_local_6.roomObjectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_6.name, null, _local_6.type));
                 }
                 _local_5++;
             }

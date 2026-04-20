@@ -127,6 +127,10 @@
         public static var chatinput_window_new:Class = HabboRoomUICom_chatinput_window_new;
         public static var chooser_item:Class = HabboRoomUICom_chooser_item;
         public static var chooser_view:Class = HabboRoomUICom_chooser_view;
+        public static var table_view_xml:Class = HabboRoomUICom_table_view_xml;
+        public static var new_furni_chooser_view:Class = HabboRoomUICom_new_furni_chooser_view;
+        public static var new_furni_chooser_item:Class = HabboRoomUICom_new_furni_chooser_item;
+        public static var new_user_chooser_view:Class = HabboRoomUICom_new_user_chooser_view;
         public static var doorbell:Class = HabboRoomUICom_doorbell;
         public static var doorbell_list_entry:Class = HabboRoomUICom_doorbell_list_entry;
         public static var credit_redeem:Class = HabboRoomUICom_credit_redeem;

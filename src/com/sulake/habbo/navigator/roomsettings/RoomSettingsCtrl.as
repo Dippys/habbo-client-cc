@@ -527,39 +527,49 @@ package com.sulake.habbo.navigator.roomsettings
 
         private function _Str_22806():void
         {
-            var _local_2:ITabButtonWindow;
-            var k:Array = [];
+            var _local_3:int = 0;
+            var _local_1:ITabButtonWindow;
+            var _local_2:Boolean;
             this._Str_2498 = ITabContextWindow(this._window.findChildByName("tab_context"));
-            while (this._Str_2498.numTabs > 0)
+            while (_local_3 < this._Str_2498.numTabs)
             {
-                _local_2 = this._Str_2498.getTabButtonAt(0);
-                k.push(_local_2);
-                this._Str_2498._Str_5897(_local_2);
-            }
-            for each (_local_2 in k)
-            {
-                if ((this._Str_17244) && ((_local_2.id == _Str_7004)))// || (_local_2.id == _Str_8841))) || ((this._Str_2366 > 0) && (_local_2.id == _Str_8841))))
-                {
-                }
-                else
-                {
-                    this._Str_2498._Str_5377(_local_2);
-                }
+                _local_1 = this._Str_2498.getTabButtonAt(_local_3);
+                _local_2 = ((this._Str_17244) && ((_local_1.id == _Str_7004) || (_local_1.id == _Str_8841)));
+                _local_1.visible = (!_local_2);
+                _local_3++;
             }
             this._Str_2498.selector.setSelected(ISelectableWindow(this._window.findChildByName(("tab_" + this._Str_5809))));
         }
 
         private function _Str_25046():void
         {
-            var _local_3:ITabButtonWindow;
-            var k:int = (this._window.width / this._Str_2498.numTabs);
-            k--;
-            var _local_2:int;
-            while (_local_2 < this._Str_2498.numTabs) //Changed from < to <=
+            var _local_6:int;
+            var _local_4:int;
+            var _local_2:ITabButtonWindow;
+            var _local_3:Boolean;
+            var _local_5:int;
+            _local_6 = 0;
+            while (_local_6 < this._Str_2498.numTabs)
             {
-                _local_3 = this._Str_2498.getTabButtonAt(_local_2);
-                _local_3.width = k;
-                _local_2++;
+                if (this._Str_2498.getTabButtonAt(_local_6).visible)
+                {
+                    _local_5++;
+                }
+                _local_6++;
+            }
+            if (_local_5 == 0)
+            {
+                return;
+            }
+            var _local_1:int = (this._window.width / _local_5);
+            _local_1--;
+            _local_4 = 0;
+            while (_local_4 < this._Str_2498.numTabs)
+            {
+                _local_2 = this._Str_2498.getTabButtonAt(_local_4);
+                _local_3 = ((this._Str_17244) && ((_local_2.id == _Str_7004) || (_local_2.id == _Str_8841)));
+                _local_2.width = ((_local_3) ? 0 : _local_1);
+                _local_4++;
             }
         }
 

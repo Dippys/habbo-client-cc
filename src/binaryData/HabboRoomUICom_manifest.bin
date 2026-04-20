@@ -125,6 +125,10 @@
             <asset mimeType="text/xml" name="chatinput_window_new"/>
             <asset mimeType="text/xml" name="chooser_item"/>
             <asset mimeType="text/xml" name="chooser_view"/>
+            <asset mimeType="text/xml" name="table_view_xml"/>
+            <asset mimeType="text/xml" name="new_furni_chooser_view"/>
+            <asset mimeType="text/xml" name="new_furni_chooser_item"/>
+            <asset mimeType="text/xml" name="new_user_chooser_view"/>
             <asset mimeType="text/xml" name="doorbell"/>
             <asset mimeType="text/xml" name="doorbell_list_entry"/>
             <asset mimeType="text/xml" name="credit_redeem"/>

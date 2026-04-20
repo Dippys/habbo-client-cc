@@ -4,6 +4,7 @@
     {
         public static const RWCCE_USER_CHOOSER_CONTENT:String = "RWCCE_USER_CHOOSER_CONTENT";
         public static const RWCCE_FURNI_CHOOSER_CONTENT:String = "RWCCE_FURNI_CHOOSER_CONTENT";
+        public static const RWCCE_FURNI_CHOOSER_CONTENT_ADD:String = "RWCCE_FURNI_CHOOSER_CONTENT_ADD";
 
         private var _items:Array;
         private var _isAnyRoomController:Boolean;

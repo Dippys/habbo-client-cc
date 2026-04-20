@@ -46,6 +46,7 @@
         {
             var k:Array = [];
             k.push(RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER);
+            k.push(RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER_ADD);
             k.push(RoomWidgetRoomObjectMessage.RWROM_SELECT_OBJECT);
             return k;
         }
@@ -61,6 +62,9 @@
             {
                 case RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER:
                     this._Str_23467();
+                    break;
+                case RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER_ADD:
+                    this._Str_24503((k as RoomWidgetRequestWidgetMessage));
                     break;
                 case RoomWidgetRoomObjectMessage.RWROM_SELECT_OBJECT:
                     _local_2 = (k as RoomWidgetRoomObjectMessage);
@@ -113,7 +117,7 @@
                     {
                         _local_6 = _local_7.getType();
                     }
-                    _local_2.push(new _Str_3405(_local_7.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, _local_6));
+                    _local_2.push(new _Str_3405(_local_7.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, _local_6, _local_7.getModel().getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME)));
                 }
                 _local_3++;
             }
@@ -143,12 +147,75 @@
                             _local_6 = _local_9;
                         }
                     }
-                    _local_2.push(new _Str_3405(_local_7.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_6));
+                    _local_2.push(new _Str_3405(_local_7.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_6, _local_7.getModel().getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME)));
                 }
                 _local_3++;
             }
             _local_2.sort(this._Str_16552);
             this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT, _local_2, this._container.sessionDataManager.isAnyRoomController));
+        }
+
+        private function _Str_24503(k:RoomWidgetRequestWidgetMessage):void
+        {
+            var _local_2:IRoomObject;
+            var _local_3:_Str_3405;
+            if ((((k == null) || (this._container == null)) || (this._container.roomSession == null)) || (this._container.roomEngine == null))
+            {
+                return;
+            }
+            _local_2 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, k.id, k.category);
+            if (_local_2 == null)
+            {
+                return;
+            }
+            _local_3 = this._Str_24886(_local_2, k.category);
+            if (_local_3 == null)
+            {
+                return;
+            }
+            this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT_ADD, [_local_3], this._container.sessionDataManager.isAnyRoomController));
+        }
+
+        private function _Str_24886(k:IRoomObject, _arg_2:int):_Str_3405
+        {
+            var _local_3:int;
+            var _local_4:IFurnitureData;
+            var _local_5:String;
+            var _local_6:int;
+            _local_5 = "";
+            if (k == null)
+            {
+                return null;
+            }
+            if (_arg_2 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
+            {
+                _local_3 = k.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
+                _local_4 = this._container.sessionDataManager.getFloorItemData(_local_3);
+                _local_5 = ((_local_4 != null) ? _local_4.localizedName : k.getType());
+            }
+            else
+            {
+                if (_arg_2 != RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
+                {
+                    return null;
+                }
+                _local_5 = k.getType();
+                if (_local_5.indexOf("poster") == 0)
+                {
+                    _local_6 = int(_local_5.replace("poster", ""));
+                    _local_5 = this._container.localization.getLocalization((("poster_" + _local_6) + "_name"), (("poster_" + _local_6) + "_name"));
+                }
+                else
+                {
+                    _local_3 = k.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
+                    _local_4 = this._container.sessionDataManager.getWallItemData(_local_3);
+                    if (((!(_local_4 == null)) && (_local_4.localizedName.length > 0)))
+                    {
+                        _local_5 = _local_4.localizedName;
+                    }
+                }
+            }
+            return new _Str_3405(k.getId(), _arg_2, _local_5, k.getModel().getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME));
         }
 
         private function _Str_16552(k:_Str_3405, _arg_2:_Str_3405):int
