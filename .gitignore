@@ -9,3 +9,6 @@
 .history/
 
 .idea
+
+node_modules/
+tools/dist/
