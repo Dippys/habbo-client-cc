@@ -57,6 +57,7 @@
         private var _friendList:FriendList;
         private var _roomSessionTags:RoomSessionTags;
         private var _competitionRoomsData:CompetitionRoomsData;
+        private var _roomThumbnailRefreshKeys:Dictionary;
 
         public function NavigatorData(k:HabboNavigator)
         {
@@ -65,6 +66,7 @@
             this._allEventCategories = new Array();
             this._visibleEventCategories = new Array();
             this._favouriteIds = new Dictionary();
+            this._roomThumbnailRefreshKeys = new Dictionary();
             this._friendList = new FriendList();
             super();
             this._navigator = k;
@@ -218,6 +220,16 @@
         public function get promotedRooms():PromotedRoomsData
         {
             return this._promotedRooms;
+        }
+
+        public function setRoomThumbnailRefreshKey(k:int, _arg_2:String):void
+        {
+            this._roomThumbnailRefreshKeys[k] = _arg_2;
+        }
+
+        public function getRoomThumbnailRefreshKey(k:int):String
+        {
+            return this._roomThumbnailRefreshKeys[k];
         }
 
         public function get roomEventData():RoomEventData

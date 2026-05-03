@@ -74,6 +74,9 @@
         public function _Str_22789(k:GuestRoomData, _arg_2:int):IWindowContainer
         {
             var _local_3:IWindowContainer = IWindowContainer(this._tileEntryTemplate.clone());
+            var _local_4:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(_local_3.findChildByName("room_pic_placeholder"));
+            var _local_5:String;
+            var _local_6:String;
             this._Str_20769(_local_3, k, true);
             if (k.groupBadgeCode != "")
             {
@@ -84,17 +87,27 @@
             {
                 if (this._navigator.getBoolean("new.navigator.official.room.thumbnails.in.amazon"))
                 {
-                    IStaticBitmapWrapperWindow(_local_3.findChildByName("room_pic_placeholder")).assetUri = (this._navigator.getProperty("navigator.thumbnail.url_base") + k.officialRoomPicRef);
+                    _local_5 = (this._navigator.getProperty("navigator.thumbnail.url_base") + k.officialRoomPicRef);
                 }
                 else
                 {
-                    IStaticBitmapWrapperWindow(_local_3.findChildByName("room_pic_placeholder")).assetUri = (this._navigator.getProperty("image.library.url") + k.officialRoomPicRef);
+                    _local_5 = (this._navigator.getProperty("image.library.url") + k.officialRoomPicRef);
                 }
             }
             else
             {
-                IStaticBitmapWrapperWindow(_local_3.findChildByName("room_pic_placeholder")).assetUri = ((this._navigator.getProperty("navigator.thumbnail.url_base") + k.flatId) + ".png");
+                _local_5 = ((this._navigator.getProperty("navigator.thumbnail.url_base") + k.flatId) + ".png");
             }
+            _local_6 = this._navigator.data.getRoomThumbnailRefreshKey(k.flatId);
+            if (((!(_local_6 == null)) && (!(_local_6 == ""))))
+            {
+                _local_5 = (_local_5 + ("?v=" + _local_6));
+            }
+            if (_local_4.assetUri == _local_5)
+            {
+                _local_4.assetUri = null;
+            }
+            _local_4.assetUri = _local_5;
             return _local_3;
         }
 

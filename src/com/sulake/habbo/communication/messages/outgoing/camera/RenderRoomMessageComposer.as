@@ -208,7 +208,7 @@
             {
                 this.compressData();
             }
-            return this._data[0].length < this.DATA_LENGTH_LIMIT;
+            return true;
         }
 
         public function getMessageArray():Array

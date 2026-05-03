@@ -32,11 +32,6 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.ui.widget.camera.*;
-    import flash.events.Event;
-    import flash.net.URLRequestMethod;
-    import flash.net.URLLoader;
-    import com.sulake.habbo.utils.images.PNGEncoder;
 
     internal class PhotoPurchaseConfirmationDialog 
     {
@@ -58,7 +53,6 @@
         private var _extraDataId:String = null;
         private var _publishButtonEnablerTimer:Timer;
         private var _purchaseCount:int = 0;
-        private var _photoId:String;
 
         public function PhotoPurchaseConfirmationDialog(k:CameraWidget, caption:String)
         {
@@ -89,45 +83,8 @@
             }
             (this._window as IFrameWindow)._Str_5665();
             this.setState(LOADING_IMAGE);
-
-            //load img
-            this.UploadPhoto();
-
             this._window.center();
             this._window.procedure = this._Str_3545;
-        }
-
-        private function UploadPhoto():void
-        {
-            var PhotoImage:BitmapData = this._widget.photoLab.getPreviewImage();
-            if(PhotoImage == null)
-            {
-                this._widget.startTakingPhoto("photoPurchaseCancel");
-                this.hide();
-                return;
-            }
-
-            var UploadRequest:URLRequest = new URLRequest(this._widget.component.getProperty("camera.uploadlink"));
-            UploadRequest.data = PNGEncoder.encode(PhotoImage);
-            UploadRequest.contentType = "application/octet-stream";
-            UploadRequest.method = URLRequestMethod.POST;
-            var LoaderPhoto:URLLoader = new URLLoader();
-            LoaderPhoto.addEventListener(Event.COMPLETE, this.photoUploadCallback);
-            LoaderPhoto.load(UploadRequest);
-        }
-
-        private function photoUploadCallback(evt:Event):void
-        {
-            var PhotoId:String = evt.target.data;
-            if(PhotoId == "" || PhotoId.length != 32)
-            {
-                this._widget.startTakingPhoto("photoPurchaseCancel");
-                this.hide();
-                return;
-            }
-
-            this._photoId = PhotoId;
-            this._Str_24775(PhotoId);
         }
 
 
@@ -258,7 +215,10 @@
             }
             if (((k) && (k.length > 0)))
             {
-                k = (this._widget.component.context.configuration.getProperty("stories.upload_image.url") + k + ".png");
+                if (((!(k.indexOf("http://") == 0)) && (!(k.indexOf("https://") == 0))))
+                {
+                    k = (this._widget.component.context.configuration.getProperty("stories.image_url_base") + k);
+                }
                 _local_2 = new BitmapFileLoader("image/png", new URLRequest(k));
                 _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onImageLoaded);
             }
@@ -493,7 +453,7 @@
                     if ((((this._state == IMAGE_LOADED) && (this._disclaimerAccepted)) && (this._Str_22012(this._widget.handler.creditPrice, this._widget.handler.ducketPrice))))
                     {
                         this.setState(WAITING_PURCHASE_TO_COMPLETE);
-                        this._widget.handler.confirmPhotoPurchase(this._photoId);
+                        this._widget.handler.confirmPhotoPurchase();
                     }
                     return;
                 case "publish_button":

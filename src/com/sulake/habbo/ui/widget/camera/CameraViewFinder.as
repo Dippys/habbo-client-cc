@@ -230,20 +230,20 @@
                     else
                     {
                         this._widget._Str_23751();
-                        //_local_4 = this._widget.handler.collectPhotoData();
-                        //if (((!(_local_4 == null)) && (_local_4.isSendable())))
-                        //{
-                            //_Str_15112[this._Str_3290] = _local_4;
+                        _local_4 = this._widget.handler.collectPhotoData();
+                        if (((!(_local_4 == null)) && (_local_4.isSendable())))
+                        {
+                            _Str_15112[this._Str_3290] = _local_4;
                             this._Str_16078(this._Str_2726.bitmap.clone());
                             this._Str_15606 = getTimer();
                             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.taken");
                             _local_5 = this._window.findChildByName("slot_container");
                             _local_5.visible = true;
-                        /*}
+                        }
                         else
                         {
-                            //this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
-                        }*/
+                            this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
+                        }
                     }
                     break;
             }

@@ -156,7 +156,7 @@
 
         private function windowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
-            //var _local_4:RenderRoomThumbnailMessageComposer;
+            var _local_4:RenderRoomThumbnailMessageComposer;
             var _local_3:WindowMouseEvent = (k as WindowMouseEvent);
             if (((_local_3) && (_local_3.type == WindowMouseEvent.CLICK)))
             {
@@ -164,20 +164,22 @@
                 {
                     case "button_capture":
                         this.triggerCameraShutterSound();
-                        //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler).collectPhotoData();
-                        //if(_local_4 == null)
-                            //return;
-                        //if (((!(_local_4 == null)) && (_local_4.isSendable())))
-                        //{
-                            //this.handler.sendPhotoData(_local_4);
+                        _local_4 = RoomThumbnailCameraWidgetHandler(this.handler).collectPhotoData();
+                        if (_local_4 == null)
+                        {
+                            return;
+                        }
+                        if (_local_4.isSendable())
+                        {
+                            this.handler.sendPhotoData(_local_4);
                             this._window.findChildByName("button_capture").disable();
                             this._window.findChildByName("button_cancel").disable();
                             this._component.removeUpdateReceiver(this);
-                        /*}
+                        }
                         else
                         {
                             windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
-                        }*/
+                        }
                         return;
                     case "header_button_close":
                     case "button_cancel":

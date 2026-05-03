@@ -356,7 +356,7 @@
                 _local_11 = _local_9.sprite;
                 if (_local_11 != null)
                 {
-                    _local_10 = _local_4.remove(_local_11.spriteType);
+                    _local_10 = _local_4.remove(_local_11.planeId);
                     if (_local_10 != null)
                     {
                         _local_10.z = _local_9.z;

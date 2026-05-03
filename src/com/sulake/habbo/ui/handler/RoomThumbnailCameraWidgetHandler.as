@@ -12,6 +12,9 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomThumbnailMessageComposer;
     import com.sulake.habbo.window.enum.HabboAlertDialogFlag;
+    import com.sulake.habbo.navigator.IHabboTransitionalNavigator;
+    import com.sulake.core.runtime.Component;
+    import flash.utils.getTimer;
 
     public class RoomThumbnailCameraWidgetHandler implements IRoomWidgetHandler, IDisposable 
     {
@@ -100,9 +103,35 @@
 
         private function _Str_23638(k:ThumbnailStatusMessageEvent):void
         {
+            var _local_2:IHabboTransitionalNavigator;
+            var _local_3:String;
+            var _local_4:Component;
             this._widget.destroy();
             if (k.getParser().isOk())
             {
+                _local_2 = (this._container.navigator as IHabboTransitionalNavigator);
+                if (((!(_local_2 == null)) && (!(_local_2.data.enteredGuestRoom == null))))
+                {
+                    _local_2.data.setRoomThumbnailRefreshKey(_local_2.data.enteredGuestRoom.flatId, ("" + getTimer()));
+                    _local_3 = ((_local_2.getProperty("navigator.thumbnail.url_base") + _local_2.data.enteredGuestRoom.flatId) + ".png");
+                    this._container.windowManager.resourceManager.removeAsset(_local_3);
+                    if (_local_2.roomInfoViewCtrl != null)
+                    {
+                        _local_2.roomInfoViewCtrl.reload();
+                    }
+                    if (_local_2.mainViewCtrl != null)
+                    {
+                        if (((_local_2.data.guestRoomSearchResults == null) || (!(_local_2.mainViewCtrl.reloadRoomList(_local_2.data.guestRoomSearchResults.searchType)))))
+                        {
+                            _local_2.mainViewCtrl.refresh();
+                        }
+                    }
+                }
+                _local_4 = (this._container.windowManager as Component);
+                if (_local_4 != null)
+                {
+                    _local_4.context.createLinkEvent("navigator/refresh");
+                }
                 this._container.windowManager.alert("${navigator.thumbnail.camera.title}", "${navigator.thumbnail.camera.success}", HabboAlertDialogFlag.BUTTON_OK, null);
             }
             else

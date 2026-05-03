@@ -147,6 +147,8 @@
             var _local_8:HabboGroupDetailsData;
             var _local_9:String;
             var _local_10:String;
+            var _local_11:String;
+            var _local_12:IStaticBitmapWrapperWindow;
             if (this._guestRoomData == null)
             {
                 return;
@@ -248,25 +250,36 @@
                 this._Str_16458("properties", "${navigator.roompopup.property.ranking}", this._guestRoomData.ranking.toString());
             }
             this._Str_16458("properties", "${navigator.roompopup.property.max_users}", this._guestRoomData.maxUserCount.toString());
-            IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = "newnavigator_default_room";
+            _local_12 = IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail"));
+            _local_11 = "newnavigator_default_room";
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
                 if (this._guestRoomData.officialRoomPicRef != null)
                 {
                     if (this._navigator.getBoolean("new.navigator.official.room.thumbnails.in.amazon"))
                     {
-                        IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._guestRoomData.flatId) + ".png");
+                        _local_11 = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._guestRoomData.flatId) + ".png");
                     }
                     else
                     {
-                        IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = (this._navigator.getProperty("image.library.url") + this._guestRoomData.officialRoomPicRef);
+                        _local_11 = (this._navigator.getProperty("image.library.url") + this._guestRoomData.officialRoomPicRef);
                     }
                 }
                 else
                 {
-                    IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._guestRoomData.flatId) + ".png");
+                    _local_11 = ((this._navigator.getProperty("navigator.thumbnail.url_base") + this._guestRoomData.flatId) + ".png");
                 }
             }
+            _local_9 = this._navigator.data.getRoomThumbnailRefreshKey(this._guestRoomData.flatId);
+            if (((!(_local_9 == null)) && (!(_local_9 == "")) && (!(_local_11 == "newnavigator_default_room"))))
+            {
+                _local_11 = (_local_11 + ("?v=" + _local_9));
+            }
+            if (_local_12.assetUri == _local_11)
+            {
+                _local_12.assetUri = null;
+            }
+            _local_12.assetUri = _local_11;
             _local_3.arrangeListItems();
             k.arrangeListItems();
         }

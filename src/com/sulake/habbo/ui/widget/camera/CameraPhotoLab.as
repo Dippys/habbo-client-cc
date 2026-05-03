@@ -386,14 +386,14 @@
                 return;
             }
             _purchaseConfirmationDialog = new PhotoPurchaseConfirmationDialog(this._widget, ITextWindow(this._window.findChildByName("captionInput")).text);
-            //var _local_2:Boolean = this._widget.sendPhotoData();
+            var _local_2:Boolean = this._widget.sendPhotoData();
             _purchaseConfirmationDialog._Str_24882(this._widget.handler.creditPrice, this._widget.handler.ducketPrice, this._widget.handler.publishDucketPrice);
             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.purchase_dialog_opened");
-            /*if (!_local_2)
+            if (!_local_2)
             {
                 _purchaseConfirmationDialog._Str_19543();
                 this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
-            }*/
+            }
             this.hide();
         }
 

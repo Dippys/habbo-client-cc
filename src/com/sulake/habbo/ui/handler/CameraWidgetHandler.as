@@ -214,9 +214,9 @@
             this._roomDesktop.removeListenerFromStage(k, _arg_2);
         }
 
-        public function confirmPhotoPurchase(PhotoId:String):void
+        public function confirmPhotoPurchase():void
         {
-            this._container.connection.send(new PurchasePhotoMessageComposer(PhotoId));
+            this._container.connection.send(new PurchasePhotoMessageComposer());
         }
 
         public function confirmPhotoPublish():void
@@ -231,6 +231,10 @@
 
         public function collectPhotoData():RenderRoomMessageComposer
         {
+            if (this._roomDesktop == null)
+            {
+                return null;
+            }
             return this._roomDesktop.roomEngine.getRenderRoomMessage(this._widget._Str_14786(), this._roomDesktop.roomBackgroundColor) as RenderRoomMessageComposer;
         }
 

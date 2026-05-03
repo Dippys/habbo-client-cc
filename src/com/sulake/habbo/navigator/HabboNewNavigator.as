@@ -442,6 +442,17 @@
                         this.performSearch(_local_2[2]);
                     }
                     return;
+                case "refresh":
+                    if (((!(this._lastSearchCode == null)) && (!(this._lastFilteringData == null))))
+                    {
+                        this._navigatorCache._Str_25085(((this._lastSearchCode + "/") + this._lastFilteringData));
+                        this.performSearch(this._lastSearchCode, this._lastFilteringData, this._previousFilterInput);
+                    }
+                    else
+                    {
+                        this.refresh();
+                    }
+                    return;
                 case "report":
                     if (_local_2.length > 3)
                     {
@@ -560,6 +571,7 @@
         {
             if (this._currentResults)
             {
+                this._newResultsRendered = false;
                 this._navigatorView._Str_18091(this._currentResults);
             }
         }

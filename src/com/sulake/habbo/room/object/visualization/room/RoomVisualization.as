@@ -805,7 +805,7 @@
                     _local_12 = (_local_6[_local_9] as RoomPlane);
                     if (_local_12 != null)
                     {
-                        _local_11.spriteType = _local_12.uniqueId;
+                        _local_11.planeId = _local_12.uniqueId;
                         if (_local_12.update(k, _local_5))
                         {
                             if (_local_12.visible)
@@ -840,7 +840,7 @@
                     }
                     else
                     {
-                        _local_11.spriteType = 0;
+                        _local_11.planeId = 0;
                         if (_local_11.visible)
                         {
                             _local_11.visible = false;
