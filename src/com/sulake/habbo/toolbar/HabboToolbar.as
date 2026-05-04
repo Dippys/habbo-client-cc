@@ -868,9 +868,13 @@
         {
             if (this._newNavigator != null)
             {
-                return this._newNavigator.legacyNavigator;
+                if (((this._sessionDataManager != null) && (this._sessionDataManager.isPerkAllowed("NAVIGATOR_PHASE_TWO_2014"))))
+                {
+                    return this._newNavigator.legacyNavigator;
+                }
+                return this._navigator;
             }
-            return null;
+            return this._navigator;
         }
 
         public function get questEngine():IHabboQuestEngine
@@ -906,6 +910,14 @@
         public function get messenger():IHabboMessenger
         {
             return this._messenger;
+        }
+
+        public function openNewNavigator():void
+        {
+            if (this._newNavigator != null)
+            {
+                this._newNavigator.open();
+            }
         }
     }
 }
