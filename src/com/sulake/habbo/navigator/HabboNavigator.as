@@ -162,6 +162,7 @@
 
         public function get roomSettingsCtrl():RoomSettingsCtrl
         {
+            this._roomSettingsCtrl.navigator = this;
             return this._roomSettingsCtrl;
         }
 
@@ -711,6 +712,18 @@
 
         public function openNavigator(k:Point=null):void
         {
+            if (this._mainViewCtrl == null)
+            {
+                return;
+            }
+            if (k != null)
+            {
+                this._mainViewCtrl.openAtPosition(k);
+            }
+            else
+            {
+                this._mainViewCtrl._Str_18392();
+            }
         }
 
         public function closeNavigator():void
@@ -832,6 +845,10 @@
             }
             else
             {
+                if (this._mainViewCtrl)
+                {
+                    this._mainViewCtrl.close();
+                }
                 context.removeLinkEventTracker(this);
             }
         }

@@ -120,6 +120,7 @@
         private var _isEmailVerified:Boolean;
         private var _isRoomCameraFollowDisabled:Boolean;
         private var _uiFlags:int;
+        private var _uiFlagsReady:Boolean;
         private var _accountSafetyLocked:Boolean = false;
         private var _mysteryBoxColor:String;
         private var _mysteryKeyColor:String;
@@ -415,6 +416,7 @@
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._isRoomCameraFollowDisabled = _local_2.roomCameraFollowDisabled;
             this._uiFlags = _local_2.uiFlags;
+            this._uiFlagsReady = true;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._uiFlags));
         }
 
@@ -549,6 +551,20 @@
             return this._isRoomCameraFollowDisabled;
         }
 
+        public function setNavigatorPhaseTwo(k:Boolean):Boolean
+        {
+            return this.setUIFlag(UIFlags.NAVIGATOR_PHASE_TWO, k);
+        }
+
+        public function get isNavigatorPhaseTwo():Boolean
+        {
+            if (((this._Str_25841()) && (!(this._uiFlagsReady))))
+            {
+                return true;
+            }
+            return (this._uiFlags & UIFlags.NAVIGATOR_PHASE_TWO) != 0;
+        }
+
         public function setFriendBarState(k:Boolean):void
         {
             this.setUIFlag(UIFlags.FRIEND_BAR_OPEN, k);
@@ -564,13 +580,13 @@
             return this._uiFlags;
         }
 
-        private function setUIFlag(k:int, _arg_2:Boolean):void
+        private function setUIFlag(k:int, _arg_2:Boolean):Boolean
         {
             if (_arg_2)
             {
                 if ((this._uiFlags & k))
                 {
-                    return;
+                    return false;
                 }
                 this._uiFlags = (this._uiFlags | k);
             }
@@ -578,11 +594,12 @@
             {
                 if (!(this._uiFlags & k))
                 {
-                    return;
+                    return false;
                 }
                 this._uiFlags = (this._uiFlags & (~(k)));
             }
             this._communicationManager.connection.send(new SetUIFlagsMessageComposer(this._uiFlags));
+            return true;
         }
 
         public function getUserTags(k:int):Array
@@ -1086,7 +1103,20 @@
 
         public function isPerkAllowed(k:String):Boolean
         {
+            if (k == PerkEnum.NAVIGATOR_PHASE_TWO_2014)
+            {
+                return this.isNavigatorPhaseTwo;
+            }
+            if (k == PerkEnum.NAVIGATOR_PHASE_ONE_2014)
+            {
+                return !this.isNavigatorPhaseTwo;
+            }
             return this._perkManager.isPerkAllowed(k);
+        }
+
+        private function _Str_25841():Boolean
+        {
+            return (((this._perkManager == null) || (!(this._perkManager.isReady))) || (!(this._perkManager.hasPerk(PerkEnum.NAVIGATOR_PHASE_ONE_2014)) && !(this._perkManager.hasPerk(PerkEnum.NAVIGATOR_PHASE_TWO_2014))));
         }
 
         public function getPerkErrorMessage(k:String):String
