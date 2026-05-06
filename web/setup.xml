@@ -15,7 +15,7 @@
         <param key="flash.dynamic.avatar.download.name.template" value="%libname%.swf"/>
         <param key="productdata.load.url" value="http://127.0.0.1:8080/gamedata/productdata.txt"/>
         <param key="furnidata.load.url" value="http://127.0.0.1:8080/gamedata/furnidata.xml"/>
-        <param key="client.fatal.error.url" value=""/>
+        <param key="client.fatal.error.url" value="http://127.0.0.1:8080/flash_client_error"/>
         <param key="client.starting" value="Testing Client 123..."/>
         <param key="flash.client.url" value="http://127.0.0.1:8080/gordon/PRODUCTION-202202222202-225849040/"/>
     </flashvars>

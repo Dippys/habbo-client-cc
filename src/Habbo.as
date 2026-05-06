@@ -98,7 +98,7 @@
             CONNECTION_HOST = flashVars["connection.info.host"];
             CONNECTION_PORTS = flashVars["connection.info.port"];
             var k:String = flashVars["client.fatal.error.url"];
-            if (k != null)
+            if (((k != null) && (k.replace(/\s+/g, "") != "")))
             {
                 Habbo._crashURL = k;
             }
